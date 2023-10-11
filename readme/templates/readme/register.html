@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block navbar %}
+
+{% endblock navbar %}
+
+
+{% block content %}
+<div class="w-full h-screen flex justify-center items-center absolute">
+    <img src="{% static 'img/auth-bg.jpg' %}" alt="Register Background"
+        class="absolute top-0 left-0 w-full h-full object-cover">
+    <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+    <form method="POST" class="w-full flex justify-center">
+        <div class="relative bg-white flex flex-col gap-6 rounded-2xl px-6 py-10 w-full max-w-md">
+            {% csrf_token %}
+            <h1 class="font-Merriweather font-medium text-5xl text-center">Buat Akun</h1>
+            <div class="flex flex-col gap-2">
+                <label class="flex flex-col gap-1" for="name">
+                    <span>Nama Anda</span>
+                    <input type="text" name="name" placeholder="Nama Lengkap">
+                </label>
+                <label class="flex flex-col gap-1" for="username">
+                    <span>Username</span>
+                    <input type="text" name="username" placeholder="namaanda">
+                </label>
+                <label class="flex flex-col gap-1" for="email">
+                    <span>Email</span>
+                    <input type="text" name="email" placeholder="emailanda@gmail.com">
+                </label>
+                <label class="flex flex-col gap-1" for="password">
+                    <span>Password</span>
+                    <input type="password" name="password1" placeholder="Minimal 8 huruf">
+                </label>
+                <label class="flex flex-col gap-1" for="confirmPassword">
+                    <span>Ulangi Password</span>
+                    <input type="password" name="password2">
+                </label>
+                <label class="flex flex-col gap-1" for="birthdate">
+                    <span>Tanggal Lahir</span>
+                    <input type="date" name="birthdate" id="birthdate" class="w-fit">
+                </label>
+            </div>
+            <div class="flex flex-col gap-4 items-center">
+                <input type="submit" name="submit" value="Daftar"
+                    class="w-full rounded-full bg-[#1E1915] text-white py-2" />
+                <span>Sudah punya akun? <a href="{% url 'login' %}" class="text-[#00635D]">Login</a></span>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+
+{% endblock content %}

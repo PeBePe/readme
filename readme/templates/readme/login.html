@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block navbar %}
+
+{% endblock navbar %}
+
+
+{% block content %}
+<div class="w-full h-screen flex justify-center items-center relative">
+    <img src="{% static 'img/auth-bg.jpg' %}" alt="Login Background"
+        class="w-full h-full absolute top-0 left-0 object-cover">
+    <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
+    <form method="POST" class="w-full flex justify-center">
+        {% csrf_token %}
+        <div class="relative bg-white flex flex-col gap-6 rounded-2xl px-6 py-10 w-full max-w-md">
+            <h1 class="font-Merriweather font-medium text-5xl text-center">Masuk</h1>
+            <div class="flex flex-col gap-2">
+                <label class="flex flex-col gap-1" for="username">
+                    <span>Username/Email</span>
+                    <input type="text" name="username" id="username" placeholder="Username atau email anda">
+                </label>
+                <label class="flex flex-col gap-1">
+                    <span>Password</span>
+                    <input type="password" name="password" placeholder="Password">
+                </label>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <input class="w-full rounded-full bg-[#1E1915] text-white py-2" type="submit" value="Login">
+                <span>Belum punya akun? <a href="{% url 'register' %}" class="text-[#00635D]">Register</a></span>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}
