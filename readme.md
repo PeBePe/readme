@@ -13,7 +13,7 @@
 <details>
     <summary>Cerita Aplikasi</summary>
 
-### Cerita Aplikasi
+## Cerita Aplikasi
 Aplikasi ReadMe adalah aplikasi yang kami buat untuk meningkatkan tingkat literasi di kalangan masyarakat Indonesia dari segala usia. Aplikasi ini menawarkan serangkaian fitur yang memungkinkan pengguna untuk berinteraksi dengan dunia literasi dan buku dengan sangat menarik. Berikut adalah beberapa fitur utama dari aplikasi ReadMe:
 
 1. Loyalty Point :
@@ -40,7 +40,7 @@ Dengan fitur-fitur ini, Kami berharap aplikasi ReadMe tidak hanya menjadi platfo
 <details>
     <summary>Daftar modul</summary>
 
-### Daftar Modul
+## Daftar Modul
 Berikut adalah modul-modul yang akan kami implementasikan.
 1. Modul Review (PIC: Muhammad Daffa'I Rafi Prasetyo) :
     - Pengguna bisa memberikan review terhadap buku. (Create)
@@ -87,7 +87,7 @@ Berikut adalah modul-modul yang akan kami implementasikan.
 <details>
     <summary>Sumber Dataset</summary>
 
-### Sumber Dataset
+## Sumber Dataset
 [Google Books API](https://developers.google.com/books)
 
 Kami memilih Google Books API karena API tersebut menyediakan akses ke koleksi buku yang sangat luas dan bervariasi, memungkinkan pengguna aplikasi untuk menemukan buku sesuai dengan preferensi mereka. API ini menyediakan informasi lengkap tentang setiap buku, termasuk detail seperti judul, pengarang, ringkasan, dan sampul buku. Dengan kelengkapan data seperti ini, pengguna dapat dengan mudah menelusuri dan menemukan buku yang mereka cari. Google Books API dukungan dan dokumentasi yang baik dan lengkap dari Google, harapannya pengembangan aplikasi nantinya akan menjadi lebih efisien. Keberagaman dan kelengkapan data yang diberikan oleh Google Books API menjadikannya pilihan yang kuat untuk membangun aplikasi yang bertemakan literasi dan berbagi pengalaman membaca.
@@ -97,7 +97,7 @@ Kami memilih Google Books API karena API tersebut menyediakan akses ke koleksi b
 <details>
     <summary>Role Pengguna</summary>
 
-### Role Pengguna
+## Role Pengguna
 Hanya terdapat 1 role pada aplikasi kami yaitu role Pengguna atau User yang dapat mengakses semua fitur diatas. User memiliki akses penuh ke seluruh fitur aplikasi, termasuk memberikan ulasan terhadap buku, membuat posting, menciptakan kutipan, berbelanja dengan loyalty points, dan mengelola daftar buku di Wishlist. Mereka dapat berpartisipasi secara aktif dalam aplikasi kami, berinteraksi dengan pengguna lain, dan mendapatkan loyalty points sebagai bentuk penghargaan atas kontribusi mereka dalam membangun pengalaman berliterasi dan membaca.
 </details>
 
