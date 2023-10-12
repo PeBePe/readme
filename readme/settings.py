@@ -37,14 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_browser_reload',
     'tailwind',
     'theme',
-    'django_browser_reload',
     'readme',
     'shop',
     'post',
     'quotes',
-    'books'
+    'books',
+    'wishlist'
 ]
 
 MIDDLEWARE = [

@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from books.models import Book
 
 
 class User(AbstractUser):
@@ -14,5 +13,6 @@ class User(AbstractUser):
     biodata = models.CharField(max_length=60)
     phone = models.CharField(max_length=15)
     loyalty_point = models.IntegerField(default=0)
-    bookshelf = models.ManyToManyField(Book, related_name='bookshelf')
-    shopping_cart = models.ManyToManyField(Book, related_name='shopping_cart')
+    bookshelf = models.ManyToManyField('books.Book', related_name='bookshelf')
+    shopping_cart = models.ManyToManyField(
+        'books.Book', related_name='shopping_cart')
