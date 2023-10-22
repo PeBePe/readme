@@ -26,7 +26,7 @@
             <div class="relative" id="profileBtn">
                 <img src="{% static '/img/profile.svg' %}" alt="Profile">
                 <div id="profile"
-                    class="absolute top-full  right-0 bg-white rounded-lg border border-black/20 min-w-[10rem] flex hidden flex-col">
+                    class="absolute top-full  right-0 bg-white rounded-lg border border-black/20 min-w-[10rem] hidden flex-col">
                     <a class="py-2 px-4 hover:bg-gray-200 font-bold" href="{% url 'profile' %}">Profile</a>
                     <a class="py-2 px-4 hover:bg-gray-200 font-bold text-red-400" href="{% url 'logout' %}">Logout</a>
                 </div>
@@ -45,9 +45,11 @@
 
     profileBtn.addEventListener('mouseover', () => {
         profile.classList.remove('hidden');
+        profile.classList.add('flex');
     });
 
     profileBtn.addEventListener('mouseleave', () => {
         profile.classList.add('hidden');
+        profile.classList.remove('flex');
     })
 </script>
