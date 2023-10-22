@@ -154,4 +154,5 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-NPM_BIN_PATH = os.getenv("NPM_BIN_PATH")
+NPM_BIN_PATH = os.getenv(
+    "NPM_BIN_PATH", default="C:\\Program Files\\nodejs\\npm.cmd")
