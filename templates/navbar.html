@@ -21,7 +21,7 @@
         <div class="flex items-center gap-4">
             <div class="flex items-center gap-1">
                 <img src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
-                <span class=" font-bold text-lg">200</span>
+                <span class=" font-bold text-lg">{{ user.loyalty_point }}</span>
             </div>
             <div class="relative" id="profileBtn">
                 <img src="{% static '/img/profile.svg' %}" alt="Profile">

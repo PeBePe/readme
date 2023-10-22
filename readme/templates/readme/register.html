@@ -8,7 +8,7 @@
 
 {% block content %}
 <div class="w-full h-screen flex justify-center items-center absolute">
-    <img src="{% static 'img/auth-bg.jpg' %}" alt="Register Background"
+    <img src="{% static 'readme/img/auth-bg.jpg' %}" alt="Register Background"
         class="absolute top-0 left-0 w-full h-full object-cover">
     <div class="absolute top-0 left-0 w-full h-full bg-black/40"></div>
     <form method="POST" class="w-full flex justify-center">
@@ -18,27 +18,48 @@
             <div class="flex flex-col gap-2">
                 <label class="flex flex-col gap-1" for="name">
                     <span>Nama Anda</span>
-                    <input type="text" name="name" placeholder="Nama Lengkap">
+                    <input type="text" name="name" placeholder="Nama Lengkap"
+                        value="{{ form.name.value|default_if_none:'' }}">
+                    {% if form.errors %}
+                    <span class="text-red-500">{{ form.errors.name }}</span>
+                    {% endif %}
                 </label>
                 <label class="flex flex-col gap-1" for="username">
                     <span>Username</span>
-                    <input type="text" name="username" placeholder="namaanda">
+                    <input type="text" name="username" placeholder="namaanda"
+                        value="{{ form.username.value|default_if_none:'' }}">
+                    {% if form.errors %}
+                    <span class="text-red-500">{{ form.errors.username }}</span>
+                    {% endif %}
                 </label>
                 <label class="flex flex-col gap-1" for="email">
                     <span>Email</span>
-                    <input type="text" name="email" placeholder="emailanda@gmail.com">
+                    <input type="text" name="email" placeholder="emailanda@gmail.com"
+                        value="{{ form.email.value|default_if_none:'' }}">
+                    {% if form.errors %}
+                    <span class="text-red-500">{{ form.errors.email }}</span>
+                    {% endif %}
                 </label>
                 <label class="flex flex-col gap-1" for="password">
                     <span>Password</span>
                     <input type="password" name="password1" placeholder="Minimal 8 huruf">
+                    {% if form.errors %}
+                    <span class="text-red-500">{{ form.errors.password1 }}</span>
+                    {% endif %}
                 </label>
                 <label class="flex flex-col gap-1" for="confirmPassword">
                     <span>Ulangi Password</span>
                     <input type="password" name="password2">
+                    {% if form.errors %}
+                    <span class="text-red-500">{{ form.errors.password2 }}</span>
+                    {% endif %}
                 </label>
                 <label class="flex flex-col gap-1" for="birthdate">
                     <span>Tanggal Lahir</span>
                     <input type="date" name="birthdate" id="birthdate" class="w-fit">
+                    {% if form.errors %}
+                    <span class="text-red-500">{{ form.errors.birthdate }}</span>
+                    {% endif %}
                 </label>
             </div>
             <div class="flex flex-col gap-4 items-center">

@@ -8,8 +8,8 @@ class DateInput(forms.DateInput):
 
 
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length=65)
-    password = forms.CharField(max_length=65, widget=forms.PasswordInput)
+    username = forms.CharField()
+    password = forms.CharField(widget=forms.PasswordInput)
 
 
 class RegisterForm(UserCreationForm):
@@ -18,5 +18,5 @@ class RegisterForm(UserCreationForm):
         widgets = {
             'birthdate': DateInput()
         }
-        fields = ['username', 'email', 'password1',
+        fields = ['name', 'username', 'email', 'password1',
                   'password2', 'birthdate']

@@ -13,4 +13,11 @@ class Post(models.Model):
         User, on_delete=models.CASCADE, related_name='post')
     book = models.ForeignKey(
         Book, on_delete=models.PROTECT, related_name='post')
-    like_user = models.ManyToManyField(User, related_name='like_post')
+
+
+class Like(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    user_id = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='likes')
+    post_id = models.ForeignKey(
+        Post, on_delete=models.CASCADE, related_name='likes')
