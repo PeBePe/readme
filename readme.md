@@ -100,6 +100,3 @@ Kami memilih Google Books API karena API tersebut menyediakan akses ke koleksi b
 ## Role Pengguna
 Hanya terdapat 1 role pada aplikasi kami yaitu role Pengguna atau User yang dapat mengakses semua fitur diatas. User memiliki akses penuh ke seluruh fitur aplikasi, termasuk memberikan ulasan terhadap buku, membuat posting, menciptakan kutipan, berbelanja dengan loyalty points, dan mengelola daftar buku di Wishlist. Mereka dapat berpartisipasi secara aktif dalam aplikasi kami, berinteraksi dengan pengguna lain, dan mendapatkan loyalty points sebagai bentuk penghargaan atas kontribusi mereka dalam membangun pengalaman berliterasi dan membaca.
 </details>
-
-
-
