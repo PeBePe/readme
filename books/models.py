@@ -5,12 +5,16 @@ from readme.models import User
 
 
 class Book(models.Model):
+    isbn = models.CharField(max_length=13)
     title = models.CharField(max_length=255)
-    author = models.CharField(max_length=255)
     description = models.TextField()
-    lang = models.CharField(max_length=10)
-    image_url = models.CharField(max_length=255)
+    author = models.CharField(max_length=255)
+    publisher = models.CharField(max_length=255)
     publication_date = models.DateField()
+    page_count = models.IntegerField()
+    category = models.CharField(max_length=255)
+    image_url = models.CharField(max_length=255)
+    lang = models.CharField(max_length=2)
 
 
 class Review(models.Model):

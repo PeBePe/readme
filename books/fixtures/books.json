@@ -1,0 +1,1602 @@
+[
+  {
+    "model": "books.Book",
+    "pk": 1,
+    "fields": {
+      "isbn": "9786230000980",
+      "title": "Teknik Hacking Android",
+      "description": "Buku ini akan membimbing Anda dalam belajar cara-cara hacking Android. Anda akan ditunjukkan berbagai hal yang mungkin tidak pernah Anda bayangkan sebelumnya dan tentu materi-materi pada buku ini akan sangat bermanfaat untuk Anda yang berminat mengutak-atik ponsel Anda. Dijamin, Anda akan heran dan kagum karena ternyata hacking Android itu sangat mudah untuk dilakukan. Berikut hal-hal yang akan dibahas pada buku: \u2022 Mengendalikan Android Jarak Jauh. \u2022 Menyadap Android teman, lawan, istri, kekasih, atau siapa pun yang Anda mau. \u2022 Memasang Keylogger Android. \u2022 Mengembalikan pesan, kontak, foto, dan video yang pernah terhapus. \u2022 Mengunci semua aplikasi Android. \u2022 Membekukan sistem Android dengan sekali klik. \u2022 Teknik Root Android. \u2022 Teknik membuat Android Anda menjadi anti dari maling. \u2022 Serta masih banyak lagi materi menarik lainnya. Jadi, tunggu apa lagi? Segera praktikkan sekarang juga.",
+      "author": "Dedik Kurniawan",
+      "publisher": "Elex Media Komputindo",
+      "publication_date": "2019-06-24",
+      "page_count": 256,
+      "category": "Education",
+      "image_url": "http://books.google.com/books/content?id=YkyrDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 2,
+    "fields": {
+      "isbn": "9786020258935",
+      "title": "Belajar Hacking dari Nol untuk Pemula",
+      "description": "Hacking adalah aktivitas untuk masuk ke sebuah sistem komputer dengan mencari kelemahan dari sistem keamanannya. Karena sistem adalah buatan manusia, maka tentu saja tidak ada yang sempurna. Terlepas dari pro dan kontra mengenai aktivitas hacking, buku ini akan memaparkan berbagai tool yang bisa digunakan untuk mempermudah proses hacking. Buku ini menjelaskan tahapan melakukan hacking dengan memanfaatkan tooltool yang tersedia di Internet. Diharapkan setelah mempelajari buku ini, Anda bisa menjadi hacker atau praktisi keamanan komputer, serta bisa memanfaatkan keahlian hacking untuk pengamanan diri sendiri ataupun pengamanan objek lain.",
+      "author": "Ali Zaki,Edy Winarno ST, M.",
+      "publisher": "Elex Media Komputindo",
+      "publication_date": "2015-02-21",
+      "page_count": 176,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=1E1JDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 3,
+    "fields": {
+      "isbn": "9786230010514",
+      "title": "Belajar Pemrograman dan Hacking Menggunakan Python",
+      "description": "Python adalah salah satu bahasa pemrograman yang populer digunakan untuk membuat berbagai macam program, seperti program CLI, Program GUI (desktop), Aplikasi Mobile, Web, IoT, Game, Program untuk Hacking, dan sebagainya. Python telah terkenal sebagai bahasa pemrograman yang banyak digunakan oleh hacker. Dan buku ini mengetengahkan bagaimana membuat aplikasi hacking menggunakan bahasa pemrograman Python. Buku ini pun mengajarkan dasar-dasar pemrograman Python hingga cara membuat aplikasi jaringan/hacking menggunakan bahasa pemrograman Python sehingga dapat menjadi panduan belajar Python bagi pemula. Untuk meningkatkan kemampuan pembaca maka buku ini mengetengahkan bagaimana melakukan hacking termasuk cara kerja metode hacking yang terkenal, seperti SQL Injection, Google Hacking, Cross-site Request Forgery (CSRF), cara membuat port scanner, dan ping sweep dengan Python. Dari aspek cyber security, buku ini mengetengahkan pula dasar-dasar persandian (kriptografi ) dan steganografi (penyembunyian pesan rahasia) dan lengkap dengan script Python. Pembahasan dalam buku mencakup: \u00a5 Dasar-dasar pemrograman Python \u00a5 Dasar-dasar internet dan pemprogram Python \u00a5 Dasar-dasar kriptografi dan steganografi \u00a5 Teknik hacking \u00a5 Cara membuat script hacking dengan Python \u00a5 Cyber crime dan cyber security",
+      "author": "Wardana",
+      "publisher": "Elex Media Komputindo",
+      "publication_date": "2019-12-23",
+      "page_count": 262,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=kCvGDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 4,
+    "fields": {
+      "isbn": "9780753545386",
+      "title": "Hacking Growth",
+      "description": "'a compelling methodology... to increase market share quickly' -- Eric Ries, bestselling author of THE LEAN STARTUP 'a must-read for anyone in business' -- James Currier, managing partner, NFX Guild 'will teach you how to think like a marketer of tomorrow' -- Josh Elman, partner, Greylock Partners Growth is now the first thing that investors, shareholders and market analysts look for in assessing and valuing companies. HACKING GROWTH is a highly accessible, practical, method for growth that involves cross-functional teams and continuous testing and iteration. Hacking Growth does for marketshare growth what THE LEAN STARTUP does for product development and BUSINESS MODEL GENERATION does for strategy. HACKING GROWTH focuses on customers - how to attain them, retain them, engage them, and monetize them - rather than product. Written by the method's pioneers, this book is a comprehensive toolkit or \"bible\" that any company in any industry can use to implement their own Growth Hacking strategy, from how to set up and run growth teams, to how to identify and test growth levers, and how to evaluate and act on the results. It is designed for any company or leader looking to break out of the ruts of traditional marketing and become more collaborative, less wasteful, and achieve more consistent, replicable, and data-driven results.",
+      "author": "Morgan Brown,Sean Ellis",
+      "publisher": "Random House",
+      "publication_date": "2017-04-27",
+      "page_count": 320,
+      "category": "Business & Economics",
+      "image_url": "http://books.google.com/books/content?id=LcS_DAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 5,
+    "fields": {
+      "isbn": "9786020414300",
+      "title": "HACKING TANPA PAKAI PROGRAM",
+      "description": "Selama ini banyak yang beranggapan bahwa aksi hacking hanya dapat dilakukan dengan memahami pemrograman tingkat tinggi atau menggunakan berbagai macam program khusus. Dalam buku ini, boleh percaya boleh tidak. Banyak aksi-aksi hacking yang bisa dilakukan melalui DOS. Mulai dari yang sangat sederhana sekali sampai yang sekelas deface, dan mencuri file log untuk aksi carding.",
+      "author": "Efvy PunyaSitus.com",
+      "publisher": "Elex Media Komputindo",
+      "publication_date": "2013-03-28",
+      "page_count": 96,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=sx5bDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 6,
+    "fields": {
+      "isbn": "9781119561453",
+      "title": "Hands on Hacking",
+      "description": "A fast, hands-on introduction to offensive hacking techniques Hands-On Hacking teaches readers to see through the eyes of their adversary and apply hacking techniques to better understand real-world risks to computer networks and data. Readers will benefit from the author's years of experience in the field hacking into computer networks and ultimately training others in the art of cyber-attacks. This book holds no punches and explains the tools, tactics and procedures used by ethical hackers and criminal crackers alike. We will take you on a journey through a hacker\u2019s perspective when focused on the computer infrastructure of a target company, exploring how to access the servers and data. Once the information gathering stage is complete, you\u2019ll look for flaws and their known exploits\u2014including tools developed by real-world government financed state-actors. An introduction to the same hacking techniques that malicious hackers will use against an organization Written by infosec experts with proven history of publishing vulnerabilities and highlighting security flaws Based on the tried and tested material used to train hackers all over the world in the art of breaching networks Covers the fundamental basics of how computer networks are inherently vulnerable to attack, teaching the student how to apply hacking skills to uncover vulnerabilities We cover topics of breaching a company from the external network perimeter, hacking internal enterprise systems and web application vulnerabilities. Delving into the basics of exploitation with real-world practical examples, you won't find any hypothetical academic only attacks here. From start to finish this book will take the student through the steps necessary to breach an organization to improve its security. Written by world-renowned cybersecurity experts and educators, Hands-On Hacking teaches entry-level professionals seeking to learn ethical hacking techniques. If you are looking to understand penetration testing and ethical hacking, this book takes you from basic methods to advanced techniques in a structured learning format.",
+      "author": "Matthew Hickey,Jennifer Arcuri",
+      "publisher": "John Wiley & Sons",
+      "publication_date": "2020-09-16",
+      "page_count": 608,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=9i_1DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 7,
+    "fields": {
+      "isbn": "9781593275648",
+      "title": "Penetration Testing",
+      "description": "Penetration testers simulate cyber attacks to find security weaknesses in networks, operating systems, and applications. Information security experts worldwide use penetration techniques to evaluate enterprise defenses. In Penetration Testing, security expert, researcher, and trainer Georgia Weidman introduces you to the core skills and techniques that every pentester needs. Using a virtual machine–based lab that includes Kali Linux and vulnerable operating systems, you’ll run through a series of practical lessons with tools like Wireshark, Nmap, and Burp Suite. As you follow along with the labs and launch attacks, you’ll experience the key stages of an actual assessment—including information gathering, finding exploitable vulnerabilities, gaining access to systems, post exploitation, and more. Learn how to: –Crack passwords and wireless network keys with brute-forcing and wordlists –Test web applications for vulnerabilities –Use the Metasploit Framework to launch exploits and write your own Metasploit modules –Automate social-engineering attacks –Bypass antivirus software –Turn access to one machine into total control of the enterprise in the post exploitation phase You’ll even explore writing your own exploits. Then it’s on to mobile hacking—Weidman’s particular area of research—with her tool, the Smartphone Pentest Framework. With its collection of hands-on lessons that cover key tools and strategies, Penetration Testing is the introduction that every aspiring hacker needs.",
+      "author": "Georgia Weidman",
+      "publisher": "No Starch Press",
+      "publication_date": "2014-06-14",
+      "page_count": 531,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=T_LlAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 8,
+    "fields": {
+      "isbn": "9781119281641",
+      "title": "Hacking Sales",
+      "description": "Stay ahead of the sales evolution with a more efficient approach to everything Hacking Sales helps you transform your sales process using the next generation of tools, tactics and strategies. Author Max Altschuler has dedicated his business to helping companies build modern, efficient, high tech sales processes that generate more revenue while using fewer resources. In this book, he shows you the most effective changes you can make, starting today, to evolve your sales and continually raise the bar. You\u2019ll walk through the entire sales process from start to finish, learning critical hacks every step of the way. Find and capture your lowest-hanging fruit at the top of the funnel, build massive lead lists using ICP and TAM, utilize multiple prospecting strategies, perfect your follow-ups, nurture leads, outsource where advantageous, and much more. Build, refine, and enhance your pipeline over time, close deals faster, and use the right tools for the job\u2014this book is your roadmap to fast and efficient revenue growth. Without a reliable process, you\u2019re disjointed, disorganized, and ultimately, underperforming. Whether you\u2019re building a sales process from scratch or looking to become your company\u2019s rock star, this book shows you how to make it happen. Identify your Ideal Customer and your Total Addressable Market Build massive lead lists and properly target your campaigns Learn effective hacks for messaging and social media outreach Overcome customer objections before they happen The economy is evolving, the customer is evolving, and sales itself is evolving. Forty percent of the Fortune 500 from the year 2000 were absent from the Fortune 500 in the year 2015, precisely because they failed to evolve. Today\u2019s sales environment is very much a \u201ckeep up or get left behind\u201d paradigm, but you need to do better to excel. Hacking Sales shows you how to get ahead of everyone else with focused effort and the most effective approach to modern sales.",
+      "author": "Max Altschuler",
+      "publisher": "John Wiley & Sons",
+      "publication_date": "2016-05-31",
+      "page_count": 164,
+      "category": "Business & Economics",
+      "image_url": "http://books.google.com/books/content?id=cXMdDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 9,
+    "fields": {
+      "isbn": "9781119396215",
+      "title": "Hacking the Hacker",
+      "description": "Meet the world's top ethical hackers and explore the tools of the trade Hacking the Hacker takes you inside the world of cybersecurity to show you what goes on behind the scenes, and introduces you to the men and women on the front lines of this technological arms race. Twenty-six of the world's top white hat hackers, security researchers, writers, and leaders, describe what they do and why, with each profile preceded by a no-experience-necessary explanation of the relevant technology. Dorothy Denning discusses advanced persistent threats, Martin Hellman describes how he helped invent public key encryption, Bill Cheswick talks about firewalls, Dr. Charlie Miller talks about hacking cars, and other cybersecurity experts from around the world detail the threats, their defenses, and the tools and techniques they use to thwart the most advanced criminals history has ever seen. Light on jargon and heavy on intrigue, this book is designed to be an introduction to the field; final chapters include a guide for parents of young hackers, as well as the Code of Ethical Hacking to help you start your own journey to the top. Cybersecurity is becoming increasingly critical at all levels, from retail businesses all the way up to national security. This book drives to the heart of the field, introducing the people and practices that help keep our world secure. Go deep into the world of white hat hacking to grasp just how critical cybersecurity is Read the stories of some of the world's most renowned computer security experts Learn how hackers do what they do\u2014no technical expertise necessary Delve into social engineering, cryptography, penetration testing, network attacks, and more As a field, cybersecurity is large and multi-faceted\u2014yet not historically diverse. With a massive demand for qualified professional that is only going to grow, opportunities are endless. Hacking the Hacker shows you why you should give the field a closer look.",
+      "author": "Roger A. Grimes",
+      "publisher": "John Wiley & Sons",
+      "publication_date": "2017-05-01",
+      "page_count": 327,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=uaOaDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 10,
+    "fields": {
+      "isbn": "9781482231625",
+      "title": "Ethical Hacking and Penetration Testing Guide",
+      "description": "Requiring no prior hacking experience, Ethical Hacking and Penetration Testing Guide supplies a complete introduction to the steps required to complete a penetration test, or ethical hack, from beginning to end. You will learn how to properly utilize and interpret the results of modern-day hacking tools, which are required to complete a penetration test. The book covers a wide range of tools, including Backtrack Linux, Google reconnaissance, MetaGooFil, dig, Nmap, Nessus, Metasploit, Fast Track Autopwn, Netcat, and Hacker Defender rootkit. Supplying a simple and clean explanation of how to effectively utilize these tools, it details a four-step methodology for conducting an effective penetration test or hack.Providing an accessible introduction to penetration testing and hacking, the book supplies you with a fundamental understanding of offensive security. After completing the book you will be prepared to take on in-depth and advanced topics in hacking and penetration testing. The book walks you through each of the steps and tools in a structured, orderly manner allowing you to understand how the output from each tool can be fully utilized in the subsequent phases of the penetration test. This process will allow you to clearly see how the various tools and phases relate to each other. An ideal resource for those who want to learn about ethical hacking but dont know where to start, this book will help take your hacking skills to the next level. The topics described in this book comply with international standards and with what is being taught in international certifications.",
+      "author": "Rafay Baloch",
+      "publisher": "CRC Press",
+      "publication_date": "2017-09-29",
+      "page_count": 531,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=fKfNBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 11,
+    "fields": {
+      "isbn": "9781501105654",
+      "title": "Mind Hacking",
+      "description": "Presents a twenty-one-day, three-step training program to achieve healthier thought patterns for a better quality of life by using the repetitive steps of analyzing, imagining, and reprogramming to help break down the barriers, including negative thought loops and mental roadblocks.",
+      "author": "John Hargrave",
+      "publisher": "Simon and Schuster",
+      "publication_date": "2016-01-05",
+      "page_count": 240,
+      "category": "Self-Help",
+      "image_url": "http://books.google.com/books/content?id=t81NCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 12,
+    "fields": {
+      "isbn": "9786020497082",
+      "title": "Network: Tweaking dan Hacking",
+      "description": "Network: Tweaking & Hacking ini akan menguraikan bagaimana kita dapat menjelajahi jaringan komputer yang ada di sekitar kita, baik itu jaringan kabel maupun jaringan wireless. Buku ini lebih mengarah kepada eksploitasi jaringan yang ada sehingga kita bisa melakukan aksi tweaking, bahkan juga berbagai aksi hacking. Buku ini, dapat digunakan oleh beberapa versi Windows sekaligus, yaitu Windows 7, Windows 8, dan Windows 10. Beberapa materi yang diuraikan dalam buku ini adalah menjelajah jaringan, mendapatkan password wifi, memutuskan koneksi internet komputer lain, menembus blokir dengan duplikasi MAC address, membuka jaringan wireless yang tersembunyi, mendeteksi spoofing, mengontrol bandwidth dan tunnel adapter, memantau jaringan, mencari sinyal kuat, jaringan wireless, default jaringan yang berbahaya, network forensics, menyadap password dalam jaringan, man in the middle attack, manipulasi jaringan via registry, mempercepat browsing pada jaringan, konfigurasi DNS cache, inbound & outbound rules, menutup port, dan mengetahui masalah TCP/IP. Apa yang diuraikan dalam buku ini terutama untuk materi hacking, penulis berharap pembaca dapat bijaksana dalam mempelajari atau menerapkannya.",
+      "author": "Efvy Zam",
+      "publisher": "Elex media komputindo",
+      "publication_date": "2019-04-15",
+      "page_count": 214,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=AcWZDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 13,
+    "fields": {
+      "isbn": "9780316245968",
+      "title": "Book Girl and the Undine Who Bore a Moonflower (light novel)",
+      "description": "\"I've been kidnapped by a bad person. Bring a change of clothes and your homework and come save me!\" Duped by this seemingly earnest summons from Tohko, Konoha finds himself forced to spend his summer break at the Himekura villa, writing snacks for his greedy club president. But the shadow of a tragedy from eighty years past threatens to destroy their otherwise peaceful summer! What is the \"secret\" that stirs the Book Girl's imagination?",
+      "author": "Mizuki Nomura",
+      "publisher": "Hachette UK",
+      "publication_date": "2013-01-22",
+      "page_count": 176,
+      "category": "Juvenile Fiction",
+      "image_url": "http://books.google.com/books/content?id=LZ1EAQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 14,
+    "fields": {
+      "isbn": "9781426200861",
+      "title": "The Camera Phone Book",
+      "description": "Marketing experts predict that by 2009, nearly 90% of all cell phones will contain a camera, as manufacturers race to create cheaper, easier-to-use models with more sophisticated cameras, more pixels, flash units and even multiple lenses. Already revolutionizing audiovisual communication, it's a trend that will only grow more explosively\u2014and who better than National Geographic to create a how-to book aimed directly at the millions who carry a camera phone everywhere and want to make the most of it? Created by two top professionals, this generously illustrated nuts-and-bolts guide is the first of its kind to treat these units as genuine cameras instead of novelties, and the only one to include a full-color photo-essay demonstrating the full capabilities of the latest camera phones. In five easy-to-read chapters, the book explains how to choose good equipment; take better pictures; and store, print and send the best images. Readers will find practical tips on preventing or repairing water damage, protecting easily-scratched lenses inside pockets and purses, and retrieving accidentally-erased images. They'll also learn to access the events, advice, and opportunities of the burgeoning camera phone community, from film festivals to news organizations, moblogs, and more. Featuring the technical savvy of CNet.com's Aimee Baldridge and the creative skill of National Geographic photographer Robert Clark, a camera phone pioneer, this compact yet comprehensive reference combines up-to-the-minute expertise with superb examples, at an inexpensive price that makes it a perfect gift book\u2014or an ideal impulse buy.",
+      "author": "Aimee Baldridge",
+      "publisher": "National Geographic Books",
+      "publication_date": "2007-06-12",
+      "page_count": 164,
+      "category": "Photography",
+      "image_url": "http://books.google.com/books/content?id=xWkDAQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 15,
+    "fields": {
+      "isbn": "9781134142286",
+      "title": "Book History Through Postcolonial Eyes",
+      "description": "This surprising study draws together the disparate fields of postcolonial theory and book history in a challenging and illuminating way. Robert Fraser proposes that we now look beyond the traditional methods of the Anglo-European bibliographic paradigm, and learn to appreciate instead the diversity of shapes that verbal expression has assumed across different societies. This change of attitude will encourage students and researchers to question developmentally conceived models of communication, and move instead to a re-formulation of just what is meant by a book, an author, a text. Fraser illustrates his combined approach with comparative case studies of print, script and speech cultures in South Asia and Africa, before panning out to examine conflicts and paradoxes arising in parallel contexts. The re-orientation of approach and the freshness of view offered by this volume will foster understanding and creative collaboration between scholars of different outlooks, while offering a radical critique to those identified in its concluding section as purveyors of global literary power.",
+      "author": "Robert Fraser",
+      "publisher": "Routledge",
+      "publication_date": "2008-08-18",
+      "page_count": 225,
+      "category": "Business & Economics",
+      "image_url": "http://books.google.com/books/content?id=4FN8AgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 16,
+    "fields": {
+      "isbn": "9780702051036",
+      "title": "Davidson's Principles and Practice of Medicine E-Book",
+      "description": "More than two million medical students, doctors and other health professionals from around the globe have owned a copy of Davidson\u2019s Principles and Practice of Medicine since it was first published. Today\u2019s readers rely on this beautifully illustrated text to provide up-to-date detail of contemporary medical practice, presented in a style that is concise and yet easy to read. Davidson\u2019s provides the factual knowledge required to practise medicine, explaining it in the context of underlying principles, basic science and research evidence, and shows how to apply this knowledge to the management of patients who present with problems rather than specific diseases. The book has won numerous prizes including being highly commended in the British Medical Association book awards. Davidson\u2019s global perspective is enhanced by the input of an international team of authors an a distinguished International Advisory Board from 17 countries. Building on the foundations laid down by its original editor, Davidson\u2019s remains one of the world\u2019s leading and most respected textbooks of medicine. The underlying principles of medicine are described concisely in the first part of the book, and the detailed practice of medicine within each sub-specialty is described in later system-based chapters. Most chapters begin with a two-page overview of the important elements of the clinical examination, including a manikin to illustrate the key steps in the examination of the relevant system. A practical, problem-based clinical approach is described in the \u2018Presenting Problems\u2019 sections, to complement the detailed descriptions of each disease. The text is extensively illustrated, with over 1000 diagrams, clinical photographs, and radiology and pathology images. 1350 text boxes present information in a way suitable for revision, including 150 clinical evidence boxes summarising the results of systematic reviews and randomised controlled trials and 65 \u2019In Old Age\u2019 boxes highlighting important aspects of medical practice in the older population. A combined index and glossary of medical acronyms contains over 10 000 subject entries. The contents can also be searched comprehensively as part of the online access to the whole book on the StudentConsult platform. Access over 500 self-testing questions with answers linked to the book\u2019s content for further reading. The text uses both SI and non-SI units to make it suitable for readers throughout the globe. A new chapter specifically on Stroke Disease recognises the emergence of Stroke Medicine as a distinct clinical and academic discipline. A rationalisation of the 1350 boxes used throughout the book gives a simpler and clearer presentation of the various categories. New \u2018In Adolescence\u2019 boxes recognise the fact that many chronic disorders begin in childhood and become the responsibility of physicians practising adult medicine. These boxes acknowledge the overlap \u2018transitional\u2019 phase and highlight the key points of importance when looking after young people. The regular introduction of new authors an editors maintains the freshness of each new edition. On this occasion Dr Ian Penman has joined the editorial team and 18 new authors brng new experience and ideas to the content and presentation of the textbook. An expanded International Advisory Board of 38 members includes new members from several different countries.",
+      "author": "Brian R. Walker,Nicki R Colledge",
+      "publisher": "Elsevier Health Sciences",
+      "publication_date": "2013-12-06",
+      "page_count": 1394,
+      "category": "Medical",
+      "image_url": "http://books.google.com/books/content?id=W-5kAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 17,
+    "fields": {
+      "isbn": "9780141971759",
+      "title": "Cress (The Lunar Chronicles Book 3)",
+      "description": "Cress is the third book in the bestselling Lunar Chronicles series, following Cinder and Scarlet. Incarcerated in a satellite, an expert hacker and out to save the world - Cress isn't your usual damsel in distress. CRESS grew-up as a prisoner. With only netscreens for company she's forced to do the bidding of the evil Queen Levana. Now that means tracking down Cinder and her handsome accomplice Emperor Kai. But little does Levana know that those she seeks, and the man she loves, are plotting her downfall . . . As paths cross and the price of freedom rises, happily ever after has never seemed further away for Cress, Scarlet and Cinder. This is not the fairy tale you remember. But it's one you won't forget. 'Fairy tales are becoming all the rage, with the TV shows Once Upon a Time and Grimm spinning them through a modern filter. . . Meyer's debut novel Cinder, though, combines a classic folk tale with hints of The Terminator and Star Wars' USAToday.com [praise for CINDER About the author: Marissa Meyer's first two books in the Lunar Chronicles, Cinder and Scarlet, debuted on the New York Times bestseller list. Marissa lives in Tacoma, Washington, with her husband and their three cats. Visit her at www.marissameyer.com and facebook.com/lunarchronicles Also Available: Cinder Scarlet Cress And don't miss: Winter",
+      "author": "Marissa Meyer",
+      "publisher": "Penguin UK",
+      "publication_date": "2014-02-06",
+      "page_count": 560,
+      "category": "Juvenile Fiction",
+      "image_url": "http://books.google.com/books/content?id=2QlKAQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 18,
+    "fields": {
+      "isbn": "9789797528300",
+      "title": "Aku ingin bunuh Harry Potter!",
+      "description": "A fan tribute to Harry Potter, looking at all that can be learned by reading these books, and examing the influence of Rowling's books.",
+      "author": "Andhy Romdani",
+      "publisher": "DAR! Mizan",
+      "publication_date": "2007-01-01",
+      "page_count": 316,
+      "category": "Fiction",
+      "image_url": "http://books.google.com/books/content?id=X5Q48SktnasC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 19,
+    "fields": {
+      "isbn": "9781859846667",
+      "title": "The Irresistible Rise of Harry Potter",
+      "description": "Blake's examination of the Potter phenomenon raises serious questions about the condition of the publishing industry, filmmaking, and the ways in which the Potter consumer campaign has changed ideas about literature and reading.",
+      "author": "Andrew Blake",
+      "publisher": "Verso",
+      "publication_date": "2002-12-17",
+      "page_count": 140,
+      "category": "Literary Criticism",
+      "image_url": "http://books.google.com/books/content?id=Aaug_RnI-xQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 20,
+    "fields": {
+      "isbn": "9781602865273",
+      "title": "Harry",
+      "description": "The most intimate and informative portrait yet of Prince Harry, from royal expert Katie Nicholl, author of the bestselling William and Harry and Kate. From his earliest public appearances as a mischievous redheaded toddler, Prince Harry has captured the hearts of royal enthusiasts around the world. In Harry, Britain's leading expert on the young royals offers an in-depth look at the wayward prince turned national treasure. Nicholl sheds new light on growing up royal, Harry's relationship with his mother, his troubled youth and early adulthood, and how his military service in Afghanistan inspired him to create his legacy, the Invictus Games. Harry: Life, Loss, and Love features interviews with friends, those who have worked with the prince, and former Palace aides. Nicholl explores Harry's relationship with his family, in particular, the Queen, his father, stepmother, and brother, and reveals his secret \"second family\" in Botswana. She uncovers new information about his former girlfriends and chronicles his romance and engagement to American actress Meghan Markle. Harry is a compelling portrait of one of the most popular members of the royal family, and reveals the inside story of the most intriguing royal romance in a decade.",
+      "author": "Katie Nicholl",
+      "publisher": "Hachette UK",
+      "publication_date": "2018-03-20",
+      "page_count": 272,
+      "category": "Biography & Autobiography",
+      "image_url": "http://books.google.com/books/content?id=VD80DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 21,
+    "fields": {
+      "isbn": "9780062878908",
+      "title": "Harry Potter Page to Screen: Updated Edition",
+      "description": "Harry Potter Page to Screen: Revised and Expanded now has more pages devoted to the legacy of the Harry Potter films. In addition to the complete history of all eight Harry Potter films, the book now explores the theme parks in Florida, California and Japan, the sets and props in Leavesden, England and the House of MinaLima, founded by the graphic designers on all of the films, and located in London. With 1200 photographs, sketches, and diagrams, the book provides unbridled access to every aspect of the film-making process. It tells the stories behind each individual film and covers the design and technology behind all the astounding effects. This book pays homage to how one film became eight, how a few months became a decade, and how one author\u2019s fantasy became the project of many individuals\u2019 lifetimes-told by the people who were there, the people who made the magic real. Harry Potter Page to Screen: Revised and Expanded will start from the very beginning, describing how the book was optioned, the casting of Harry, Ron and Hermione, and the assembling of a creative team with the vision to tackle a world we had previously seen only in our imaginations. Interviews, quotes, and stories from the directors, producers, screenwriters, and actors discuss the making of all eight films at length, including the last film, film number 8, Harry Potter and the Deathly Hallows, Part 2. Daniel Radcliffe and his personal narrative from set to set is used as the life line that connects all aspects of this memoir, giving structure to the many voices of the Harry Potter family who orate this tale. All of the movies were filmed at the Leavesden Studio in Hertfordshire, England and these pages describe how the Leavesden family dealt with numerous cast, crew, and production dramas, replacements, technical difficulties and countless narrative and visual decisions. This book will touch on subjects such as J.K. Rowling\u2019s private comments to her young cast, the impact of Richard Harris\u2019 (the original Dumbledore) death on the cast and crew, the effects of 9/11 on the Leavesden family (during the filming of Harry Potter and the Chamber of Secrets), the reality of \"growing up Potter\" for the young starlets who experienced their adolescence on a hugely public stage, and reflections from the cast and crew on the end of the film series. In addition to stories on and off set, Harry Potter Page to Screen: Revised and Expanded pays tribute to the stunning physical, visual and technological genius that went into making an unbelievable story believable, showcasing more than a decade\u2019s worth of art and special effects, including never-before-seen photos of the costumes, sets, props, and creatures, as well as early concept art, drawings and designs. The book is fully supported by Warner Bros. and is being put together with the same group as Harry Potter Film Wizardry: The Updated Edition. While Film Wizardry provided a whimsical and informative scrapbook for Harry Potter fans and was published prior to the release of the last film, this mammoth book gives readers a more complete account of the entire film-making process, designed in a more classical, sophisticated package. Harry Potter Page to Screen: Revised and Expanded is a publishing event. This book is the Bible for everything Potter and will stand as the most complete and final visual history of the Harry Potter movie story ever to be published.",
+      "author": "Bob McCabe",
+      "publisher": "Harper Design",
+      "publication_date": "2018-11-13",
+      "page_count": 540,
+      "category": "Performing Arts",
+      "image_url": "http://books.google.com/books/content?id=TMS8tQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 22,
+    "fields": {
+      "isbn": "9786232443679",
+      "title": "The Book of SPSS",
+      "description": "Buku ini merupakan alternatif berbagai kalangan mulai dari pemula maupun yang telah mahir yang membutuhkan panduan dalam melakukan analisis data melalui paket program SPSS. Buku ini diharapkan mampu memberi bantuan terutama kepada pembeli yang sedang mengerjakan skripsi di samping dapat pula digunakan untuk menyelesaikan olah data biasa. Buku yang berisi sebelas bab ini berisis mulai dari pengenalan paket program SPSS, statistik deskriptif, statistik inferensi mengenai metode parametik, analisis regresi dan korelasi, analisis reliabilitas, statistik non parametik, berbagai grafik dan tabel statistik yang dilampirkan. Buku ini menunjukkan tahap demi tahap cara melakukan berbagai analisis dan uji/test mulai dari berbagai output yang digambarkan melalui tabel atau plot. Para pembeli buku ini akan merasakan bila sebelumnya merasa sulit untuk mengerjakan analisis data mengguankan SPSS namun ternyata menyadari bahwa sebenarnya SPSS sangat simple, mudah, dan praktis serta efektif untuk menyelesaikan berbagai permasalahan mengenai data.",
+      "author": "Romie Priyastama",
+      "publisher": "Anak Hebat Indonesia",
+      "publication_date": "2020-01-01",
+      "page_count": 288,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=g_HzDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 23,
+    "fields": {
+      "isbn": "9781108422093",
+      "title": "Data-Driven Science and Engineering",
+      "description": "This beginning graduate textbook teaches data science and machine learning methods for modeling, prediction, and control of complex systems.",
+      "author": "Steven L. Brunton,J. Nathan Kutz",
+      "publisher": "Cambridge University Press",
+      "publication_date": "2019-02-28",
+      "page_count": 495,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=CYaEDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 24,
+    "fields": {
+      "isbn": "9781800564336",
+      "title": "Scalable Data Streaming with Amazon Kinesis",
+      "description": "Explore Kinesis managed services such as Kinesis Data Streams, Kinesis Data Analytics, Kinesis Data Firehose, and Kinesis Video Streams with the help of practical use cases Key FeaturesGet well versed with the capabilities of Amazon KinesisExplore the monitoring, scaling, security, and deployment patterns of various Amazon Kinesis servicesLearn how other Amazon Web Services and third-party applications such as Splunk can be used as destinations for Kinesis dataBook Description Amazon Kinesis is a collection of secure, serverless, durable, and highly available purpose-built data streaming services. This data streaming service provides APIs and client SDKs that enable you to produce and consume data at scale. Scalable Data Streaming with Amazon Kinesis begins with a quick overview of the core concepts of data streams, along with the essentials of the AWS Kinesis landscape. You'll then explore the requirements of the use case shown through the book to help you get started and cover the key pain points encountered in the data stream life cycle. As you advance, you'll get to grips with the architectural components of Kinesis, understand how they are configured to build data pipelines, and delve into the applications that connect to them for consumption and processing. You'll also build a Kinesis data pipeline from scratch and learn how to implement and apply practical solutions. Moving on, you'll learn how to configure Kinesis on a cloud platform. Finally, you\u2019ll learn how other AWS services can be integrated into Kinesis. These services include Redshift, Dynamo Database, AWS S3, Elastic Search, and third-party applications such as Splunk. By the end of this AWS book, you\u2019ll be able to build and deploy your own Kinesis data pipelines with Kinesis Data Streams (KDS), Kinesis Data Firehose (KFH), Kinesis Video Streams (KVS), and Kinesis Data Analytics (KDA). What you will learnGet to grips with data streams, decoupled design, and real-time stream processingUnderstand the properties of KFH that differentiate it from other Kinesis servicesMonitor and scale KDS using CloudWatch metricsSecure KDA with identity and access management (IAM)Deploy KVS as infrastructure as code (IaC)Integrate services such as Redshift, Dynamo Database, and Splunk into KinesisWho this book is for This book is for solutions architects, developers, system administrators, data engineers, and data scientists looking to evaluate and choose the most performant, secure, scalable, and cost-effective data streaming technology to overcome their data ingestion and processing challenges on AWS. Prior knowledge of cloud architectures on AWS, data streaming technologies, and architectures is expected.",
+      "author": "Tarik Makota,Brian Maguire,Danny Gagne,Rajeev Chakrabarti",
+      "publisher": "Packt Publishing Ltd",
+      "publication_date": "2021-03-31",
+      "page_count": 314,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=GekmEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 25,
+    "fields": {
+      "isbn": "9786230225116",
+      "title": "Desain Basis Data",
+      "description": "Salah satu faktor utama keberhasilan di dalam sebuah aplikasi program adalah memiliki basis data yang baik harus menggunakan kaidah analisis dan sistematis mengikuti tahapan-tahapan yang telah ditentukan. Buku ini menjelaskan konsep dasar baiss data sampai dengan mendesain basis data serta contoh-contoh kasus yang diperlukan mahasiswa khususnya program studi Manajemen Informatika, Sistem Informasi, Teknik Informatika, dan Teknik Komputer. Desain Basis Data ini diterbitkan oleh Penerbit Deepublish dan tersedia juga dalam versi cetak.",
+      "author": "M. Abu Jihad Plaza R, S.Kom., M.T.I",
+      "publisher": "Deepublish",
+      "publication_date": "2021-02-01",
+      "page_count": 54,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=600iEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 26,
+    "fields": {
+      "isbn": "9786022172826",
+      "title": "Analisis Data Penelitian dengan Statistik (Edisi Kedua)",
+      "description": "Jika Anda pernah membaca atau memiliki salah satu buku statistik, maka Anda harus membandingkannya dengan buku ini. Mengapa demikian? Buku ini adalah buku yang patut dibaca oleh Anda yang mendalami ilmu statistik, karena buku ini membahas begitu detail dan mendalam dengan judulnya, aplikasi yang dianalisis dalam buku ini disesuaikan dipahami oleh Anda yang mendalami Ilmu statistik. Buku ini menyajikan kepada Anda pendalaman materi yang lebih cermat beserta contoh aplikasi statistik yang banuak dan beraneka ragam. Selain itu, pada buku ini ada penambahan dua bab dari edisi pertama, yaitu Analisis Univariat dan Prasyarat Analisis Data. Dengan adanya penambahan dua bab tersebut., diharapkan pembahasan tentang analisis data penelitian dengan statistik diharapkan semakin lengkap",
+      "author": "Misbahuddin,Iqbal Hasan",
+      "publisher": "Bumi Aksara",
+      "publication_date": "2022-08-19",
+      "page_count": 355,
+      "category": "Education",
+      "image_url": "http://books.google.com/books/content?id=ROSCEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 27,
+    "fields": {
+      "isbn": "9786233911412",
+      "title": "Pembahasan UU Pelindungan Data Pribadi (UU RI No. 27 Tahun 2022)",
+      "description": "Setelah proses pembahasan tidak kurang dari 10 tahun, akhirnya pada 17 Oktober 2022 UU RI No. 27 Tahun 2022 tentang Pelindungan Data Pribadi disahkan dan diundangkan oleh DPR serta ditandatangani oleh Presiden Joko Widodo. Langkah pemerintah ini merupakan pencapaian yang besar walaupun sangat terlambat bila dibandingkan dengan negara ASEAN lainnya yang telah memiliki UU PDP sejak awal tahun 2010. Model pengaturan UU PDP adalah komprehensif dan mengikat pihak yang mengelola data pribadi masyarakat, yaitu setiap orang, badan publik, swasta, dan organisasi internasional. Kehadiran UU PDP diharapkan dapat memberikan kepastian hukum, keadilan, dan mendorong kesadaran tentang pentingnya pengakuan dan penghormatan atas data pribadi masyarakat. Buku ini akan membahas dan merinci semuanya. Sehingga, semua pihak yang berkepentingan dapat memahaminya dengan benar.",
+      "author": "Sinta Dewi Rosadi",
+      "publisher": "Sinar Grafika",
+      "publication_date": "2023-10-17",
+      "page_count": 185,
+      "category": "Law",
+      "image_url": "http://books.google.com/books/content?id=-y7dEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 28,
+    "fields": {
+      "isbn": "9786239051594",
+      "title": "Analisis Data Kualitatif Teori Konsep dalam Penelitian Pendidikan",
+      "description": "Penelitian kualitatif merupakan metode-metode untuk mengeksplorasi dan memahami makna yang oleh sejumlah individu atau kelompok orang dianggap berasal dari masalah sosial atau kemanusiaan. Proses penelitian kualitatif ini melibatkan upaya-upaya penting, seperti mengajukan pertanyaan-pertanyaan dan prosedur-prosedur, mengumpulkan data yang spesifik dari para partisipan, menganalisis data secara induktif mulai dari tema-tema khusus ke tema-tema umum, dan menafsirkan makna data.",
+      "author": "Umrati,Hengki Wijaya",
+      "publisher": "Sekolah Tinggi Theologia Jaffray",
+      "publication_date": "2020-07-30",
+      "page_count": 140,
+      "category": "Antiques & Collectibles",
+      "image_url": "http://books.google.com/books/content?id=GkP2DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 29,
+    "fields": {
+      "isbn": "9786027847811",
+      "title": "Menggali Emas Terpendam Data Mining",
+      "description": "Data mining merupakan salah satu cabang Ilmu Komputer yang akhirakhir ini menjadi tren. Mengapa tidak, karena hampir semua bidang pekerjaan manusia disegala aspek khususnya yang membutuhkan keputusan menggunakan ilmu ini. Oleh karenanya bidang ini menjadi sangat penting kedepannya. Kita ambil contoh keberhasilan salah satu timnas dalam menjuarai piala dunia 2014 tahun lalu merupakan salah satu andil dari bidang ini. Buku ini memberikan gambaran tentang data mining dari awal, proses sampai pengambilan suatu keputusan. Dijelaskan pula bidangbidang yang bisa digunakan dengan ilmu ini serta bagaimana proses penggaliannya. Buku ini menuntun kita bagaimana memperlajari data mining serta bagaimana mengaplikasikannya dalam suatu kasus yang ada. Dijelaskan pula bagaimana proses perhitungan secara manual maupun menggunakan aplikasi yang mendukung ilmu ini.",
+      "author": "Dudih Gustian,Samsul Pahmi,Nunik Destria Arianti",
+      "publisher": "3M Media Karya Serang",
+      "publication_date": "2020-10-01",
+      "page_count": 212,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=uMofEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 30,
+    "fields": {
+      "isbn": "9786238004539",
+      "title": "Sistem Basis Data",
+      "description": "Konsep Basis Data, Protokol Jaringan Komputer, Model Data Relasional Dan Batasan Basis Data Relasional, Aljabar Relasional, Manipulasi Data Menggunakan SQL, Definisi Data Menggunakan Sql, Desain Basis Data Logika Untuk Model Data Relasional, Normalitas Data, Transformasi Model Data Ke Basis Data Fisik Dan Query Pada My SQL",
+      "author": "Jamaludin,Khairunnisa Samosir,Wahyuddin S,Elmi Devia,Leo Willyanto Santoso,Yuniansyah,Junaidi,Sri Rezeki Candra Nursari,Noor Azizah,Muhamad Hadi Saputra",
+      "publisher": "Global Eksekutif Teknologi",
+      "publication_date": "2022-10-24",
+      "page_count": 140,
+      "category": "Language Arts & Disciplines",
+      "image_url": "http://books.google.com/books/content?id=m-KWEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 31,
+    "fields": {
+      "isbn": "9786230205842",
+      "title": "Data Mining Untuk Perguruan Tinggi",
+      "description": "Pada buku ini akan membahas teori dan algoritma atau metode dalam data mining. Setiap algoritma atau metode yang dibahas akan diuraikan mulai dari teori, rumus, cara kerja algoritma atau metode, studi kasus dan penyelesaian studi kasus tersebut secara bertahap dan detail. Begitu juga bahasa yang digunakan, menggunakan bahasa yang formal atau umum digunakan dalam kehidupan sehari-hari sehingga mudah dimengerti.",
+      "author": "Efori Buulolo ",
+      "publisher": "Deepublish",
+      "publication_date": "2020-01-01",
+      "page_count": 89,
+      "category": "Juvenile Nonfiction",
+      "image_url": "http://books.google.com/books/content?id=-K_SDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 32,
+    "fields": {
+      "isbn": "9786230217012",
+      "title": "Praktis Penelitian Kualitatif Teori Dasar Dan Analisis Data Dalam Perspektif Kualitatif",
+      "description": "Tidak sedikit peneliti pemula yang memiliki ketertarikan terhadap penelitian kualitatif namun mereka mengalami kendala ketidaktahuan akan apa, mengapa dan bagaimana mewujudkannya. Keterbatasan wawasan dan pengalaman peneliti dapat menjadi hambatan utama dalam keberhasilan sebuah penelitian. Buku \u201cPRAKTIS PENELITIAN KUALITATIF Teori Dasar dan Analisis Data dalam Perspektif Kualitatif\u201d mencoba memberikan jawaban atas segala kegelisahan tersebut. Buku ini membahas tentang latar belakang munculnya kegiatan penelitian, paradigma penelitian, kedudukan teori, langkah dasar penelitian, teknik dan alat pengumpul data serta deskripsi dan pembahasan hasil penelitian. Pemaparan dalam buku ini lebih ditekankan pada aspek praktiknya, sehingga disajikan teori dilengkapi dengan contoh-contoh praktis agar dapat kiranya diaplikasikan dengan mudah. Buku ini lahir dari sebuah pemikiran yang sederhana dari penulis sehingga mudah dipahami dan diaplikasikan di lapangan. Selain memaparkan teori-teori dasar tentang penelitian kualitatif, buku ini juga memuat contoh analisis data hasil penelitian studi kasus tentang Pembinaan Semangat Nasionalisme Indonesia Dalam Menghadapi Tantangan Kosmopolitanisme dan Etnisitas di Entikong, Wilayah Perbatasan Indonesia-Malaysia. Praktis Penelitian Kualitatif Teori Dasar Dan Analisis Data Dalam Perspektif Kualitatif ini diterbitkan oleh Penerbit Deepublish dan tersedia juga dalam versi cetak",
+      "author": "Mardawani",
+      "publisher": "Deepublish",
+      "publication_date": "2020-09-01",
+      "page_count": 192,
+      "category": "Education",
+      "image_url": "http://books.google.com/books/content?id=nn0GEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 33,
+    "fields": {
+      "isbn": "9786234981209",
+      "title": "Basis Data Terdistribusi (Client Server, SQL, Basis Data Dalam Web)",
+      "description": "Buku \u201cBasis Data Terdistribusi (Client Server, SQL, Basis Data Dalam Web)\u201d berisi informasi dan pengetahuan mengenai bagaimana tata cara membuat basis data yang mudah. Dalam buku ini, tertulis bagaimana pentingnya sebuah basis data dalam pengembangan sistem dan langkah-langkah dalam pembuatan sebuah basis data sederhana dengan mudah. Materi yang disajikan relevan dengan mata kuliah Basis Data yang menjadi alternatif bagi mahasiswa dan dosen ketika menempuh mata kuliah Basis Data di Indonesia.",
+      "author": "Baiq Desi Dwi Arianti, S.Kom., M.T., Jamaluddin, S.Pd.T., M.Eng.",
+      "publisher": "CV Jejak (Jejak Publisher)",
+      "publication_date": "2022-12-14",
+      "page_count": 115,
+      "category": "Antiques & Collectibles",
+      "image_url": "http://books.google.com/books/content?id=sG-mEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 34,
+    "fields": {
+      "isbn": "9783319392417",
+      "title": "Basic Prediction Techniques in Modern Video Coding Standards",
+      "description": "This book discusses in detail the basic algorithms of video compression that are widely used in modern video codec. The authors disect complicated specifications and present material in a way that gets readers quickly up to speed by describing video compression algorithms succinctly, without going to the mathematical details and technical specifications. For accelerated learning, hybrid codec structure, inter- and intra- prediction techniques in MPEG-4, H.264/AVC, and HEVC are discussed together. In addition, the latest research in the fast encoder design for the HEVC and H.264/AVC is also included.",
+      "author": "Byung-Gyu Kim,Kalyan Goswami",
+      "publisher": "Springer",
+      "publication_date": "2016-06-21",
+      "page_count": 84,
+      "category": "Technology & Engineering",
+      "image_url": "http://books.google.com/books/content?id=1_N6DAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 35,
+    "fields": {
+      "isbn": "9781119363026",
+      "title": "Coding All-in-One For Dummies",
+      "description": "See all the things coding can accomplish The demand for people with coding know-how exceeds the number of people who understand the languages that power technology. Coding All-in-One For Dummies gives you an ideal place to start when you're ready to add this valuable asset to your professional repertoire. Whether you need to learn how coding works to build a web page or an application or see how coding drives the data revolution, this resource introduces the languages and processes you'll need to know. Peek inside to quickly learn the basics of simple web languages, then move on to start thinking like a professional coder and using languages that power big applications. Take a look inside for the steps to get started with updating a website, creating the next great mobile app, or exploring the world of data science. Whether you're looking for a complete beginner's guide or a trusted resource for when you encounter problems with coding, there's something for you! Create code for the web Get the tools to create a mobile app Discover languages that power data science See the future of coding with machine learning tools With the demand for skilled coders at an all-time high, Coding All-in-One For Dummies is here to propel coding newbies to the ranks of professional programmers.",
+      "author": "Nikhil Abraham",
+      "publisher": "John Wiley & Sons",
+      "publication_date": "2017-05-01",
+      "page_count": 100,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=xwu4DgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 36,
+    "fields": {
+      "isbn": "9781593276690",
+      "title": "Game Hacking",
+      "description": "You don’t need to be a wizard to transform a game you like into a game you love. Imagine if you could give your favorite PC game a more informative heads-up display or instantly collect all that loot from your latest epic battle. Bring your knowledge of Windows-based development and memory management, and Game Hacking will teach you what you need to become a true game hacker. Learn the basics, like reverse engineering, assembly code analysis, programmatic memory manipulation, and code injection, and hone your new skills with hands-on example code and practice binaries. Level up as you learn how to: –Scan and modify memory with Cheat Engine –Explore program structure and execution flow with OllyDbg –Log processes and pinpoint useful data files with Process Monitor –Manipulate control flow through NOPing, hooking, and more –Locate and dissect common game memory structures You’ll even discover the secrets behind common game bots, including: –Extrasensory perception hacks, such as wallhacks and heads-up displays –Responsive hacks, such as autohealers and combo bots –Bots with artificial intelligence, such as cave walkers and automatic looters Game hacking might seem like black magic, but it doesn’t have to be. Once you understand how bots are made, you’ll be better positioned to defend against them in your own games. Journey through the inner workings of PC games with Game Hacking, and leave with a deeper understanding of both game design and computer security.",
+      "author": "Nick Cano",
+      "publisher": "No Starch Press",
+      "publication_date": "2016-07-01",
+      "page_count": 305,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=h4-7DQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 37,
+    "fields": {
+      "isbn": "9780241314524",
+      "title": "The Story of Coding",
+      "description": "Learn about the history of coding and computers in DK Reader The Story of Coding. Young readers will find out what coding is, how it developed, and how modern codes are used for everyday purposes. DK's innovative range of levelled readers combines a highly visual approach with non-fiction narratives that children will love reading. DK Reader The Story of Coding is a level 3 reader, Beginning to Reading Alone, with intriguing facts, from Charles Babbage and Ada Lovelace's first steps in computer programming to today's wide variety of coding languages and their uses, and the impact of the Internet and apps on programming. There's a message in ASCII for readers to decode, plus tips for writing their own code with child-friendly Scratch programming. Explore the world of coding with DK Reader The Story of Coding, includes facts kids will love reading.",
+      "author": "James Floyd Kelly,DK",
+      "publisher": "Dorling Kindersley Ltd",
+      "publication_date": "2017-06-01",
+      "page_count": 49,
+      "category": "Juvenile Nonfiction",
+      "image_url": "http://books.google.com/books/content?id=s5GJEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 38,
+    "fields": {
+      "isbn": "9781801079020",
+      "title": "ASP.NET Core 5 Secure Coding Cookbook",
+      "description": "Learn how to secure your ASP.NET Core web app through robust and secure code Key FeaturesDiscover the different types of security weaknesses in ASP.NET Core web applications and learn how to fix themUnderstand what code makes an ASP.NET Core web app unsafeBuild your secure coding knowledge by following straightforward recipesBook Description ASP.NET Core developers are often presented with security test results showing the vulnerabilities found in their web apps. While the report may provide some high-level fix suggestions, it does not specify the exact steps that you need to take to resolve or fix weaknesses discovered by these tests. In ASP.NET Secure Coding Cookbook, you'll start by learning the fundamental concepts of secure coding and then gradually progress to identifying common web app vulnerabilities in code. As you progress, you'll cover recipes for fixing security misconfigurations in ASP.NET Core web apps. The book further demonstrates how you can resolve different types of Cross-Site Scripting. A dedicated section also takes you through fixing miscellaneous vulnerabilities that are no longer in the OWASP Top 10 list. This book features a recipe-style format, with each recipe containing sample unsecure code that presents the problem and corresponding solutions to eliminate the security bug. You'll be able to follow along with each step of the exercise and use the accompanying sample ASP.NET Core solution to practice writing secure code. By the end of this book, you'll be able to identify unsecure code causing different security flaws in ASP.NET Core web apps and you'll have gained hands-on experience in removing vulnerabilities and security defects from your code. What you will learnUnderstand techniques for squashing an ASP.NET Core web app security bugDiscover different types of injection attacks and understand how you can prevent this vulnerability from being exploitedFix security issues in code relating to broken authentication and authorizationEliminate the risks of sensitive data exposure by getting up to speed with numerous protection techniquesPrevent security misconfiguration by enabling ASP.NET Core web application security featuresExplore other ASP.NET web application vulnerabilities and secure coding best practicesWho this book is for This ASP.NET Core book is for intermediate-level ASP.NET Core web developers and software engineers who use the framework to develop web applications and are looking to focus on their security using coding best practices. The book is also for application security engineers, analysts, and specialists who want to know more about securing ASP.NET Core using code and understand how to resolve issues identified by the security tests they perform daily.",
+      "author": "Roman Canlas,Ed Price",
+      "publisher": "Packt Publishing Ltd",
+      "publication_date": "2021-07-16",
+      "page_count": 324,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=R-I3EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 39,
+    "fields": {
+      "isbn": "9781641521758",
+      "title": "Coding for Kids: Python",
+      "description": "Games and activities that teach kids ages 10+ to code with Python Learning to code isn\u2019t as hard as it sounds\u2015you just have to get started! Coding for Kids: Python starts kids off right with 50 fun, interactive activities that teach them the basics of the Python programming language. From learning the essential building blocks of programming to creating their very own games, kids will progress through unique lessons packed with helpful examples\u2014and a little silliness! Kids will follow along by starting to code (and debug their code) step by step, seeing the results of their coding in real time. Activities at the end of each chapter help test their new knowledge by combining multiple concepts. For young programmers who really want to show off their creativity, there are extra tricky challenges to tackle after each chapter. All kids need to get started is a computer and this book. This beginner\u2019s guide to Python for kids includes: 50 Innovative exercises\u2015Coding concepts come to life with game-based exercises for creating code blocks, drawing pictures using a prewritten module, and more. Easy-to-follow guidance\u2015New coders will be supported by thorough instructions, sample code, and explanations of new programming terms. Engaging visual lessons\u2015Colorful illustrations and screenshots for reference help capture kids\u2019 interest and keep lessons clear and simple. Encourage kids to think independently and have fun learning an amazing new skill with this coding book for kids.",
+      "author": "Adrienne B. Tacke",
+      "publisher": "Rockridge Press",
+      "publication_date": "2019-03-19",
+      "page_count": 0,
+      "category": "Juvenile Nonfiction",
+      "image_url": "http://books.google.com/books/content?id=DQ3QtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 40,
+    "fields": {
+      "isbn": "9781510740044",
+      "title": "Coding for Minecrafters",
+      "description": "Learn to Code while Adventuring through the Overworld! This fun and educational activity book Introduces kids to the world of coding through the Minecraft world they love. Colorfully illustrated characters and themes from their favorite video game bring the excitement of coding to life, while easy-to-follow screenshots guide them through activities. With adventures that include design, music, animation, gaming, and more, learners will discover tons of ways coding connects to other activities they love and how far a little imagination and invention can take them\u2026to The End and beyond! Minecrafting-themed characters help kids become master coders Kid-friendly concepts and steps designed specifically for ages 8-12 Great games, mods, experiments, and more teach computational thinking\u2014how to tackle large problems by breaking them down into a sequence of smaller, more manageable problems Whether brand-new to coding or looking for more hands-on learning, Coding for Minecrafters helps young coders advance in technology education by leaps and bounds\u2014and have fun doing it!",
+      "author": "Ian Garland",
+      "publisher": "Simon and Schuster",
+      "publication_date": "2019-05-21",
+      "page_count": 128,
+      "category": "Juvenile Nonfiction",
+      "image_url": "http://books.google.com/books/content?id=LldUDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 41,
+    "fields": {
+      "isbn": "9781506341293",
+      "title": "Computational Thinking and Coding for Every Student",
+      "description": "Empower tomorrow\u2019s tech innovators Our students are avid users and consumers of technology. Isn\u2019t it time that they see themselves as the next technological innovators, too? Computational Thinking and Coding for Every Student is the beginner\u2019s guide for K-12 educators who want to learn to integrate the basics of computer science into their curriculum. Readers will find Strategies and activities for teaching computational thinking and coding inside and outside of school, at any grade level, across disciplines Instruction-ready lessons for every grade A discussion guide and companion website with videos, activities, and other resources",
+      "author": "Jane Krauss,Kiki Prottsman",
+      "publisher": "Corwin Press",
+      "publication_date": "2016-10-28",
+      "page_count": 208,
+      "category": "Education",
+      "image_url": "http://books.google.com/books/content?id=OXlZDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 42,
+    "fields": {
+      "isbn": "9780262036245",
+      "title": "Coding Literacy",
+      "description": "How the theoretical tools of literacy help us understand programming in its historical, social and conceptual contexts. The message from educators, the tech community, and even politicians is clear: everyone should learn to code. To emphasize the universality and importance of computer programming, promoters of coding for everyone often invoke the concept of \u201cliteracy,\u201d drawing parallels between reading and writing code and reading and writing text. In this book, Annette Vee examines the coding-as-literacy analogy and argues that it can be an apt rhetorical frame. The theoretical tools of literacy help us understand programming beyond a technical level, and in its historical, social, and conceptual contexts. Viewing programming from the perspective of literacy and literacy from the perspective of programming, she argues, shifts our understandings of both. Computer programming becomes part of an array of communication skills important in everyday life, and literacy, augmented by programming, becomes more capacious. Vee examines the ways that programming is linked with literacy in coding literacy campaigns, considering the ideologies that accompany this coupling, and she looks at how both writing and programming encode and distribute information. She explores historical parallels between writing and programming, using the evolution of mass textual literacy to shed light on the trajectory of code from military and government infrastructure to large-scale businesses to personal use. Writing and coding were institutionalized, domesticated, and then established as a basis for literacy. Just as societies demonstrated a \u201cliterate mentality\u201d regardless of the literate status of individuals, Vee argues, a \u201ccomputational mentality\u201d is now emerging even though coding is still a specialized skill.",
+      "author": "Annette Vee",
+      "publisher": "MIT Press",
+      "publication_date": "2017-07-28",
+      "page_count": 375,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=YXQsDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 43,
+    "fields": {
+      "isbn": "9781483260594",
+      "title": "The Mathematical Theory of Coding",
+      "description": "The Mathematical Theory of Coding focuses on the application of algebraic and combinatoric methods to the coding theory, including linear transformations, vector spaces, and combinatorics. The publication first offers information on finite fields and coding theory and combinatorial constructions and coding. Discussions focus on self-dual and quasicyclic codes, quadratic residues and codes, balanced incomplete block designs and codes, bounds on code dictionaries, code invariance under permutation groups, and linear transformations of vector spaces over finite fields. The text then takes a look at coding and combinatorics and the structure of semisimple rings. Topics include structure of cyclic codes and semisimple rings, group algebra and group characters, rings, ideals, and the minimum condition, chains and chain groups, dual chain groups, and matroids, graphs, and coding. The book ponders on group representations and group codes for the Gaussian channel, including distance properties of group codes, initial vector problem, modules, group algebras, andrepresentations, orthogonality relationships and properties of group characters, and representation of groups. The manuscript is a valuable source of data for mathematicians and researchers interested in the mathematical theory of coding.",
+      "author": "Ian F. Blake,Ronald C. Mullin",
+      "publisher": "Academic Press",
+      "publication_date": "2014-05-10",
+      "page_count": 368,
+      "category": "Mathematics",
+      "image_url": "http://books.google.com/books/content?id=lQfjBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 44,
+    "fields": {
+      "isbn": "9780470041963",
+      "title": "Audio Signal Processing and Coding",
+      "description": "An in-depth treatment of algorithms and standards for perceptual coding of high-fidelity audio, this self-contained reference surveys and addresses all aspects of the field. Coverage includes signal processing and perceptual (psychoacoustic) fundamentals, details on relevant research and signal models, details on standardization and applications, and details on performance measures and perceptual measurement systems. It includes a comprehensive bibliography with over 600 references, computer exercises, and MATLAB-based projects for use in EE multimedia, computer science, and DSP courses. An ftp site containing supplementary material such as wave files, MATLAB programs and workspaces for the students to solve some of the numerical problems and computer exercises in the book can be found at ftp://ftp.wiley.com/public/sci_tech_med/audio_signal",
+      "author": "Andreas Spanias,Ted Painter,Venkatraman Atti",
+      "publisher": "John Wiley & Sons",
+      "publication_date": "2006-09-11",
+      "page_count": 544,
+      "category": "Technology & Engineering",
+      "image_url": "http://books.google.com/books/content?id=a1RULRErhOYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 45,
+    "fields": {
+      "isbn": "9781641855020",
+      "title": "How Coding Works",
+      "description": "Explains the process programmers use to write code, including key concepts such as algorithms and programming languages. Easy-to-read text, informative sidebars, and helpful diagrams make this book an engaging read for avid technology fans and readers who are new to computer coding.",
+      "author": "George Anthony Kulz",
+      "publisher": "North Star Editions, Inc.",
+      "publication_date": "2019-01-01",
+      "page_count": 32,
+      "category": "Juvenile Nonfiction",
+      "image_url": "http://books.google.com/books/content?id=l0eqDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 46,
+    "fields": {
+      "isbn": "9780470130650",
+      "title": "Web Analytics",
+      "description": "Written by an in-the-trenches practitioner, this step-by-step guide shows you how to implement a successful Web analytics strategy. Web analytics expert Avinash Kaushik, in his thought-provoking style, debunks leading myths and leads you on a path to gaining actionable insights from your analytics efforts. Discover how to move beyond clickstream analysis, why qualitative data should be your focus, and more insights and techniques that will help you develop a customer-centric mindset without sacrificing your company\u2019s bottom line. Note: CD-ROM/DVD and other supplementary materials are not included as part of eBook file.",
+      "author": "Avinash Kaushik",
+      "publisher": "Sybex",
+      "publication_date": "2007-06-05",
+      "page_count": 480,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=IYf5nQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 47,
+    "fields": {
+      "isbn": "9781484227879",
+      "title": "Beginning Django",
+      "description": "Discover the Django web application framework and get started building Python-based web applications. This book takes you from the basics of Django all the way through to cutting-edge topics such as creating RESTful applications. Beginning Django also covers ancillary, but essential, development topics, including configuration settings, static resource management, logging, debugging, and email. Along with material on data access with SQL queries, you\u2019ll have all you need to get up and running with Django 1.11 LTS, which is compatible with Python 2 and Python 3. Once you\u2019ve built your web application, you\u2019ll need to be the admin, so the next part of the book covers how to enforce permission management with users and groups. This technique allows you to restrict access to URLs and content, giving you total control of your data. In addition, you\u2019ll work with and customize the Django admin site, which provides access to a Django project\u2019s data. After reading and using this book, you\u2019ll be able to build a Django application top to bottom and be ready to move on to more advanced or complex Django application development. What You'll Learn Get started with the Django framework Use Django views, class-based views, URLs, middleware, forms, templates, and Jinja templates Take advantage of Django models, including model relationships, migrations, queries, and forms Leverage the Django admin site to get access to the database used by a Django project Deploy Django REST services to serve as the data backbone for mobile, IoT, and SaaS systems Who This Book Is For Python developers new to the Django web application development framework and web developers new to Python and Django.",
+      "author": "Daniel Rubio",
+      "publisher": "Apress",
+      "publication_date": "2017-10-27",
+      "page_count": 609,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=8sU7DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 48,
+    "fields": {
+      "isbn": "9781119366447",
+      "title": "Professional JavaScript for Web Developers",
+      "description": "Update your skill set for ES 6 and 7 with the ultimate JavaScript guide for pros Professional JavaScript for Web Developers is the essential guide to next-level JavaScript development. Written for intermediate-to-advanced programmers, this book jumps right into the technical details to help you clean up your code and become a more sophisticated JavaScript developer. From JavaScript-specific object-oriented programming and inheritance, to combining JavaScript with HTML and other markup languages, expert instruction walks you through the fundamentals and beyond. This new fourth edition has been updated to cover ECMAScript 6 and 7 (also known as ES2015 and ES2016) and the major re-imagination and departure from ES 5.1; new frameworks and libraries, new techniques, new testing tools, and more are explained in detail for the professional developer, with a practical focus that helps you put your new skills to work on real-world projects. The latest\u2014and most dramatic\u2014ES release is already being incorporated into JavaScript engines in major browsers; this, coupled with the rise in mobile web traffic increasing demand for responsive, dynamic web design, means that all web developers need to update their skills\u2014and this book is your ideal resource for quick, relevant guidance. Get up to date with ECMAScript 6 and 7, new frameworks, and new libraries Delve into web animation, emerging APIs, and build systems Test more effectively with mocks, unit tests, functional tests, and other tools Plan your builds for future ES releases Even if you think you know JavaScript, new ES releases bring big changes that will affect the way you work. For a professional-level update that doesn't waste time on coding fundamentals, Professional JavaScript for Web Developers is the ultimate resource to bring you up to speed.",
+      "author": "Matt Frisbie",
+      "publisher": "John Wiley & Sons",
+      "publication_date": "2019-10-15",
+      "page_count": 1200,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=3GOuDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 49,
+    "fields": {
+      "isbn": "9783642412301",
+      "title": "Web Information Systems Engineering -- WISE 2013",
+      "description": "This book constitutes the proceedings of the 14th International Conference on Web Information Systems Engineering, WISE 2013, held in Nanjing, China, in October 2013. The 48 full papers, 29 short papers, and 10 demo and 5 challenge papers, presented in the two-volume proceedings LNCS 8180 and 8181, were carefully reviewed and selected from 198 submissions. They are organized in topical sections named: Web mining; Web recommendation; Web services; data engineering and database; semi-structured data and modeling; Web data integration and hidden Web; challenge; social Web; information extraction and multilingual management; networks, graphs and Web-based business processes; event processing, Web monitoring and management; and innovative techniques and creations.",
+      "author": "Xuemin Lin,Yannis Manolopoulos,Divesh Srivastava,Guangyan Huang",
+      "publisher": "Springer",
+      "publication_date": "2013-10-07",
+      "page_count": 526,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=L0u7BQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 50,
+    "fields": {
+      "isbn": "9781430237877",
+      "title": "The Essential Guide to HTML5 and CSS3 Web Design",
+      "description": "The Essential Guide to HTML5 and CSS3 Web Design has been fully revised from its critically acclaimed first edition, and updated to include all of the new features and best practices of HTML5 and CSS3. This book reveals all you'll need to design great web sites that are standards-compliant, usable, and aesthetically pleasing, but it won't overwhelm you with waffle, theory, or obscure details! You will find The Essential Guide to HTML5 and CSS3 Web Design invaluable at any stage of your career, with its mixture of practical tutorials and reference material. Beginners will quickly pick up the basics, while more experienced web designers and developers will keep returning to the book again and again to read up on techniques they may not have used for a while, or to look up properties, attributes and other details. This book is destined to become a close friend, adopting a permanent place on your desk. The Essential Guide to HTML5 and CSS3 Web Design starts off with a brief introduction to the web and web design, before diving straight in to HTML5 and CSS3 basics, reusing code, and other best practices you can adopt. The book then focuses on the most important areas of a successful web site: typography, images, navigation, tables, layouts, forms and feedback (including ready-made PHP scripts) and browser quirks, hacks and bugs. The Essential Guide to HTML5 and CSS3 Web Design is completely up-to-date, covering support of the newest standards in all the latest browsers, including IE 9 and Firefox 4. The last chapter of the book provides several case studies to dissect and learn from, including all the most popular web site archetypes\u2014a blog, a store front, a corporate home page, and an online gallery. You'll also appreciate several detailed reference appendices covering CSS, HTML, color references, entities, and more\u2014any details you need to look up will be close at hand.",
+      "author": "Craig Grannell,Victor Sumner,Dionysios Synodinos",
+      "publisher": "Apress",
+      "publication_date": "2012-09-07",
+      "page_count": 509,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=ZsgL1_PykOgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 51,
+    "fields": {
+      "isbn": "9780128097656",
+      "title": "Managing the Web of Things",
+      "description": "Managing the Web of Things: Linking the Real World to the Web presents a consolidated and holistic coverage of engineering, management, and analytics of the Internet of Things. The web has gone through many transformations, from traditional linking and sharing of computers and documents (i.e., Web of Data), to the current connection of people (i.e., Web of People), and to the emerging connection of billions of physical objects (i.e., Web of Things). With increasing numbers of electronic devices and systems providing different services to people, Web of Things applications present numerous challenges to research institutions, companies, governments, international organizations, and others. This book compiles the newest developments and advances in the area of the Web of Things, ranging from modeling, searching, and data analytics, to software building, applications, and social impact. Its coverage will enable effective exploration, understanding, assessment, comparison, and the selection of WoT models, languages, techniques, platforms, and tools. Readers will gain an up-to-date understanding of the Web of Things systems that accelerates their research. Offers a comprehensive and systematic presentation of the methodologies, technologies, and applications that enable efficient and effective management of the Internet of Things Provides an in-depth analysis on the state-of-the-art Web of Things modeling and searching technologies, including how to collect, clean, and analyze data generated by the Web of Things Covers system design and software building principles, with discussions and explorations of social impact for the Web of Things through real-world applications Acts as an ideal reference or recommended text for graduate courses in cloud computing, service computing, and more",
+      "author": "Michael Sheng,Yongrui Qin,Lina Yao,Boualem Benatallah",
+      "publisher": "Morgan Kaufmann",
+      "publication_date": "2017-02-10",
+      "page_count": 482,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=q0PQDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 52,
+    "fields": {
+      "isbn": "9780387001753",
+      "title": "Web Data Management",
+      "description": "Existence of huge amounts of data on the Web has developed an undeferring need to locate right information at right time, as well as to integrating information effectively to provide a comprehensive source of relevant information. There is a need to develop efficient tools for analyzing and managing Web data, and efficiently managing Web information from the database perspective. The book proposes a data model called WHOM (Warehouse Object Model) to represent HTML and XML documents in the warehouse. It defines a set of web algebraic operators for building new web tables by extracting relevant data from the Web, as well as generating new tables from existing ones. These algebraic operators are used for change detection.",
+      "author": "Sourav S. Bhowmick,Sanjay K. Madria,Wee K. Ng",
+      "publisher": "Springer Science & Business Media",
+      "publication_date": "2003-11-07",
+      "page_count": 481,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=aqjLL7auMEkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 53,
+    "fields": {
+      "isbn": "9789027294883",
+      "title": "Web Advertising",
+      "description": "This book examines new forms of communication that have emerged through the interactive capabilities of the Internet, in particular online advertising and web advertisements. It develops a new model of online communication, incorporating mass communication and interpersonal communication. Interactive mass communication redefines the roles of online communication partners who are confronted with a higher degree of complexity in terms of hypertextual information units. In web advertising, this new aspect of interactivity is linguistically reflected in different types of personal address forms, directives, and \"trigger words\". This study also analyzes the different strategies of persuasion with which web ads try to initiate their activation.Web Advertising provides essential information on the language of web advertisements for academics, researchers and students in the fields of hypertext-linguistics, advertising, communication and media studies.",
+      "author": "Anja Janoschka",
+      "publisher": "John Benjamins Publishing",
+      "publication_date": "2004-12-23",
+      "page_count": 230,
+      "category": "Language Arts & Disciplines",
+      "image_url": "http://books.google.com/books/content?id=_SM6AAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 54,
+    "fields": {
+      "isbn": "9781605664194",
+      "title": "Integrated Approaches in Information Technology and Web Engineering: Advancing Organizational Knowledge Sharing",
+      "description": "Provides a collection of authoritative articles from distinguished international researchers in information technology and Web engineering.",
+      "author": "Alkhatib, Ghazi I.,Rine, David C.",
+      "publisher": "IGI Global",
+      "publication_date": "2008-11-30",
+      "page_count": 392,
+      "category": "Law",
+      "image_url": "http://books.google.com/books/content?id=6YeH5xGQ63kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 55,
+    "fields": {
+      "isbn": "9780470459720",
+      "title": "Building Web Sites All-in-One For Dummies",
+      "description": "Want to launch a Web site but don\u2019t know where to begin? Information on Web design, page building software, using HTML, site planning, and everything else you need to know can be found easily in Building Web Sites All-in-One For Dummies, 2nd Edition. So you can easily find what you\u2019re looking for, this plain-English guide is divided into nine minibooks: Preparations Site Design Site Construction Web Graphics Multimedia Audience Interaction E-Commerce Site Management Case Studies From deciding what your site should do to working with HTML, using Dreamweaver, incorporating Flash creations, and keeping your site on the cutting edge, this book is your one-stop course in building Web sites. Learn to: Plan your site, decide whether you need a Web team, and create relevant content Develop your site design, work with wire frames, and organize behind-the-scenes files that make your site work Select the right hardware and software and create pages with Dreamweaver Create cool site graphics with Photoshop and Fireworks Add interest with Flash animations, slideshows, video, and sound Make your site interactive with Javascript, PHP, ASP, and MySQL Build an e-commerce site that\u2019s user-friendly, legally sound, and secure Keep your content and design fresh and up to date Ready to begin? Grab Building Web Sites All-in-One For Dummies, 2nd Edition and let\u2019s get started!",
+      "author": "Claudia Snell,Doug Sahlin",
+      "publisher": "John Wiley & Sons",
+      "publication_date": "2009-01-23",
+      "page_count": 693,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=3zP641cAVicC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 56,
+    "fields": {
+      "isbn": "9780786730452",
+      "title": "Small Pieces Loosely Joined",
+      "description": "The Web has not been hyped enough. That's the startling thesis of this one-of-a-kind book that's sure to become a classic work of social commentary. Just as Marshall McLuhan forever altered our view of broadcast media, Weinberger shows that the new medium of the Web is not only altering social institutions such as business and government but, more important, is transforming bedrock concepts of our culture such as space, time, the public, and even reality itself. Weinberger introduces us to denizens of this new world, among them Zannah, whose online diary turns self-revelation into play; Tim Bray, whose map of the Web reveals what's at the heart of the new Web space; and Danny Yee and Claudiu Popa, part of the new breed of Web experts we trust despite their lack of qualifications. Through stories of life on the Web, an insightful take on some familiar (and some unfamiliar) Web sites, and a wicked sense of humor, Weinberger puts the Web into the social and intellectual context we need to begin assessing its true impact on our lives. The irony, according to Weinberger, is that this new technology is more in tune with our authentic selves than is the modern world. Funny, provocative, and ultimately hopeful, Small Pieces Loosely Joined makes us look at the Web -- and at life -- in a new light. From Small Pieces Loosely Joined: The Web has sent a jolt through our culture, zapping our economy, our ideas about the sharing of creative works, and possibly even institutions such as religion and government. Why? How do we explain the lightning charge of the Web? If it has fallen short of our initial hopes and fears about its transformational powers, why did it excite those hopes and fears in the first place? Why did this technology hit our culture like a bolt from Zeus? Suppose -- just suppose -- that the Web is a new world we're just beginning to inhabit . . . If the Web is changing bedrock concepts such as space, matter, time, perfection, public, knowledge, and morality -- each a chapter of this book -- no wonder we're so damn confused. That's as it should be. The Web is enabling us to rediscover what we've always known about being human: we are connected creatures in a connected world about which we care passionately . . . If this is true, then for all of the over-heated, exaggerated, manic-depressive coverage of the Web, we'd have to conclude that the Web in fact has not been hyped enough.",
+      "author": "David Weinberger",
+      "publisher": "Hachette UK",
+      "publication_date": "2008-11-05",
+      "page_count": 240,
+      "category": "History",
+      "image_url": "http://books.google.com/books/content?id=iXw4DgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 57,
+    "fields": {
+      "isbn": "9780470164099",
+      "title": "Beginning Expression Web",
+      "description": "Microsoft Expression Web gives you the tools to develop sophisticated sites that integrate standardized CSS layout with ASP.NET 2.0, XML, and SQL Server 2005. Written by an experienced ASP.NET and Dreamweaver Web developer, this book shows you how to take advantage of all of Expression Web\u2019s innovative features to create a memorable online experience. Expert tips and techniques on Web page structuring, page formatting style sheets, HTML forms, and more will show you how to design and develop new Web applications.",
+      "author": "Zak Ruvalcaba",
+      "publisher": "John Wiley & Sons",
+      "publication_date": "2007-03-15",
+      "page_count": 503,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=km-FReCKj1QC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 58,
+    "fields": {
+      "isbn": "9786027985803",
+      "title": "Action Research",
+      "description": "Kajian ini merupakan eligibilitas suatu penelitian tindakan (action research) untuk digunakan dalam ndidikan, baik pada jenjang pendidikan sarjana, magister, maupun doktoral. Mencakup puluhan modeL penelitian tindakan yang kemudian dikaji dan ditelaah lebih mendalam, yang pada akhirnya tersusun dalam suatu pokok pembahasan action research atau model penelitian tindakan. Cakupan isi buku dalam delapan bab ini membahas berbagai topik penting model action research: memahami penelitian tindakan; jenis penelitian tindakan; model-model pelaksanaan penelitian tindakan; identifikasi fokus penelitian dan pencarian informasi awal; perencanaan penelitian; teknik pengumpulan data; menganalisis data; dan menulis penelitian tindakan. Buku pegangan utama (textbook) ini direkomendasikan untuk berbagai aksi penelitian yang dilakukan lembaga riset ilmiah dan sosial-politik, kalangan LSM, organisasi/ perusahaan, dosen LPTIK, mahasiswa, guru, dan kalangan umum yangtertarik melaksanakan action research Buku persembahan penerbit prenadaMedia -PrenadaMedia-",
+      "author": "Dr. Muhammad Yaumi, M.Hum., M.A.",
+      "publisher": "Prenada Media",
+      "publication_date": "2016-07-12",
+      "page_count": 224,
+      "category": "Study Aids",
+      "image_url": "http://books.google.com/books/content?id=X-IuDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 59,
+    "fields": {
+      "isbn": "9786020307916",
+      "title": "My Brave Action!",
+      "description": "Orang-orang sukses memiliki keseragaman dalam prinsip hidupnya yang menjadi metode sukses. Metode itu, disadari atau tidak, tergambar dalam tiga poin besar: Vision (Visi), Belief (Keyakinan), dan Action (Tindakan). Ketiganya merupakan kesatuan. Satu saja terpisahkan tak akan berhasil. Penulis membahas metode kesatuan itu berdasarkan pengalamannya dan kejeliannya menyerap ilmu dari orang-orang sukses dan meramunya menjadi sebuah metode. Metode itu terbukti. Metode itu bisa dipelajari. Banyak orang tahu tentang visi, keyakinan, dan tindakan, tapi hanya sedikit yang tahu cara mengikatnya. Heriyanto Tandra menemukan bahwa pengikat ketiganya adalah keberanian. Ini rahasia yang sering diabaikan banyak orang sehingga pantas orang sukses terbatas jumlahnya. Membaca My Brave Action! membuat Anda tahu bagaimana menumbuhkan keberanian yang akan menjamin kesuksesan Anda",
+      "author": "Heriyanto Tandra",
+      "publisher": "Gramedia Pustaka Utama",
+      "publication_date": "2015-02-24",
+      "page_count": 176,
+      "category": "Self-Help",
+      "image_url": "http://books.google.com/books/content?id=qKFLDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 60,
+    "fields": {
+      "isbn": "9786020212326",
+      "title": "Action For One Family One Entrepreneur",
+      "description": "Buku ini bicara tentang kewirausahaan. Banyak orang sering berwacana bagaimana berwirausaha. Buku ini langsung tancap, bertindak saja. Seperti berenang, masuk saja ke air. Konsekuensinya, bisa tenggelam, bisa selamat. Silahkan mencoba sampai babak belur.",
+      "author": "A. Khoerusalim Ikhs",
+      "publisher": "Elex Media Komputindo",
+      "publication_date": "2014-06-18",
+      "page_count": 400,
+      "category": "Business & Economics",
+      "image_url": "http://books.google.com/books/content?id=4ttMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 61,
+    "fields": {
+      "isbn": "9786020221045",
+      "title": "Action Power",
+      "description": "\"\"\"Dalam bahasa Inggris, Irwan Berutu ini biasanya disebut self-made man, seperti Thomas Alva Edison dan Steve Jobs dari Amerika atau Konosuke Matsushita dan Soichiro Honda dari Jepang. Mereka mencetak diri mulai dari zero hingga menjadi hero dan membangun diri mereka dari kelas emperan menjadi empire. Saya sudah membaca ribuan buku, ratusan diantaranya biografi orang hebat sejagat, dan saya melihat pada diri seorang Irwan Berutu sebuah kisah klasik perjuangan mengentaskan diri ,keluarga dan bangsa.Kali ini tidak dari Amerika, India, Jepang, atau Eropa. Tetapi justru dari Indonesia: Desa salak jauh di pelosok Sumatra Utara, yakin Pakpak Barat.Maka patutlah semua orang mengangkat dua jempol untuk Irwan Berutu sebab kisahnya dalam buku ini sangat inspiratif, Ilmu suksesnya amat aplikatif , dan api seManga, Manhua & Manhwatnya sungguh motivatif - Jansen Sinamo (Guru Etos Indonesia) Tindakan mengalahkan Kepandaian, tanpa tindakan tidak akan ada keajaiban. Semoga buku ini menginspirasi pembacanya untuk segera Take Action menjemput keberhasilan. - Bong Chandra (Enterpreneur, Author,Motivator) Irwan berutu menuliskan dalam buku ini, bukan hanya mengajarkan, tetapi juga mengimpartasikan hidup yang tidak didikte oleh keterbatasan, tetapi terbang lebih tinggi bagai rajawali, bersamaNya Anda pun bisa. -Pdt. Yosef Moro Wijaya, SE. Gembala Gereja Mawar Sharon, Regional Sumatera - Dalam usia relatif muda, Irwan menghasilkan karya yang luar biasa. \u0093 Action Power\u0094, sebagai pimpinan Universitas Methodist Indonesia bangga karena salah seorang dari alumni Fakultas Sastra Inggris berani tampil sebagai Motivator sukses dan di perhitungkan dalam dunia bisnis. - Rektor Univ. Methodist Indonesia (UMI). Ir. Pantas Simanjuntak, MM. Meraih Sukses dimulai dari diri & pikiran, di bungkus dalam bahasa yang optimis, dihayati secara mendalam, kemudian dilakukan dalam perubuatan! Dengan goal yang jelas,Irwan Berutu dalam buku nya yang berjudul Action Power ingin memotivasi setiap orang untuk dapat meraih mimpi-mimpinya demi keberhasilannya dimasa depan. Bacalah bukunya, Anda akan termotivasi untuk bangkit meraih mimpi-mimpimu! - Prof. Dr. Robert Sibarani, MS. (Guru besar USU & Pengajar S2 Unimed ) Irwan is a self made man,dreaming village boy to a successful motivator and entrepreneur, he loves to give and dedicate all his efforts to help people to have a better life. Learn from this book how to make a change and to fulfil your dreams. - Balazs Huszka, Ph.D/ Lecturer at University Malaysia Selatan Strongly recommended to read this book, Pewerful Message. Irwan Berutu\u0092s life story shows every possibility of human being to turn their situation, from negative to positive, from zero to hero, from minus into surplus, and from history into victory. -Elmi Christina/ Senior Vice President & Head Of Commercial Banking Surabaya Branch Hidup adalah \u0093 Aksi\u0094 ,Hidup adalah bertindak, buku ini bagus untuk dibaca semua kalangan \u0093 Nothing is Imposssible When There is an Action\u0094. - Kolonel Inf. Abdul Rahman, S.SOS Seorang anak muda yang tidak pernah menyerah, seManga, Manhua & Manhwatnya luar biasa dan tidak mengenal kata rendah diri. Berbuat baiklah senantiasa Jenny Riany Lucia Berutu, SH PPAT/ Notaris & Dirut Conservation Mentality (COME) Medan. \u0093LUAR BIASA\u0094!! BUKU INI menceritakan kisah yang sangat INSPIRATIF, pelajaran yang APLIKATIF dan seManga, Manhua & Manhwat seperti API yang membara. Buku ini sangat saya Rekomendasikan bagi Anda yang ingin ACTION untuk mencapai kesuksesan dalam karir dan kehidupan Anda\u0094.\"\"\"",
+      "author": "Irwan Wiseful Berutu",
+      "publisher": "Elex Media Komputindo",
+      "publication_date": "2013-09-16",
+      "page_count": 160,
+      "category": "Self-Help",
+      "image_url": "http://books.google.com/books/content?id=wYZKDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 62,
+    "fields": {
+      "isbn": "9786239377304",
+      "title": "METODOLOGI PENELITIAN KUALITATIF, KUANTITATIF, ACTION RESEARCH, RESEARCH AND DEVELOPMENT (R n D).",
+      "description": "DAFTAR ISI BAB 1 PENDAHULUAN. 4 KONSEP-KONSEP DASAR PENELITIAN. 4 A. Pengetahuan (Knowledge) 4 B. Pengertian Penelitian. 7 C. Sikap dan Cara Berpikir Peneliti 8 C. Tujuan Penelitian. 9 D. Fungsi Penelitian. 12 E. Jenis-Jenis Penelitian. 13 F. Unsur-unsur Penelitian. 20 BAB 2 METODOLOGI PENELITIAN KUALITATIF. 27 A. Definisi kualitatif 27 B. Karakteristik Penelitian Kualitatif 29 C. Desain Penelitian Kualitatif 32 D. Tahap Penelitian Kualitatif 34 E. Instrumen Penelitian. 37 F. Metode Penelitian. 47 G. Teknik Analisis Data Kualitatif 51 BAB 3 METODOLOGI PENELITIAN KUANTITATIF. 58 A. Definisi Penelitian Kuantitatif 58 B. Karakteristik Penelitian Kuantitatif 59 C. Tahapan Penelitian Kuantitatif 60 D. Desain Penelitian Kuantitatif 61 E. Instrument Penelitian Kuantitatif 63 F. Metode Penelitian Kuantitatif 64 G. Analisis Data Penelitian Kuantitatif 66 BAB 4 METODOLOGI PENELITIAN ACTION RESEARCH. 69 A. Defenisi Action Research. 69 B. Tujuan Dan Ciri-Ciri Penelitian Action Research. 70 C. Karakteristik Penelitian Action Research. 71 D. Desain Penelitian Action Research. 72 E. Tahapan-tahapan Penelitian Action Research. 73 F. Metode Penelitian Action Research. 74 G. Analisis Data Penelitian Action Research. 75 H. Penyajian Hasil Penelitian Action Research. 76 BAB 5 METODOLOGI PENELITIAN RESEARCH & DEVELOPMENT (R&D) 78 A. Pengertian Penelitian R&D.. 78 B. Karakteristik Penelitian R&D.. 80 C. Desain Penelitian R&D.. 81 D. Tahap Penelitian R&D.. 82 E. Langkah-Langkah Penelitian R&D.. 88 F. Instrumen Penelitian R&D.. 89 G. Metode Penelitian R&D.. 91 H. Analisis Penelitian R&D.. 92 BAB 6 LATAR BELAKANG.. 95 A. Cara Membuat Latar Belakang. 95 BAB 7 RUMUSAN MASALAH. 98 A. Cara Membuat Rumusan Masalah. 98 BAB 8 KERANGKA TEORI 100 A. Cara Membuat Kerangka Teori 100 B. Cara Membuat Kerangka Konsep. 103 C. Cara Kerja Kerangka Teori 105 BAB 9 KESIMPULAN. 106 A. Cara Membuat Kesimpulan. 106 B. Tujuan dan manfaat kesimpulan. 107 BAB 10 DAFTAR PUSTAKA & CATATAN KAKI 109 A. Cara Membuat Daftar Pustaka. 109 B. Cara Membuat Catatan Kaki 110 C. Aturan Penulisan Footnote (Catatan Kaki) 113 DAFTAR PUSTAKA 11",
+      "author": "M. Askari Zakariah,Vivi Afriani,KH. M. Zakariah",
+      "publisher": "Yayasan Pondok Pesantren Al Mawaddah Warrahmah Kolaka",
+      "publication_date": "2020-05-07",
+      "page_count": 118,
+      "category": "Education",
+      "image_url": "http://books.google.com/books/content?id=k8j4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 63,
+    "fields": {
+      "isbn": "9786020314907",
+      "title": "The Power of Action",
+      "description": "Action is power! Kita mungkin punya sebongkah impian indah, segudang rencana, setumpuk ide cemerlang, tetapi semua itu tidak akan menghasilkan apa pun, jika kita tidak berani melakukan action dengan langkah pertama. Baca buku ini, dan temukan keberanian bertindak dan menggapai kesuksesan Anda. Salam sukses, luar biasa! \u2014Andrie Wongso Motivator No.1 Indonesia, Founder of Andrie Wongso Learning Center www.andriewongso.com Kekuatan buku ini justru terletak pada kesederhanaan gagasan utamanya. Dan, karena gagasan-gagasan di buku ini sangat simpel dan membumi, jadi kiat-kiat sukses yang ditawarkan penulisnya justru bisa ditiru atau dijalankan oleh semua orang. \u2014Edy Zaqeus Bestselling Author, Writing Coach, Trainer, Founder of Edy Zaqeus Institute www.ezinstitute.com Siapa pun yang membaca buku ini akan tertular seManga, Manhua & Manhwat dahsyat dan menakjubkan dari Harianto Tian. Perjalanannya mencapai kesuksesan sangat menginspirasi dan menyentuh hati. Anda yang punya mimpi besar wajib membaca buku dahsyat ini. \u2014Tung Desem Waringin Penulis Buku Rekor MURI Terlaris, Financial Revolution dan Marketing Revolution",
+      "author": "Harianto Tian",
+      "publisher": "Gramedia Pustaka Utama",
+      "publication_date": "2015-05-04",
+      "page_count": 228,
+      "category": "Self-Help",
+      "image_url": "http://books.google.com/books/content?id=WxdIDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 64,
+    "fields": {
+      "isbn": "9786230213564",
+      "title": "Penelitian Tindakan Kelas (Classroom Action Research)",
+      "description": "Buku ini ditulis dalam rangka untuk memberikan sumbangan ilmu pengetahuan bagi segenap para pembaca baik dikalangan mahasiswa maupun dikalangan dosen, pengajar dan masyarakat umum serta praktisi pendidikan lainnya. Penulisan buku ini, dilandasi beberapa kajian literatur yang berhubungan dengan tindakan tenaga pendidik dalam mencerdaskan anak didiknya. Buku yang diangkat dari hasil menelaah dari fenomena perkembangan zaman dan riset di sekolah Kota Batam, yang sangat aktual dan relevansi dengan situasi dan kondisi kekinian. Buku ini selain sebagai bentuk pengabdian dan partisipasi penulis dalam mengembangkan Penelitian Tindakan Kelas (Classroom Action Research) juga dapat memperkaya khazanah keilmuan di bidang manajemen pendidikan Islam yang relatif masih minim ketersediaannya buku baik di pustaka maupun di toko-toko buku, terlebih buku yang didukung oleh data empiris yang diangkat dari hasil penelitian. Dengan hadirnya buku ini, sangat membantu untuk para guru dan mendukung perkuliahan baik di fakultas maupun di pascasarjana, terkait dengan program pendidikan Penelitian Tindakan Kelas (Classroom Action Research) ini diterbitkan oleh Penerbit Deepublish dan tersedia juga dalam versi cetak",
+      "author": "Afi Parnawi",
+      "publisher": "Deepublish",
+      "publication_date": "2020-07-01",
+      "page_count": 119,
+      "category": "Education",
+      "image_url": "http://books.google.com/books/content?id=djX4DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 65,
+    "fields": {
+      "isbn": "9786233841382",
+      "title": "Pemidanaan Korporasi dan Gugatan Class Action Ganti Rugi",
+      "description": "Setiap perusahaan di mana pun berada di dalam menjalankan kegiatan usahanya selalu terkait dengan lingkungan hidup, dan agar lingkungan tetap baik dan sehat, perusahaan berkewajiban untuk menjaga, merawat, dan memeliharanya dengan terus-menerus secara berkesinambungan. Meskipun dikehendaki demikian, masih ditemukan peristiwa kerusakan maupun pencemaran lingkungan hidup yang terjadi di masyarakat lebih banyak dilakukan oleh perusahaan sewaktu menjalankan kegiatan bisnisnya. Akibat yang ditimbulkan dari peristiwa tersebut, tampaknya tidak selalu segera diantisipasi oleh perusahaan, padahal perbuatannya menimbulkan kerugian pada masyarakat yang ada di sekitarnya. Buku ini membahas persoalan-persoalan di bidang hukum tersebut, terutama mengenai pelanggaran pidana lingkungan hidup yang dilakukan korporasi, tentang gugatan \u201cclass-action\u201d di bidang lingkungan hidup, dan masalah atau isu pencabutan izin lingkungan bagi perusahaan yang melanggar aturan lingkungan hidup. Oleh karena itu, buku ini berguna bagi para mahasiswa, dosen, pengacara, polisi, jaksa, dan hakim serta warga masyarakat yang ingin mempelajari hukum lingkungan hidup berkaitan dengan pemidanaan korporasi, gugatan class-action dan pencabutan izin lingkungan Buku persembahan penerbit PrenadaMediaGroup #Kencana",
+      "author": "Gatot Supramono",
+      "publisher": "Prenada Media",
+      "publication_date": "2022-03-01",
+      "page_count": 232,
+      "category": "Law",
+      "image_url": "http://books.google.com/books/content?id=wDFqEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 66,
+    "fields": {
+      "isbn": "9786020201368",
+      "title": "Sub-Conscious Communication in Action: SCC-in-Action",
+      "description": "Jika relasi atau hubungan hanya diamati atau dijalani dari sisi nalar (logis), maka acapkali hubungan tersebut akan menjadi \"\"kering\"\". Artinya, tanpa ada vibrasi pelengkap, yaitu \"\"rasa\"\" yang pasti memperkaya nuansa pemahaman diri, karena SCC (sub-conscious communicasi) sebenarnya sangat dalam-kaya-kuat dalam membentuk interkomunikasi sehingga menjadi multi-makna. \"\"Inner journey\"\" (perjalanan SCC), yang seperti inilah yang mendorong gairah menuliskannya demi membagi pemahaman sehingga bisa meningkatkan keharmonisan hubungan walau masih terasa kehadiran nuansa perbedaan. Dengan pemahaman underlying communication (bahasa yang tersamar), mampu mendekatkan perbedaan, menguraikan keruwetan karena kurang selaras, serta mempertemukan dua kutub yang berbeda.",
+      "author": "Reza Rifanto,Tatty S.B.",
+      "publisher": "Elex Media Komputindo",
+      "publication_date": "2014-07-17",
+      "page_count": 120,
+      "category": "Self-Help",
+      "image_url": "http://books.google.com/books/content?id=cttMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 67,
+    "fields": {
+      "isbn": "9786020433509",
+      "title": "Sekali Action Langsung Eksis",
+      "description": "Setiap orang punya impian. Setiap orang ingin bekerja. Setiap orang ingin memiliki pendapatan, memiliki omzet dan profitnya meningkat. Semua orang menginginkan itu, termasuk saya dan Anda. Namun, masih sedikit yang mau action untuk mewujudkannya. Yang banyak masih terus berharap dan bermimpi saja. Mungkinkah jadi nyata? Berupayalah menambah ilmu dan membaca buku juga tak kalah pentingnya. Sesibuk apa pun kita menjalankan bisnis, luangkanlah waktu untuk menambah ilmu melalui training yang dibawakan orang-orang yang telah teruji dan terbukti. Buku ini menguak rahasia dongkrak penghasilan tanpa lelet apalagi pelet.",
+      "author": "Awal Syaddad",
+      "publisher": "Elex Media Komputindo",
+      "publication_date": "2017-08-14",
+      "page_count": 152,
+      "category": "Business & Economics",
+      "image_url": "http://books.google.com/books/content?id=AdFBDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 68,
+    "fields": {
+      "isbn": "9786239582302",
+      "title": "Netnografi in Action",
+      "description": "Buku ini berisi 4 bab hasil dari kontributor melanglang jagad dunia maya saat mempraktikkan metode netnografi, yang dilakukan peserta Kelas Netnografi Peneleh Research Institute. Bab pertama buku ini menyajikan bagaimana nilai-nilai religiositas masyarakat mulai menghilang karena tayangan konten youtuber. Bab kedua menyajikan bagaimana media sosial marak digunakan oleh oknum penguasa dan calon penguasa untuk menggiring opini publik untuk mendapatkan keuntungan. Bab ketiga buku ini merupakan ruang penyadaran bagi pu-blik, bahwa religiusitas telah ditunggangi oknum untuk menda-patkan kekuasaan. Di bab keempat, pembaca disuguhi dengan polemik seputar kehadiran fintech syariah yang tengah bertumbuh. Beberapa stigma negatif yang menghadang kehadirannya, atau penerimaan positif dari masyarakat serta berbagai fenomena pro dan kontra yang ikut hadir mewarnai menjadi bahan yang menarik untuk disimak",
+      "author": "A A Gde Satia Utama, Abdul Mun'im, Adib A. Nizar, Ahmad F. Fathoni, Ahmad Kudhori,  A'isyah M. Sholihah, Ayudia Sokarina, Binti S. Jannah, Dani Sugiri, Dika F. Anjarwati, Dita M. Agustina, Dwi Indriani F. Wijaya, Eka Siskawati, Erika Takidah, Firman Sujatmiko, Harkaneri, Luky Patricia, Lusiana Kanji, Maria Assumpta, Muhammad Yusran, Mustakim Muchlis, Rahmawati Ramli, Ratna A. Aripratiwi, Ria A. Sholihah, Rian Vebrianto, Wijaya, Selvia E. Aristantia, Syahrul Djafar, Virginia N. Rahmanti, Wa Ode Rayyani",
+      "publisher": "Penerbit Peneleh",
+      "publication_date": "2021-01-01",
+      "page_count": 103,
+      "category": "Social Science",
+      "image_url": "http://books.google.com/books/content?id=4IcfEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 69,
+    "fields": {
+      "isbn": "9789794209691",
+      "title": "Corporate Action Pembentukan Bank Syariah",
+      "description": "Perkembangan perbankan syariah di tingkat internasional telah mendapat momentum sejak 1970-an. Perkembangan yang dimaksud secara umum mengambil dua pola, yakni: pertama, mendirikan bank syariah berdampingan dengan bank konvensional (dual banking system), seperti yang terjadi di Mesir, Malaysia, Arab Saudi, Yordania, Kuwait, Bahraian, Bangladesh, dan Indonesia. Kedua, merestrukturisasi sistem perbankan secara keseluruhan sesuai dengan syariat Islam (full fledged islamic financial system) seperti yang terjadi di Sudan, Iran, dan Pakistan. Pola dual banking dalam konteks Indonesia tidak dimaksudkan untuk selamanya. Hal ini dibuktikan dengan adanya pengaturan mengenai keharusan melakukan pemisahan Unit Usaha Syariah Bank Umum Konvensional dalam jangka waktu maksimal 15 tahun pasca-diundangkannya Undang-Undang Nomor 21 Tahun 2008 tentang Perbankan Syariah. Oleh karena itu, peranan regulasi menjadi titik krusial dalam kedua model tersebut karena seluruh inisiasi awal perbankan syariah dimulai dengan dukungan regulasi yang memadai.",
+      "author": "Khotibul Umam,Veri Antoni",
+      "publisher": "UGM PRESS",
+      "publication_date": "2018-04-27",
+      "page_count": 208,
+      "category": "Business & Economics",
+      "image_url": "http://books.google.com/books/content?id=4IFYDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 70,
+    "fields": {
+      "isbn": "9781119873068",
+      "title": "Samsung Galaxy S22 For Dummies",
+      "description": "Your step-by-step roadmap to unlocking the full potential of your new Galaxy S22 Your new Samsung Galaxy S22 is packed with more features than you can count. So, how should you go about using this fantastic phone to its fullest? With some friendly and expert help from Samsung Galaxy S22 For Dummies! This book on Samsung\u2019s latest version of its flagship smartphone will walk you through every important function and feature on the S22. Want to make a call or send an email? Samsung Galaxy S22 For Dummies will show you how to set up your accounts and contacts to help you stay in touch with your friends and family. More interested in playing some new games or using the latest app? Flip to the chapter on accessing the Google Play Store and grab your favorite downloads. You\u2019ll find step-by-step descriptions, complete with helpful screenshots and pictures, to help you: Understand the home screen, buttons, and menus of your new phone so you can navigate it with ease Customize your phone with ringtones, wallpapers, lock screens, and widgets Improve your productivity with functional apps like Calendar and GPS Whether this is your first Samsung phone, or just the latest in a long line of them, Samsung Galaxy S22 For Dummies is your secret weapon to unlocking the full potential of one of the most powerful smartphones on the market today.",
+      "author": "Bill Hughes",
+      "publisher": "John Wiley & Sons",
+      "publication_date": "2022-06-01",
+      "page_count": 326,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=a2l6EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 71,
+    "fields": {
+      "isbn": "9786234431964",
+      "title": "Cerita Galaxy 8 - Selamat Tinggal Peri",
+      "description": "Buku ini menceritakan petualangan Galaxy dan sang peri. Pada seri ini menceritakan petualangan Galaxy di bawah lubang tikus sekaligus akhir kisah Galaxy dan sang peri.",
+      "author": "K. Pyle",
+      "publisher": "victory pustaka media",
+      "publication_date": "2022-05-08",
+      "page_count": 33,
+      "category": "Fiction",
+      "image_url": "http://books.google.com/books/content?id=dI9wEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 72,
+    "fields": {
+      "isbn": "9786234431933",
+      "title": "Cerita Galaxy 5: Cincin Rubi",
+      "description": "Buku ini menceritakan petualangan Galaxy dan sang peri. Pada seri ini Galaxy berpetualang ke dalam sebuah gua hingga bertemu dengan kurcaci dan menemukan cincin rubi.",
+      "author": "K. Pyle",
+      "publisher": "victory pustaka media",
+      "publication_date": "2022-05-08",
+      "page_count": 26,
+      "category": "Fiction",
+      "image_url": "http://books.google.com/books/content?id=VI9wEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 73,
+    "fields": {
+      "isbn": "9786234431957",
+      "title": "Cerita Galaxy 7: Mimpi Indah untuk Dania",
+      "description": "Buku ini menceritakan petualangan Galaxy dan sang peri. Pada seri ini Galaxy berusaha mencegah mimpi buruk mendatangi Dania. Galaxy ingin mimpi indah yang mendatangi Dania.",
+      "author": "K. Pyle",
+      "publisher": "victory pustaka media",
+      "publication_date": "2022-05-08",
+      "page_count": 25,
+      "category": "Fiction",
+      "image_url": "http://books.google.com/books/content?id=bI9wEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 74,
+    "fields": {
+      "isbn": "9786234431926",
+      "title": "Cerita Galaxy 4: Cerita di Pinggir Laut",
+      "description": "Buku ini menceritakan petualangan Galaxy dan sang peri. Pada seri ini Galaxy berpetualang di tepi laut kutub hingga ia bertemu dengan anjing laut yang bertaring panjang dan bermata lembut.",
+      "author": "K. Pyle",
+      "publisher": "victory pustaka media",
+      "publication_date": "2022-05-08",
+      "page_count": 32,
+      "category": "Fiction",
+      "image_url": "http://books.google.com/books/content?id=TI9wEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 75,
+    "fields": {
+      "isbn": "9786234431896",
+      "title": "Cerita Galaxy 1: Putri dan Istana Emas",
+      "description": "Buku ini menceritakan petualangan Galaxy dan sang peri. Pada seri ini Galaxy pertama kali bertemu dengan sang peri.",
+      "author": "K. Pyle",
+      "publisher": "victory pustaka media",
+      "publication_date": "2022-05-08",
+      "page_count": 28,
+      "category": "Fiction",
+      "image_url": "http://books.google.com/books/content?id=vGxwEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 76,
+    "fields": {
+      "isbn": "9786234431902",
+      "title": "Cerita Galaxy 2: Burung Hantu dan Peri yang Suka Berjudi",
+      "description": "Buku ini menceritakan petualangan Galaxy dan sang peri. Pada seri ini Galaxy bertemu dengan burung-burung hantu dan peri yang suka berjudi.",
+      "author": "K. Pyle",
+      "publisher": "victory pustaka media",
+      "publication_date": "2022-05-08",
+      "page_count": 27,
+      "category": "Fiction",
+      "image_url": "http://books.google.com/books/content?id=MI9wEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 77,
+    "fields": {
+      "isbn": "9780132730761",
+      "title": "My Samsung Galaxy Tab",
+      "description": "COVERS Galaxy Tab 10.1 and Galaxy Tab 7.0 My Samsung Galaxy TabTM Step-by-step instructions with callouts to photos that show you exactly what to do with the Galaxy Tab 7.0 and Galaxy Tab 10.1 Help when you run in to Samsung Galaxy Tab problems or limitations Tips and Notes to help you get the most from your Samsung Galaxy Tab Full-color, step-by-step tasks walk you through getting and keeping your Samsung Galaxy Tab working just the way you want. Learn how to \u2022 Get started fast! \u2022 Navigate Samsung Galaxy Tab\u2019s Android operating system \u2022 Retrieve, play, and manage music, video, podcasts, and audiobooks \u2022 Use the Samsung Media Hub as a portal to movies and TV content \u2022 Capture higher-quality photos and video \u2022 Surf the Web quickly with the built-in browser \u2022 Monitor news, weather, and stock prices \u2022 Simplify your life with the Calendar and Contacts \u2022 Send email, text, and multimedia messages \u2022 Use your Galaxy Tab as an Amazon Kindle ebook reader \u2022 Find any destination with Maps, Navigation, Places, and Latitude \u2022 Discover, choose, install, and work with new Android apps \u2022 Extend your Galaxy Tab with add-on hardware and accessories \u2022 Customize your tablet to reflect your personal style, habits, and preferences \u2022 Keep your Galaxy Tab up to date, reliable, and running smoothly",
+      "author": "Eric Butow,Lonzell Watson",
+      "publisher": "Que Publishing",
+      "publication_date": "2011-12-01",
+      "page_count": 948,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=7Cq5m7d3LIQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 78,
+    "fields": {
+      "isbn": "9781844163427",
+      "title": "Bintang Galaxy: Novelindo Publishing",
+      "description": "Seperti arti dari sebuah nama. Tingginya 175 cm, bersinar karena prestasinya dalam bidang basket, suka makan seblak mercon dan mempunyai fans club namun sayangnya tomboy. Cecilia Bintang menganggap sahabatnya bernama Barja Agritama merupakan sosok yang selama ini dia cari, karena kepiawaian laki-laki itu sebagai play maker basket. Namun sayangnya tinggi mereka sama. Menepis budaya ketimuran sekaligus sudah bucin kronis, Bintang membuat taruhan pada dirinya sendiri. Apabila bisa membawa tim basketnya menang, maka dia akan menyatakan perasaannya pada Barja. Namun bukankah rencana yang disusun rapi seringkali kacau karena suatu hal atau seseorang? Pianis adik kelas bernama Galaxy Andromeda—misalnya?",
+      "author": "Chacha Prima",
+      "publisher": "Novelindo Publishing",
+      "publication_date": "2021-03-09",
+      "page_count": 370,
+      "category": "Fiction",
+      "image_url": "http://books.google.com/books/content?id=zQYiEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 79,
+    "fields": {
+      "isbn": "9781484232521",
+      "title": "Introducing JavaScript Game Development",
+      "description": "Learn to build a fully-functional 2D game inspired by the 1979 Atari classic, Asteroids, using just HTML5, CSS and JavaScript. Developing games has never been easier than it is now. New web technology allows even beginner developers to turn their hand to game development. Developed from an undergraduate course module, Introducing JavaScript Game Development teaches each new technology as it is introduced so can be followed by enthusiastic beginners as well as intermediate coders. You will learn how to work with HTML5 and the canvas element, how to understand paths, how to draw to a design and create your spaceship and asteroids. You\u2019ll then move on to animating your game, and finally building. You will work step-by-step through the game design process, starting with only what is necessary to complete each step, and refactoring the code as necessary along the way, reflecting the natural progression that code follows in the real world. Each chapter is designed to take your code base to the next level and to add to your skills. After completing the examples in this book you will have the tools necessary to build your own, high-quality games. Make the process of creating object-oriented 2D games more fun and more productive and get started on your game development journey.",
+      "author": "Graeme Stuart",
+      "publisher": "Apress",
+      "publication_date": "2017-12-07",
+      "page_count": 211,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=vzVCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 80,
+    "fields": {
+      "isbn": "9781484237366",
+      "title": "Practical Video Game Bots",
+      "description": "Develop and use bots in video gaming to automate game processes and see possible ways to avoid this kind of automation. This book explains how bots can be very helpful in games such as multiplayer online games, both for training your character and for automating repetitious game processes in order to start a competition with human opponents much faster. Some players might use bots for cheating or avoiding game rules to gain an advantage over opponents - a sophisticated form of hacking that includes some elements of artificial intelligence (AI). However, while Practical Video Game Bots considers these topics, it is not a cheater's guide. Rather, this book is an attempt to overcome the information vacuum regarding bot development in video game applications. Through the use of three case study game examples, it covers most methods and technologies that are used by bot developers, and the details of anti-cheating systems. This book provides answers and useful advice for topics such as process automation, reverse engineering, and network applications. Modern bot applications use technologies from all these domains. You will also consider the work mechanisms of different kinds of bots and will write simple prototypes. What You Will Learn Discover bots and apply them to game applications Use clicker bots with OS-level embedding data, output-device capture, and more Develop in-game bots, with process memory analysis and access Work with out-game bots, with network interception and embedding data Deal with input device emulation and OS-level interception data Who This Book Is For Those with some prior experience in game development and coding experience in Python, C++, and Windows APIs.",
+      "author": "Ilya Shpigor",
+      "publisher": "Apress",
+      "publication_date": "2018-08-21",
+      "page_count": 336,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=LnhqDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 81,
+    "fields": {
+      "isbn": "9781351989343",
+      "title": "C# and Game Programming",
+      "description": "The second edition of C# and Game Programming offers the same practical, hands-on approach as the first edition to learning the C# language through classic arcade game applications. Complete source code for games like Battle Bit, Asteroid Miner, and Battle Tennis, included on the CD-ROM, demonstrates programming strategies and complements the comprehensive treatment of C# in the text. From the basics of adding graphics and sound to games, to advanced concepts such as the .Net framework and object-oriented programming, this book provides the foundations for a beginner to become a full-fledged programmer. New in this edition: - Supports DirectX 9.0 - Revised programs and examples - Improved frame rate for game examples",
+      "author": "Salvatore A. Buono",
+      "publisher": "CRC Press",
+      "publication_date": "2019-05-20",
+      "page_count": 594,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=FYCYDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 82,
+    "fields": {
+      "isbn": "9783319338552",
+      "title": "Finding a Million-Star Hotel",
+      "description": "Bob Mizon, one of the world\u2019s best known campaigners against the veil of light pollution that has taken away the starry sky from most of the world\u2019s population, takes readers to a hundred places in the UK and the USA where the wonders of the night sky might still be enjoyed in perfect or near-perfect night skies. Visiting small hotels and simple campsites, and savoring vast dark-sky reserves where the night sky is actively protected, The Million-Star Hotel celebrates the black skies of yesteryear \u2013 which may become a reality for more and more of us as modern technology reins in lighting and puts it only where needed. How can you prepare for your stay beneath the stars? What astronomy can you do during the daytime? What kind of equipment will you need? Questions such as these are answered, and if town dwellers return inspired \u2013 and, Bob hopes, also inspired to look with fresh eyes at their own local lighting \u2013 there is enough information here for them to equip themselves for some urban astronomy too.",
+      "author": "Bob Mizon",
+      "publisher": "Springer",
+      "publication_date": "2016-07-04",
+      "page_count": 322,
+      "category": "Science",
+      "image_url": "http://books.google.com/books/content?id=0j6lDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 83,
+    "fields": {
+      "isbn": "9781849437493",
+      "title": "Alex and the Winter Star",
+      "description": "In this hilarious sequel to Alex and The Warrior, Alex and Cat are once again faced with keeping the unruly Warrior under control, not an easy feat for the pair as I'm sure you all know. One year older, Alex has started to doubt his old friend Warrior, but Warrior cannot leave until he's vanquished his deadly enemy the Skarg... Somehow the dreaded Skarg, who still can't decide whether to destroy the Earth or star in the next Hollywood movie, have found a way to break out of the game and with their new found freedom are planning world domination! Only through securing the help of his friend Alex can Warrior stop the villains dastardly plans and save the world from invasion... Incorporating the themes of friendship and what it means to belong, Alex and the Winter Star is not only play jam packed with adventure, danger and magic, but is underlined by important concepts and issues. Ideal for young actors and schools, Alex's new adventures are sure to capture the imagination of young readers, sending them spinning into a mystical world of possibilities.",
+      "author": "Ann Coburn",
+      "publisher": "Bloomsbury Publishing",
+      "publication_date": "2009-01-08",
+      "page_count": 91,
+      "category": "Performing Arts",
+      "image_url": "http://books.google.com/books/content?id=dNL7DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 84,
+    "fields": {
+      "isbn": "9780190888428",
+      "title": "Rock Star/Movie Star",
+      "description": "During the mid-1950s, when Hollywood found itself struggling to compete within an expanding entertainment media landscape, certain producers and studios saw an opportunity in making films that showcased performances by rock 'n' roll stars. Rock stars eventually found cinema to be a useful space to extend their creative practices, and the motion picture and recording industries increasingly saw cinematic rock stardom as a profitable means to connect multiple media properties. Indeed, casting rock stars for film provided a tool for bridging new relationships across media industries and practices. From Elvis Presley to Madonna, this book examines the casting rock stars in films. In so doing, Rock Star/Movie Star offers a new perspective on the role of stardom within the convergence of media industries. While hardly the first popular music culture to see its stars making the transition to screen, the timing of rock's emergence and its staying power within popular culture proved fortuitous for a motion picture business searching for its place in the face of continuous technological and cultural change. At the same time, a post-star-system film industry provided a welcoming context for rock stars who have valued authenticity, creative autonomy, and personal expression. This book uses illuminating archival resources to demonstrate how rock stars have often proven themselves to be prominent film workers exploring this terrain of platforms old and new - ideal media laborers whose power lies in the fact that they are rarely recognized as such. Combining star studies with media industry studies, this book proposes an integrated methodology for writing media history that combines the actions of individuals and the practices of industries. It demonstrates how stars have operated as both the gravitational center of media production as well as social actors who have taken on a decisive role in the purposes to which their images are used.",
+      "author": "Landon Palmer",
+      "publisher": "Oxford University Press",
+      "publication_date": "2020-06-30",
+      "page_count": 288,
+      "category": "Music",
+      "image_url": "http://books.google.com/books/content?id=jPUTEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 85,
+    "fields": {
+      "isbn": "9781465459770",
+      "title": "The Star Trek Book",
+      "description": "Celebrate 50 years of one of the longest running and beloved sci-fi franchises with The Star Trek Book. This comprehensive guide to the series delves into the myriad worlds and different dimensions visited by the crew of the U.S.S. Enterprise. Discover the amazing science of Star Trek and how it has influenced real-world technology such as flip phones. Featuring informative and analytical text combined with exciting photography and infographics throughout, The Star Trek Book is broken down into main categories such as science and technology, Starfleet, allies and enemies, and more. Perfect for fans of the various Star Trek TV series, including The Next Generation, Deep Space Nine, Voyager, and Enterprise, The Star Trek Book details everything you need to know about 50 years of excitement and adventure on the final frontier. \u00ae & \u00a9 2016 CBS Studios Inc. \u00a9 2016 Paramount Pictures Corporation. STAR TREK and related marks are trademarks of CBS Studios Inc. All Rights Reserved.",
+      "author": "Paul J. Ruditis",
+      "publisher": "Penguin",
+      "publication_date": "2016-06-07",
+      "page_count": 723,
+      "category": "Performing Arts",
+      "image_url": "http://books.google.com/books/content?id=fAkyDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 86,
+    "fields": {
+      "isbn": "9781481486156",
+      "title": "Last Star Burning",
+      "description": "\u201cRich and timely.\u201d \u2014Aprilynne Pike, #1 New York Times bestselling author \u201cIncredibly immersive.\u201d \u2014Kirkus Reviews \u201cA gripping tale of trust.\u201d \u2014Booklist To escape execution for a crime she didn\u2019t commit, sixteen-year-old Sev is forced to run away from the only home she\u2019s ever known in this \u201crichly imagined\u201d (BCCB, starred review) post-apocalyptic debut novel from Caitlin Sangster. Sev is branded with the mark of a criminal\u2014a star burned into her hand. That\u2019s the penalty for being the daughter of the woman who betrayed their entire nation. Now her mother\u2019s body is displayed above Traitor\u2019s Arch, kept in a paralyzed half sleep by the same plague that destroyed the rest of the world. And as further punishment, Sev is forced to do hard labor to prove that she\u2019s more valuable alive than dead. When the government blames Sev for a horrific bombing, she must escape the city or face the chopping block. Unimaginable dangers lurk outside the city walls, and Sev\u2019s only hope of survival lies with the most unlikely person\u2014Howl, the chairman\u2019s son. Though he promises to lead her to safety, Howl has secrets, and Sev can\u2019t help but wonder if he knows more about her past\u2014and her mother\u2019s crimes\u2014than he lets on. But in a hostile world, trust is a luxury. Even when Sev\u2019s life and the lives of everyone she loves may hang in the balance.",
+      "author": "Caitlin Sangster",
+      "publisher": "Simon and Schuster",
+      "publication_date": "2017-10-10",
+      "page_count": 400,
+      "category": "Young Adult Fiction",
+      "image_url": "http://books.google.com/books/content?id=2ayuDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 87,
+    "fields": {
+      "isbn": "9781316782095",
+      "title": "Twenty Lectures on Algorithmic Game Theory",
+      "description": "Computer science and economics have engaged in a lively interaction over the past fifteen years, resulting in the new field of algorithmic game theory. Many problems that are central to modern computer science, ranging from resource allocation in large networks to online advertising, involve interactions between multiple self-interested parties. Economics and game theory offer a host of useful models and definitions to reason about such problems. The flow of ideas also travels in the other direction, and concepts from computer science are increasingly important in economics. This book grew out of the author's Stanford University course on algorithmic game theory, and aims to give students and other newcomers a quick and accessible introduction to many of the most important concepts in the field. The book also includes case studies on online advertising, wireless spectrum auctions, kidney exchange, and network management.",
+      "author": "Tim Roughgarden",
+      "publisher": "Cambridge University Press",
+      "publication_date": "2016-09-01",
+      "page_count": 357,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=5hjCDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 88,
+    "fields": {
+      "isbn": "9780571317653",
+      "title": "Strange Star",
+      "description": "They were coming tonight to tell ghost stories. 'A tale to freeze the blood,' was the only rule. Switzerland, 1816. On a stormy summer night, Lord Byron and his guests are gathered round the fire. Felix, their serving boy, can't wait to hear their creepy tales. Yet real life is about to take a chilling turn- more chilling than any tale. Frantic pounding at the front door reveals a stranger, a girl covered in the most unusual scars. She claims to be looking for her sister, supposedly snatched from England by a woman called Mary Shelley. Someone else has followed her here too, she says. And the girl is terrified. This breathtaking new book from Emma Carroll, the critically-acclaimed author of Frost Hollow Hall, The Girl Who Walked On Air, In Darkling Wood and The Snow Sister, is a deliciously creepy story inspired by the creation of Frankenstein, and is brought to life by a leading talent in children's literature.",
+      "author": "Emma Carroll",
+      "publisher": "Faber & Faber Childrenas",
+      "publication_date": "2016-07-07",
+      "page_count": 320,
+      "category": "JUVENILE FICTION",
+      "image_url": "http://books.google.com/books/content?id=d2VLjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 89,
+    "fields": {
+      "isbn": "9783642161698",
+      "title": "Algorithmic Game Theory",
+      "description": "Thepresentvolumewasdevotedto thethirdeditionofthe InternationalSym- sium on Algorithmic Game Theory (SAGT), an interdisciplinary scienti?c event intended to provide a forum for researchers as well as practitioners to exchange innovative ideas and to be aware of each other's e?orts and results. SAGT 2010 took place in Athens, on October 18\u201320, 2010. The present volume contains all contributed papers presented at SAGT 2010 together with the distinguished invited lectures of Amos Fiat (Tel-Aviv University, Israel), and Paul Goldberg (University of Liverpool, UK). The two invited papers are presented at the - ginning of the proceedings, while the regular papers follow in alphabetical order (by the authors' names). In response to the call for papers, the Program Committee (PC) received 61 submissions.Amongthesubmissionswerefour paperswith atleastonecoauthor that was also a PC member of SAGT 2010. For these PC-coauthored papers, anindependent subcommittee (EliasKoutsoupias,PaulG. Spirakis,andXiaotie Deng) made the judgment, and eventually two of these papers were proposedfor inclusion in the Scienti?c Program. For the remaining 57 (non-PC-coauthored) papers, the PC of SAGT 2010 conducted a thorough evaluation (at least 3, and on average 3.9 reviews per paper) and electronic discussion, and eventually selected 26 papers for inclusion in the Scienti?c Program. An additional tutorial, \u201cGames Played in Physics\u201d, was also provided in SAGT 2010, courtesy of the academic research network Algogames (A??o?a????o) of the University of Patras.",
+      "author": "Spyros Kontogiannis",
+      "publisher": "Springer Science & Business Media",
+      "publication_date": "2010-10-06",
+      "page_count": 370,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=4RAvCF67UlQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 90,
+    "fields": {
+      "isbn": "9780521173636",
+      "title": "The Cambridge Star Atlas",
+      "description": "Ideal for astronomers worldwide, the fourth edition of this classic atlas features new Moon maps, new data and enhanced charts.",
+      "author": "Wil Tirion",
+      "publisher": "Cambridge University Press",
+      "publication_date": "2011-01-27",
+      "page_count": 97,
+      "category": "Science",
+      "image_url": "http://books.google.com/books/content?id=k2GiRwnAl9cC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 91,
+    "fields": {
+      "isbn": "9788835454953",
+      "title": "Gaming dan video game",
+      "description": "Mengapa Orang Suka Bermain Game? Jutaan ahli dan para orang tua yang merasa khawatir telah menanyakan pertanyaan ini kepada diri mereka sendiri selama setidaknya lima puluh tahun. Ketika video game mulai bermunculan pada tahun tujuh puluhan, kebanyakan orang melihatnya sebagai keseruan belaka, tetapi seiring dengan meningkatnya jumlah penggemar video game, bahkan pada dekade tersebut, kalangan akademik mulai menyebut video game sebagai 'gangguan bodoh', dan para pemain game sebagai 'orang-orang dungu'. Hal ini berlanjut sampai baru-baru ini, dan sangat banyak artikel yang ditulis untuk meremehkan video game dan pemain game. Walaupun begitu, keadaan mulai berubah, dan para 'ahli' dengan angkuh mulai menyuarakan segi positif dari video game terhadap para pemain game...bahkan mereka yang masih sangat muda. Sementara semua perdebatan mengenai hal ini memanas, para pemain game tetap melakukan hal yang paling mereka gemari - bermain video game. Banyak hal yang telah ditulis mengenai bagaimana video game sangat memikat kalangan anak muda pada tahun tujuh puluhan, dan mengapa sekarang, baik orang tua maupun anak muda gemar bermain game. Ada yang menyukai game RPG, ada yang senang mengambil resiko di dalam dunia virtual, dan ada juga yang gemar mengasah kemampuan yang biasanya tidak mereka gunakan. Bahkan ada beberapa yang bermimpi menjadi bagian dari jajaran pemain game elite yang merupakan jutawan. Apapun alasan Anda, semoga anda mendapatkan kesenangan dari hobi Anda, dan may the Force be with you. Dalam e-book ini terkandung informasi mengenai berbagai video game, game komputer, arcade dan topik-topik yang terkait, yang disusun dalam 16 babak yang masing-masing terdiri dari sekitar 500-600 kata. Sebagai bonus tambahan, saya memberikan Anda izin untuk menggunakan isi e-book ini untuk situs web atau blog dan buletin Anda, walaupun sebaiknya Anda menulisnya kembali menggunakan kata-kata Anda sendiri. Translator: Haidar M. Azhar PUBLISHER: TEKTIME",
+      "author": "Owen Jones",
+      "publisher": "Tektime",
+      "publication_date": "2023-08-09",
+      "page_count": 58,
+      "category": "Juvenile Nonfiction",
+      "image_url": "http://books.google.com/books/content?id=4hbQEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 92,
+    "fields": {
+      "isbn": "9786023869473",
+      "title": "ANIMAL BASED TOURISM DAN ISU KESEJAHTERAAN HEWAN",
+      "description": "Buku ini terdiri dari delapan bab yang menjelaskan definisi konsep, pemahaman, aplikasi, dan implikasi ABT. Bab 1 menjelaskan konsep dasar dari animal based tourism dan fungsi hewan sebagai kawan, penjaga/pengawal, tunggangan/kendaraan, hewan piaraan dan kesenangan, bahan pangan, bahan sandang, sampai sebagai atraksi yang dikemas dalam wisata. Di bab ini juga dibahas secara sekilas isu-isu kesejahteraan hewan pada penyelenggaraan wisata berbasis hewan. Bab 2 menjelaskan bahwa setiap pengembangan pariwisata perlu mempertimbangkan konsep pembangunan wisata yang berkelanjutan. Bab 3 menjelaskan perkembangan terkini dari pariwisata yang sudah meninggalkan konsep-konsep lama (mass tourism), serta kritik dari konsep dan implementasi pariwisata alternatif tersebut. Bab 4 menjelaskan peran organisasi dan stakeholder dalam pengembangan pariwisata, teknologi komunikasi dan teknologi alternatif sebagai sarana pariwisata, dan dampak yang ditimbulkan dari pembangunan pariwisata. Bab 5 menjelaskan ABT sebagai salah satu jenis pariwisata alternatif. Di bab ini dijelaskan juga tentang jenis-jenis pariwisata. Bab 6 menjelaskan berbagai macam pandangan dan etika pelaksanaan terkait kesejahteraan hewan. Di bab ini secara khusus dijelaskan tentang pemahaman, konsep, sejarah, dan pelaksanaan kesejahteraan hewan serta isu-isu yang berkaitan dengan kehidupan hewan untuk kelangsungan hidup manusia. Bab 7 menjelaskan isu kesejahteraan hewan dan penerapannya dalam ABT. Dalam bab ini dibahas cara meningkatkan kesejahteraan pada hewan-hewan yang digunakan dalam atraksi pariwisata, tantangan kesejahteraan hewan pada sektor pariwisata, serta cara menciptakan standard animal welfare. Buku ini ditutup dengan Bab 8 yang menyimpulkan bab-bab sebelumnya dan implikasi ABT dalam rangka membangun sektor pariwisata, khususnya pariwisata berbasis hewan dengan memperhatikan kesejahteraan hewan. Semoga buku ini bermanfaat bagi pembaca yang tertarik mengenai pariwisata, khususnya pariwisata berbasis hewan atau animal based tourism.",
+      "author": "Budi Guntoro",
+      "publisher": "UGM PRESS",
+      "publication_date": "2021-11-24",
+      "page_count": 244,
+      "category": "Nature",
+      "image_url": "http://books.google.com/books/content?id=h3ZQEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 93,
+    "fields": {
+      "isbn": "9789027287465",
+      "title": "Dialogue \u0096 The Mixed Game",
+      "description": "The \u2018Mixed Game Model\u2019 represents a holistic theory of dialogue which starts from human beings\u2019 competence-in-performance and describes how language is integrated in a general theory of human action and behaviour. Human beings are able to adapt to changing conditions and to pursue their interests by the integrated use of various communicative means, mainly verbal, perceptual and cognitive. The core unit is the dialogic action game or \u2018the mixed game\u2019 with human beings at the centre acting and reacting in cultural surroundings. The key to opening up the complex whole is human beings\u2019 nature. The Mixed Game Model demonstrates how the different disciplines of the natural and social sciences and the humanities are mutually interconnected. After a detailed overview of the state of the art, the fundamentals of the theory are laid down. They include a typology of action games which ranges from minimal games to complex institutional games. The description is illustrated by analyses of authentic games.",
+      "author": "Edda Weigand",
+      "publisher": "John Benjamins Publishing",
+      "publication_date": "2010-12-22",
+      "page_count": 304,
+      "category": "Language Arts & Disciplines",
+      "image_url": "http://books.google.com/books/content?id=FUozAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 94,
+    "fields": {
+      "isbn": "9780231534260",
+      "title": "Being Animal",
+      "description": "For most people, animals are the most significant aspects of the nonhuman world. They symbolize nature in our imaginations, in popular media and culture, and in campaigns to preserve wilderness, yet scholars habitually treat animals and the environment as mutually exclusive objects of concern. Conducting the first examination of animals' place in popular and scholarly thinking about nature, Anna L. Peterson builds a nature ethic that conceives of nonhuman animals as active subjects who are simultaneously parts of both nature and human society. Peterson explores the tensions between humans and animals, nature and culture, animals and nature, and domesticity and wildness. She uses our intimate connections with companion animals to examine nature more broadly. Companion animals are liminal creatures straddling the boundary between human society and wilderness, revealing much about the mutually constitutive relationships binding humans and nature together. Through her paradigm-shifting reflections, Peterson disrupts the artificial boundaries between two seemingly distinct categories, underscoring their fluid and continuous character.",
+      "author": "Anna Peterson",
+      "publisher": "Columbia University Press",
+      "publication_date": "2013-05-21",
+      "page_count": 240,
+      "category": "Nature",
+      "image_url": "http://books.google.com/books/content?id=1cVDPsnTZ5UC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 95,
+    "fields": {
+      "isbn": "9781935408277",
+      "title": "1668",
+      "description": "Peter Sahlins\u2019s brilliant new book reveals the remarkable and understudied \u201canimal moment\u201d in and around 1668 in which authors (icluding La Fontaine, whose Fables appeared in that year), anatomists, painters, sculptors, and especially the young Louis XIV turned their attention to nonhuman beings. At the center of the Year of the Animal was the Royal Menagerie in the gardens of Versailles, dominated by exotic and graceful birds. In the remarkable unfolding of his original and sophisticated argument, Sahlins shows how the animal bodies of the menagerie and others (such as the dogs and lambs of the first xenotransfusion experiments) were critical to a dramatic rethinking of governance, nature, and the human. The animals of 1668 helped to shift an entire worldview in France \u2014 what Sahlins calls Renaissance humanimalism \u2014 toward more modern expressions of Classical naturalism and mechanism. In the wake of 1668 came the debasement of animals and the strengthening of human animality, including in Descartes\u2019s animal-machine, highly contested during the Year of the Animal. At the same time, Louis XIV and his intellectual servants used the animals of Versailles to develop and then to transform the symbolic language of French absolutism. Louis XIV came to adopt a model of sovereignty after 1668 where his absolute authority is represented in manifold ways with the bodies of animals and justified by the bestial nature of his human subjects. 1668: The Year of the Animal in France explores and reproduces the king\u2019s animal collections \u2014 in printed text, weaving, poetry, and engraving, all seen from a unique interdisciplinary perspective. Sahlins brings the animals of 1668 together and to life as he observes them critically in their native habitats \u2014 within the animal palace itself by Louis Le Vau, the paintings and tapestries of Charles Le Brun, the garden installations of Andr\u00e9 Le N\u00f4tre, the literary work of Charles Perrault and the natural history of his brother Claude, the poetry of Madeleine de Scud\u00e9ry, the philosophy of Ren\u00e9 Descartes, the engravings of S\u00e9bastien Leclerc, the trans_fusion experiments of Jean Denis, and others. The author joins the non_human and human agents of 1668 \u2014 panthers and painters, swans and scientists, weasels and weavers \u2014 in a learned and sophisticated treatment that will engage scholars and students of early modern France and Europe and readers broadly interested in the subject of animals in human history.",
+      "author": "Peter Sahlins",
+      "publisher": "Princeton University Press",
+      "publication_date": "2017-11-17",
+      "page_count": 496,
+      "category": "History",
+      "image_url": "http://books.google.com/books/content?id=G2PyDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 96,
+    "fields": {
+      "isbn": "9786239285203",
+      "title": "Pengembangan Game Si Pitung dengan GameMaker Studio",
+      "description": "Anda dapat memainkan game berapa kali, dan tentu saja akan selalu berbeda. Setiap game tidak diketahui dan tidak pasti siapa yang akan memenangkan permainan. Ketidakpastian dan tidak diketahui itulah yang membuat game sangat menarik dan menyenangkan. Buku ini merupakan panduan bagi yang ingin meningkatkan diri dalam pengembangan game untuk berbagai bidang seperti pendidikan, entertainment, dan lainnya. Pembelajaran dalam berbagai subjek, dengan menggunakan game tersebut tidak membosankan bagi siswa. Dengan menguasai materi ini diharapkan Anda sudah dapat menyelesaikan pekerjaan-pekerjaan yang berkaitan dengan pengembangan pembelajaran berbasis game. Pengembangan game dengan tokoh Si Pitung terdiri dari Collecting Game, Maze Game dan Platformer Game. Pembahasan meliputi desain dan implementasi pengembangan game. Fokus utama adalah pelaksanaan pembuatan game dengan GameMaker Studio.",
+      "author": "Ariesto Hadi Sutopo",
+      "publisher": "Topazart",
+      "publication_date": "2023-01-20",
+      "page_count": 128,
+      "category": "Computers",
+      "image_url": "http://books.google.com/books/content?id=nGyoEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "id"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 97,
+    "fields": {
+      "isbn": "9783319180021",
+      "title": "International Farm Animal, Wildlife and Food Safety Law",
+      "description": "This volume is an inspiring and breakthrough piece of academic scholarship and the first of its kind featuring a comprehensive reader-friendly approach to teach the intricacies of the various aspects of international farm animal, wildlife conservation, food safety and environmental protection law. The selected focus areas are grouped in sections, such as agrobiodiversity, fishing and aquaculture, pollinators and pesticides, soil management, industrial animal production and transportation, and international food trade. Farm animal welfare, environmental protection, biodiversity conservation, and food safety are the core of the selected chapters. Every chapter provides real-world examples to make the complex field easy to understand. With its systematic approach, this book is devoted to anyone interested in the subject, becomes a valuable resource for professionals working in food regulation, and provides a solid foundation for courses and master\u2019s programs in animal law, environmental policy, food and agriculture law, and regulation of these subjects around the world. Through its emphasis on sustainable food production, this work offers a cutting-edge selection of evolving topics at the heart of the pertinent discourse. As one of its highlights, this books also provides \u201cTools for Change,\u201d a unique compilation and analysis of laws from the major farm animal product trading nations. With these tools, practitioners, advocates, policy makers and other state-holders are equipped with information to start work toward improving farm animal welfare, wildlife conservation, and food safety through the use of law and policy.",
+      "author": "Gabriela Steier,Kiran K. Patel",
+      "publisher": "Springer",
+      "publication_date": "2017-01-09",
+      "page_count": 868,
+      "category": "Law",
+      "image_url": "http://books.google.com/books/content?id=ueTeDQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 98,
+    "fields": {
+      "isbn": "9781317652564",
+      "title": "Animals and Society (RLE Social Theory)",
+      "description": "Animals and Society uses a variety of historical sources and a coherent social theory to tell the story of the invention of animal rights. It moves from incidents like the medieval execution of pigs to a discussion of the politics and strategies of modern rights organisations. The book also presents radical interpretations of nineteenth-century animal welfare laws, and the accounts of the Noble Savage. The insights generated by social science are always at the core of the discussion and the author daws on the work of Michel Foucault, Norbert Elias, Claude Levi-Strauss and Mary Douglas. This wide-ranging and accessible book provides a fascinating account of the relations between humans and animals. It raises far-reaching questions about the philosophy, history and politics of animal rights.",
+      "author": "Keith Tester",
+      "publisher": "Routledge",
+      "publication_date": "2014-08-21",
+      "page_count": 227,
+      "category": "Social Science",
+      "image_url": "http://books.google.com/books/content?id=jgRUBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 99,
+    "fields": {
+      "isbn": "9781134068463",
+      "title": "The Regulation of Animal Health and Welfare",
+      "description": "The Regulation of Animal Health and Welfare draws on the research of scientists, lawyers, economists and political scientists to address the current and future regulatory problems posed by the issues of animal health and disease. Recent events such as the outbreak of mad cow disease, epidemics of foot and mouth disease, concerns about bluetongue in sheep, and the entry into the food chain of the offspring of cloned cattle, have heightened awareness of the issues of regulation in animal disease and welfare. This book critically appraises the existing regulatory institutions and guiding principles of how best to maintain animal health in the context of social change and a developing global economy. Addressing considerations of sound science, the role of risk management, and the allocation of responsibilities, it also takes up the theoretical and practical challenges which here \u2013 and elsewhere \u2013 attend the co-operation of scientists, social scientists, lawyers and policy makers. Indeed, the collaboration of scientists and social scientists in determined and regulatory contexts such as that of animal disease is an issue of ever-increasing importance. This book will be of considerable value to those with interests in this issue, as well as those concerned with the law and policy relating to animal health and welfare.",
+      "author": "John McEldowney,Wyn Grant,Graham Medley",
+      "publisher": "Routledge",
+      "publication_date": "2013-09-05",
+      "page_count": 210,
+      "category": "Law",
+      "image_url": "http://books.google.com/books/content?id=rSCwAAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  },
+  {
+    "model": "books.Book",
+    "pk": 100,
+    "fields": {
+      "isbn": "9783319545493",
+      "title": "Ethical and Political Approaches to Nonhuman Animal Issues",
+      "description": "This book offers ethical and political approaches to issues that nonhuman animals face. The recent \u2018political turn\u2019 in interspecies ethics, from ethical to political approaches, has arisen due to the apparent lack of success of the nonhuman animal movement and dissatisfaction with traditional approaches. Current works largely present general positions rather than address specific issues and principally rely on mainstream approaches. This book offers alternative positions such as cosmopolitan, libertarian, and left humanist thought, as well as applying ethical and political thought to specific issues, such as experimentation, factory farming, nonhuman political agency, and intervention. Presenting work by theorists and activists, insights are offered from both ethics and politics that impact theory and practice and offer essential considerations for those engaging in interspecies ethics within the political turn era.",
+      "author": "Andrew Woodhall,Gabriel Garmendia da Trindade",
+      "publisher": "Springer",
+      "publication_date": "2017-08-28",
+      "page_count": 410,
+      "category": "Philosophy",
+      "image_url": "http://books.google.com/books/content?id=kyIzDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
+    }
+  }
+]
