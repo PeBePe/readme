@@ -1,0 +1,32 @@
+[
+  {
+    "model": "quotes.QuoteCited",
+    "pk": 1,
+    "fields": { "cited_at": "2023-10-25 10:11:12", "user_id": 1, "quote_id": 2 }
+  },
+  {
+    "model": "quotes.QuoteCited",
+    "pk": 2,
+    "fields": { "cited_at": "2023-10-25 10:12:12", "user_id": 1, "quote_id": 3 }
+  },
+  {
+    "model": "quotes.QuoteCited",
+    "pk": 3,
+    "fields": { "cited_at": "2023-10-24 10:12:12", "user_id": 2, "quote_id": 1 }
+  },
+  {
+    "model": "quotes.QuoteCited",
+    "pk": 4,
+    "fields": { "cited_at": "2023-10-24 10:09:12", "user_id": 3, "quote_id": 1 }
+  },
+  {
+    "model": "quotes.QuoteCited",
+    "pk": 5,
+    "fields": { "cited_at": "2023-09-24 10:12:12", "user_id": 3, "quote_id": 2 }
+  },
+  {
+    "model": "quotes.QuoteCited",
+    "pk": 6,
+    "fields": { "cited_at": "2023-09-21 10:12:12", "user_id": 4, "quote_id": 1 }
+  }
+]

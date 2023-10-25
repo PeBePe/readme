@@ -1,0 +1,155 @@
+[
+  {
+    "model": "post.Like",
+    "pk": 1,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 1,
+      "post_id": 1
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 2,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 1,
+      "post_id": 3
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 3,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 1,
+      "post_id": 5
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 4,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 1,
+      "post_id": 7
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 5,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 1,
+      "post_id": 9
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 6,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 2,
+      "post_id": 2
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 7,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 2,
+      "post_id": 3
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 8,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 2,
+      "post_id": 6
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 9,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 2,
+      "post_id": 7
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 10,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 2,
+      "post_id": 10
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 11,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 3,
+      "post_id": 4
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 12,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 3,
+      "post_id": 5
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 13,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 3,
+      "post_id": 6
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 14,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 3,
+      "post_id": 7
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 15,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 4,
+      "post_id": 8
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 16,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 4,
+      "post_id": 9
+    }
+  },
+  {
+    "model": "post.Like",
+    "pk": 17,
+    "fields": {
+      "created_at": "2023-10-25 01:01:01",
+      "user_id": 4,
+      "post_id": 10
+    }
+  }
+]
