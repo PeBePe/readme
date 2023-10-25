@@ -1,0 +1,32 @@
+[
+  {
+    "model": "quotes.Quote",
+    "pk": 1,
+    "fields": {
+      "created_at": "2023-10-21 10:10:10",
+      "updated_at": "2023-10-21 10:10:10",
+      "quote": "This is test Quote 1, Please report to the developer if you see this",
+      "user": 1
+    }
+  },
+  {
+    "model": "quotes.Quote",
+    "pk": 2,
+    "fields": {
+      "created_at": "2023-10-21 10:10:10",
+      "updated_at": "2023-10-21 10:10:10",
+      "quote": "This is test Quote 2, Please report to the developer if you see this",
+      "user": 2
+    }
+  },
+  {
+    "model": "quotes.Quote",
+    "pk": 3,
+    "fields": {
+      "created_at": "2023-10-21 10:10:10",
+      "updated_at": "2023-10-21 10:10:10",
+      "quote": "This is test Quote 3, Please report to the developer if you see this",
+      "user": 3
+    }
+  }
+]

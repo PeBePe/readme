@@ -7,6 +7,7 @@ from books.models import Book
 class Wishlist(models.Model):
     wishlist_date = models.DateTimeField(auto_now_add=True)
     note = models.TextField()
-    user = models.OneToOneField(
+    user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='wishlist')
-    books = models.ManyToManyField(Book, related_name='wishlist')
+    books = models.ForeignKey(
+        Book, on_delete=models.SET_NULL,  related_name='wishlist', null=True)

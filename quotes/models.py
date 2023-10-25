@@ -1,8 +1,6 @@
 from django.db import models
 from readme.models import User
 
-# Create your models here.
-
 
 class Quote(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)

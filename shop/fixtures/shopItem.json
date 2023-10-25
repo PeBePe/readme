@@ -1,0 +1,452 @@
+[
+  {
+    "model": "shop.ShopItem",
+    "pk": 1,
+    "fields": {
+      "amount": 10,
+      "price": 400,
+      "book": 1
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 2,
+    "fields": {
+      "amount": 60,
+      "price": 600,
+      "book": 3
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 3,
+    "fields": {
+      "amount": 80,
+      "price": 500,
+      "book": 5
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 4,
+    "fields": {
+      "amount": 90,
+      "price": 800,
+      "book": 7
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 5,
+    "fields": {
+      "amount": 90,
+      "price": 600,
+      "book": 9
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 6,
+    "fields": {
+      "amount": 60,
+      "price": 300,
+      "book": 11
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 7,
+    "fields": {
+      "amount": 80,
+      "price": 200,
+      "book": 13
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 8,
+    "fields": {
+      "amount": 80,
+      "price": 200,
+      "book": 15
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 9,
+    "fields": {
+      "amount": 70,
+      "price": 500,
+      "book": 17
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 10,
+    "fields": {
+      "amount": 50,
+      "price": 1000,
+      "book": 19
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 11,
+    "fields": {
+      "amount": 70,
+      "price": 400,
+      "book": 21
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 12,
+    "fields": {
+      "amount": 90,
+      "price": 1000,
+      "book": 23
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 13,
+    "fields": {
+      "amount": 10,
+      "price": 200,
+      "book": 25
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 14,
+    "fields": {
+      "amount": 50,
+      "price": 200,
+      "book": 27
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 15,
+    "fields": {
+      "amount": 30,
+      "price": 700,
+      "book": 29
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 16,
+    "fields": {
+      "amount": 90,
+      "price": 400,
+      "book": 31
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 17,
+    "fields": {
+      "amount": 80,
+      "price": 700,
+      "book": 33
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 18,
+    "fields": {
+      "amount": 30,
+      "price": 300,
+      "book": 35
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 19,
+    "fields": {
+      "amount": 30,
+      "price": 600,
+      "book": 37
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 20,
+    "fields": {
+      "amount": 60,
+      "price": 500,
+      "book": 39
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 21,
+    "fields": {
+      "amount": 0,
+      "price": 1000,
+      "book": 41
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 22,
+    "fields": {
+      "amount": 40,
+      "price": 500,
+      "book": 43
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 23,
+    "fields": {
+      "amount": 70,
+      "price": 900,
+      "book": 45
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 24,
+    "fields": {
+      "amount": 60,
+      "price": 800,
+      "book": 47
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 25,
+    "fields": {
+      "amount": 0,
+      "price": 700,
+      "book": 49
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 26,
+    "fields": {
+      "amount": 20,
+      "price": 1000,
+      "book": 51
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 27,
+    "fields": {
+      "amount": 30,
+      "price": 900,
+      "book": 53
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 28,
+    "fields": {
+      "amount": 50,
+      "price": 400,
+      "book": 55
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 29,
+    "fields": {
+      "amount": 90,
+      "price": 300,
+      "book": 57
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 30,
+    "fields": {
+      "amount": 100,
+      "price": 1000,
+      "book": 59
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 31,
+    "fields": {
+      "amount": 100,
+      "price": 100,
+      "book": 61
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 32,
+    "fields": {
+      "amount": 40,
+      "price": 900,
+      "book": 63
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 33,
+    "fields": {
+      "amount": 70,
+      "price": 300,
+      "book": 65
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 34,
+    "fields": {
+      "amount": 40,
+      "price": 1000,
+      "book": 67
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 35,
+    "fields": {
+      "amount": 60,
+      "price": 300,
+      "book": 69
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 36,
+    "fields": {
+      "amount": 100,
+      "price": 600,
+      "book": 71
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 37,
+    "fields": {
+      "amount": 90,
+      "price": 600,
+      "book": 73
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 38,
+    "fields": {
+      "amount": 30,
+      "price": 600,
+      "book": 75
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 39,
+    "fields": {
+      "amount": 90,
+      "price": 400,
+      "book": 77
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 40,
+    "fields": {
+      "amount": 20,
+      "price": 400,
+      "book": 79
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 41,
+    "fields": {
+      "amount": 20,
+      "price": 600,
+      "book": 81
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 42,
+    "fields": {
+      "amount": 70,
+      "price": 200,
+      "book": 83
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 43,
+    "fields": {
+      "amount": 40,
+      "price": 400,
+      "book": 85
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 44,
+    "fields": {
+      "amount": 100,
+      "price": 100,
+      "book": 87
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 45,
+    "fields": {
+      "amount": 50,
+      "price": 500,
+      "book": 89
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 46,
+    "fields": {
+      "amount": 90,
+      "price": 800,
+      "book": 91
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 47,
+    "fields": {
+      "amount": 100,
+      "price": 500,
+      "book": 93
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 48,
+    "fields": {
+      "amount": 100,
+      "price": 200,
+      "book": 95
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 49,
+    "fields": {
+      "amount": 70,
+      "price": 300,
+      "book": 97
+    }
+  },
+  {
+    "model": "shop.ShopItem",
+    "pk": 50,
+    "fields": {
+      "amount": 10,
+      "price": 700,
+      "book": 99
+    }
+  }
+]
