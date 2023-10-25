@@ -1,19 +1,22 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
-from readme.forms import RegisterForm, LoginForm
+from readme.forms import RegisterForm, LoginForm, EditUserForm
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
 from django.core.exceptions import ValidationError, BadRequest
+from post.models import Post
 
 import datetime
 
 
 @login_required(login_url='/landing-page', redirect_field_name=None)
 def index(request):
+    posts = Post.objects.all()
     context = {
-        'user': request.user
+        'user': request.user,
+        'posts': posts
     }
     return render(request, 'readme/index.html', context=context)
 
@@ -67,5 +70,20 @@ def logout_user(request):
     return response
 
 
+@login_required(login_url='/landing-page', redirect_field_name=None)
 def profile(request):
-    return render(request, 'readme/profile.html')
+    print(request.user.cited_quote.all()[0].quote_id.quote)
+    context = {
+        "user": request.user
+    }
+    return render(request, 'readme/profile.html', context=context)
+
+
+@require_http_methods(['GET', 'POST'])
+def edit_profile(request):
+    if (request.method == 'POST'):
+
+        form = EditUserForm()
+        return render(request, 'readme/edit-profile.html', {"form": form})
+    else:
+        return render(request, 'readme/edit-profile.html', {"form": form})

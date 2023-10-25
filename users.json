@@ -1,0 +1,169 @@
+[
+{
+    "model": "readme.user",
+    "pk": 1,
+    "fields": {
+        "password": "passwd123",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-25T05:36:17.455Z",
+        "created_at": "2023-10-25T00:00:00Z",
+        "updated_at": "2023-10-25T00:00:00Z",
+        "username": "yuujibatagor",
+        "email": "yuujibatagor@gmail.com",
+        "name": "Yuuji Batagor",
+        "birthdate": "2001-01-01",
+        "biodata": "This is a test account. Please report to the developer if you see this account!",
+        "phone": "081111111111",
+        "loyalty_point": 1000,
+        "groups": [],
+        "user_permissions": [],
+        "bookshelf": [
+            1,
+            2,
+            3
+        ],
+        "shopping_cart": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "readme.user",
+    "pk": 2,
+    "fields": {
+        "password": "passwd123",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-25T05:36:17.482Z",
+        "created_at": "2023-10-25T00:00:00Z",
+        "updated_at": "2023-10-25T00:00:00Z",
+        "username": "gojoketoprak",
+        "email": "gojoketoprak@yahoo.com",
+        "name": "Gojo Ketoprak",
+        "birthdate": "2002-02-02",
+        "biodata": "This is a test account. Please report to the developer if you see this account!",
+        "phone": "082222222222",
+        "loyalty_point": 2000,
+        "groups": [],
+        "user_permissions": [],
+        "bookshelf": [
+            2,
+            3,
+            4
+        ],
+        "shopping_cart": [
+            3,
+            4,
+            5
+        ]
+    }
+},
+{
+    "model": "readme.user",
+    "pk": 3,
+    "fields": {
+        "password": "passwd123",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-25T05:36:17.492Z",
+        "created_at": "2023-10-25T00:00:00Z",
+        "updated_at": "2023-10-25T00:00:00Z",
+        "username": "kentosumedang",
+        "email": "kentosumedang@outlook.com",
+        "name": "Kento Sumedang",
+        "birthdate": "2003-03-03",
+        "biodata": "This is a test account. Please report to the developer if you see this account!",
+        "phone": "083333333333",
+        "loyalty_point": 3000,
+        "groups": [],
+        "user_permissions": [],
+        "bookshelf": [
+            3,
+            4,
+            5
+        ],
+        "shopping_cart": [
+            4,
+            5,
+            6
+        ]
+    }
+},
+{
+    "model": "readme.user",
+    "pk": 4,
+    "fields": {
+        "password": "passwd123",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-25T05:36:17.496Z",
+        "created_at": "2023-10-25T00:00:00Z",
+        "updated_at": "2023-10-25T00:00:00Z",
+        "username": "megumijambubiji",
+        "email": "megumijambubiji@email.com",
+        "name": "Megumi Jambu Biji",
+        "birthdate": "2004-04-04",
+        "biodata": "This is a test account. Please report to the developer if you see this account!",
+        "phone": "084444444444",
+        "loyalty_point": 4000,
+        "groups": [],
+        "user_permissions": [],
+        "bookshelf": [
+            4,
+            5,
+            6
+        ],
+        "shopping_cart": [
+            5,
+            6,
+            7
+        ]
+    }
+},
+{
+    "model": "readme.user",
+    "pk": 5,
+    "fields": {
+        "password": "pbkdf2_sha256$600000$9F0KChixZk5sP3zvKVa4rf$BGWQ0UDa5DgUmV3eRR/wB9fgFowPmCCrINMhcYyYvBo=",
+        "last_login": null,
+        "is_superuser": false,
+        "first_name": "",
+        "last_name": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2023-10-25T05:40:46.338Z",
+        "created_at": "2023-10-25T05:40:47.000Z",
+        "updated_at": "2023-10-25T05:40:47.000Z",
+        "username": "test",
+        "email": "test@gmail.com",
+        "name": "test",
+        "birthdate": "2023-10-25",
+        "biodata": "",
+        "phone": "",
+        "loyalty_point": 0,
+        "groups": [],
+        "user_permissions": [],
+        "bookshelf": [],
+        "shopping_cart": []
+    }
+}
+]
