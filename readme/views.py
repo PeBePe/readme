@@ -7,6 +7,9 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
 from django.core.exceptions import ValidationError, BadRequest
 from post.models import Post
+from books.models import Book
+from quotes.models import Quote
+from django.db.models import Count
 
 import datetime
 
@@ -14,9 +17,18 @@ import datetime
 @login_required(login_url='/landing-page', redirect_field_name=None)
 def index(request):
     posts = Post.objects.all()
+    newest_books = Book.objects.order_by('-publication_date')[:3]
+    categories = Book.objects.values_list(
+        'category', flat=True).distinct()[:15]
+    best_quote = Quote.objects.annotate(cited_count=Count(
+        'cited_quote')).order_by('-cited_count').first()
+
     context = {
         'user': request.user,
-        'posts': posts
+        'posts': posts,
+        "books": newest_books,
+        "categories": categories,
+        "quote": best_quote
     }
     return render(request, 'readme/index.html', context=context)
 
