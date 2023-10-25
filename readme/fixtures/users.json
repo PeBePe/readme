@@ -5,14 +5,16 @@
     "fields": {
       "created_at": "2023-10-25",
       "updated_at": "2023-10-25",
-      "username": "Yuuji Batagor",
+      "username": "yuujibatagor",
       "email": "yuujibatagor@gmail.com",
+      "name": "Yuuji Batagor",
       "birthdate": "2001-01-01",
       "biodata": "This is a test account. Please report to the developer if you see this account!",
       "phone": "081111111111",
       "loyalty_point": 1000,
       "bookshelf": [1, 2, 3],
-      "shopping_cart": [4, 5, 6]
+      "shopping_cart": [4, 5, 6],
+      "password": "pbkdf2_sha256$600000$9F0KChixZk5sP3zvKVa4rf$BGWQ0UDa5DgUmV3eRR/wB9fgFowPmCCrINMhcYyYvBo="
     }
   },
   {
@@ -21,14 +23,16 @@
     "fields": {
       "created_at": "2023-10-25",
       "updated_at": "2023-10-25",
-      "username": "Gojo Ketoprak",
+      "username": "gojoketoprak",
       "email": "gojoketoprak@yahoo.com",
+      "name": "Gojo Ketoprak",
       "birthdate": "2002-02-02",
       "biodata": "This is a test account. Please report to the developer if you see this account!",
       "phone": "082222222222",
       "loyalty_point": 2000,
       "bookshelf": [2, 3, 4],
-      "shopping_cart": [3, 4, 5]
+      "shopping_cart": [3, 4, 5],
+      "password": "pbkdf2_sha256$600000$9F0KChixZk5sP3zvKVa4rf$BGWQ0UDa5DgUmV3eRR/wB9fgFowPmCCrINMhcYyYvBo="
     }
   },
   {
@@ -37,14 +41,16 @@
     "fields": {
       "created_at": "2023-10-25",
       "updated_at": "2023-10-25",
-      "username": "Kento Sumedang",
+      "username": "kentosumedang",
       "email": "kentosumedang@outlook.com",
+      "name": "Kento Sumedang",
       "birthdate": "2003-03-03",
       "biodata": "This is a test account. Please report to the developer if you see this account!",
       "phone": "083333333333",
       "loyalty_point": 3000,
       "bookshelf": [3, 4, 5],
-      "shopping_cart": [4, 5, 6]
+      "shopping_cart": [4, 5, 6],
+      "password": "pbkdf2_sha256$600000$9F0KChixZk5sP3zvKVa4rf$BGWQ0UDa5DgUmV3eRR/wB9fgFowPmCCrINMhcYyYvBo="
     }
   },
   {
@@ -53,14 +59,16 @@
     "fields": {
       "created_at": "2023-10-25",
       "updated_at": "2023-10-25",
-      "username": "Megumi Jambu Biji",
+      "username": "megumijambubiji",
       "email": "megumijambubiji@email.com",
+      "name": "Megumi Jambu Biji",
       "birthdate": "2004-04-04",
       "biodata": "This is a test account. Please report to the developer if you see this account!",
       "phone": "084444444444",
       "loyalty_point": 4000,
       "bookshelf": [4, 5, 6],
-      "shopping_cart": [5, 6, 7]
+      "shopping_cart": [5, 6, 7],
+      "password": "pbkdf2_sha256$600000$9F0KChixZk5sP3zvKVa4rf$BGWQ0UDa5DgUmV3eRR/wB9fgFowPmCCrINMhcYyYvBo="
     }
   }
 ]
