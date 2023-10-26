@@ -27,8 +27,10 @@ urlpatterns = [
     path('auth/register', views.register, name='register'),
     path('auth/logout/', views.logout_user, name='logout'),
     path('profile/', views.profile, name='profile'),
+    # path('profile/edit', views.edit_profile, name="profile-edit"),
     path('books/', include("books.urls")),
     path('quotes/', include("quotes.urls")),
     path('post/', include("post.urls")),
     path('shop/', include("shop.urls")),
+    path('wishlist/', include('wishlist.urls'))
 ]

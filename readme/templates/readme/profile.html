@@ -1,7 +1,85 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
-<div class="w-full h-screen flex justify-center items-center text-5xl font-bold">This is profile page! Still in
-    progress!</div>
+<div class="container max-w-screen-xl flex gap-8 py-6">
+    <div class="flex flex-col gap-8 w-3/4">
+        <div class="flex gap-6 w-full">
+            <div class="flex flex-col items-center gap-4 ">
+                <div class="w-40 h-40"><img src="{% static 'img/profile.svg' %}" alt="photo profile"
+                        class="w-full h-full">
+                </div>
+                <div class="flex flex-col gap-2 text-sm">
+                    <a href="{% url 'wishlist' %}"
+                        class="bg-[#00635D] text-white py-2 px-2 rounded-sm text-center">Lihat
+                        Wishlist</a>
+                    <a href="{% url 'shop' %}" class="bg-[#003f63] text-white py-2 px-2 rounded-sm text-center">Lihst
+                        Buku yang Dibeli</a>
+                </div>
+            </div>
+            <div class="flex flex-col justify-between w-full">
+                <div class="w-full flex flex-col gap-1">
+                    <div class="flex gap-2 items-end justify-between">
+                        <h1 class="text-2xl font-bold">{{ user.name }}
+                            <span class="text-black/50">@{{ user.username }}</span>
+                        </h1>
+
+                        {% comment %}
+                        <a href="{% url 'profile-edit' %}" class="text-[#00635D] underline">(Edit profile)</a>
+                        {% endcomment %}
+
+                    </div>
+                    <hr class="border-2">
+                    <span class="text-lg">{{ user.biodata }}</span>
+                </div>
+                <div class="flex flex-col justify-between h-max">
+                    <div class="grid grid-cols-2 w-1/2 text-lg font-bold text-black/50">
+                        <span>Lahir</span>
+                        <span>{{ user.birthdate|date:"j F Y" }}</span>
+                        <span>Bergabung</span>
+                        <span>{{ user.created_at|date:"j F Y" }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h2 class="font-bold text-lg">Quote yang dikutip</h2>
+            <hr class="border-2">
+            <div class="flex gap-4">
+
+                {% if user.cited_quote %}
+                {% for quote in user.cited_quote.all %}
+                <div
+                    class="text-[#5A410095] bg-white w-1/3 text-center h-40 flex flex-col justify-center items-center gap-1 border rounded-2xl px-2 font-Merriweather">
+                    <span>"{{ quote.quote_id.quote }}"</span>
+                    <span class="text-xs italic">-{{quote.quote_id.user.name}}</span>
+                </div>
+                {% endfor %}
+                {% else %}
+                <span class="italic">User ini belum mengutip quotes apapun</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <aside class="w-1/4">
+        <div class="flex flex-col gap-2">
+            <h2 class="font-bold text-lg">Quotes yang dibuat</h2>
+            <hr class="border-2">
+
+            {% if user.quote %}
+            <div>
+                <div
+                    class="text-[#5A410095] bg-white w-full text-center px-2 h-40 flex flex-col justify-center items-center gap-1 border rounded-2xl font-Merriweather">
+                    <span>"{{ user.quote.quote }}"</span>
+                    <span class="text-xs italic">-{{ user.name }}</span>
+                </div>
+            </div>
+
+            {% else %}
+            <span class="italic">User ini belum membuat quote</span>
+            {% endif %}
+
+        </div>
+    </aside>
+</div>
 {% endblock content %}
