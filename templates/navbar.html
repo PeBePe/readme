@@ -12,8 +12,10 @@
         <div class="w-full max-w-sm">
             <label for="search" class="relative">
                 <img src="{% static '/img/magnify.svg' %}" alt="Magnify"
-                    class="absolute top-0 right-2 pointer-events-none">
-                <input type="text" id="search" class="h-8 w-full  border-1 border-black/40" placeholder="Cari buku">
+                    class="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none">
+                <form method="GET" action="{% url 'books' %}">
+                    <input type="text" name="q" class="h-8 w-full  border-1 border-black/40" placeholder="Cari buku">
+                </form>
             </label>
         </div>
 

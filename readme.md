@@ -13,6 +13,7 @@
 <details>
     <summary>Cerita Aplikasi</summary>
 
+
 ## Cerita Aplikasi
 Aplikasi ReadMe adalah aplikasi yang kami buat untuk meningkatkan tingkat literasi di kalangan masyarakat Indonesia dari segala usia. Aplikasi ini menawarkan serangkaian fitur yang memungkinkan pengguna untuk berinteraksi dengan dunia literasi dan buku dengan sangat menarik. Berikut adalah beberapa fitur utama dari aplikasi ReadMe:
 
