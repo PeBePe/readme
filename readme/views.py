@@ -84,7 +84,6 @@ def logout_user(request):
 
 @login_required(login_url='/landing-page', redirect_field_name=None)
 def profile(request):
-    print(request.user.cited_quote.all()[0].quote_id.quote)
     context = {
         "user": request.user
     }
