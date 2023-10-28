@@ -4,11 +4,13 @@
 {% block content %}
 <div class="container flex flex-col py-6 px-4 sm:px-12 justify-center">
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-6 justify-items-center">
-        {% for book in bookshelf %}
+        {% for item in bookshelf %}
         <div class="bg-white border p-2 rounded-md w-36 shadow-md">
             <div class="flex flex-col h-4/5">
-                <img src="{{book.book.image_url}}" alt="book cover" class="h-48">
-                <p class="text-xs mt-2 font-semibold text-center">{{ book.book.title }} ({{ book.book.publication_date.year }})</p>
+                <a href="{% url 'item_detail' item.pk %}">
+                    <img src="{{item.book.image_url}}" alt="book cover" class="h-48">
+                    <p class="text-xs mt-2 font-semibold text-center">{{ item.book.title }} ({{ item.book.publication_date.year }})</p>
+                </a>
             </div>
             <div class="flex flex-col justify-end items-center h-1/5">
                 <div class="flex justify-center w-full mt-2">
@@ -16,7 +18,7 @@
                         <div class="mr-1">
                             <img class="h-4 w-4" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
                         </div>
-                        {{ book.price }}
+                        {{ item.price }}
                     </div>
                 </div>
             </div>

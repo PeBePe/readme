@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container flex gap-10 max-w-screen-xl py-6">
+    <div class="w-1/4 flex flex-col gap-4">
+        <div class="w-full px-10"><img src="{{ item.book.image_url }}" class="w-full drop-shadow-lg" alt="Cover"></div>
+        <div class="flex flex-col items-center gap-2">
+            <div class="flex justify-center gap-2 w-full">
+                <div class="flex justify-end items-center font-bold mr-1 py-1">
+                    {{ item.amount }} Available
+                </div>
+                <div class="flex justify-start items-center font-bold">
+                    <div class="mr-1">
+                        <img class="h-5 w-5" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
+                    </div>
+                    {{ item.price }}
+                </div>
+            </div>
+            {% if user.is_authenticated %}
+                {% if item not in user.bookshelf.all %}
+                    {% if item.amount == 0 %}
+                    <button class="bg-gray-500 text-white text-center rounded-full w-full py-2" disabled>Out of Stock</button>
+                    {% else %}
+                    <button class="bg-[#fbbd61] hover:bg-[#af8445] text-white text-center rounded-full w-full py-2" onclick="addToCart('{{item.pk}}')">Add To Cart</button>
+                    {% endif %}
+                {% else %}
+                <button class="bg-emerald-600 text-white text-center rounded-full w-full py-2" disabled>Purchased</button>
+                {% endif %}
+            {% else %}
+                {% if item.amount == 0 %}
+                <button class="bg-gray-500 text-white text-center rounded-full w-full py-2" disabled>Out of Stock</button>
+                {% else %}
+                <button class="bg-[#fbbd61] hover:bg-[#af8445] text-white text-center rounded-full w-full py-2" onclick="addToCart('{{item.pk}}')">Add To Cart</button>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="w-3/4 flex flex-col gap-7">
+        <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2">
+                    <div class="">
+                        <h1 class="text-3xl font-bold inline">{{ item.book.title }} </h1>
+                        <span class="bg-[#E7E7E7] h-fit rounded-full whitespace-nowrap  py-0.5 px-3.5 w-fit">
+                            {{ item.book.category }}</span>
+                    </div>
+                    <span class="text-xl">{{ item.book.author }}</span>
+                </div>
+                <hr class="border-2">
+                <span class="text-lg">{{ item.book.description }}</span>
+            </div>
+        </div>
+        <div class="flex flex-col gap-1">
+            <h2>Detail</h2>
+            <hr class="border-2">
+            <div class="grid grid-cols-2 w-fit gap-x-2 gap-y-1">
+                <span class="text-black/70">ISBN</span> <span>{{ item.book.isbn }}</span>
+                <span class="text-black/70">Penulis</span> <span>{{ item.book.author }}</span>
+                <span class="text-black/70">Penerbit</span> <span>{{ item.book.publisher }}</span>
+                <span class="text-black/70">Tanggal Terbit</span> <span>{{ item.book.publication_date }}</span>
+                <span class="text-black/70">Jumlah Halaman</span> <span>{{ item.book.page_count }}</span>
+                <span class="text-black/70">Bahasa</span> <span> {% if item.book.lang == 'en' %}
+                    Inggris
+                    {% elif item.book.lang == 'id' %}
+                    Indonesia
+                    {% else %}
+                    Bahasa Lain
+                    {% endif %}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% if user.is_authenticated %}
+<a class="fixed bottom-0 right-0 mr-12 mb-12 bg-[#fbbd61] hover:bg-[#af8445] rounded-full py-2 px-4 shadow-xl drop-shadow-xl" href="{% url 'cart' %}">
+    <img class="h-10 w-10" src="{% static 'shop/img/cart.svg' %}" alt="shopping cart">
+</a>
+{% endif %}
+
+<div class="fixed top-20 flex justify-center w-full" id="message"></div>
+
+<script>
+    function addToCart(item_id) {
+        fetch(`../../add-to-cart/${item_id}/`, {method: "POST"}).then(response => {
+            message = document.getElementById("message");
+            message.innerHTML = `<div class="flex ${response.ok ? "bg-green-100 border-green-500 text-green-500" : "bg-red-100 border-red-500 text-red-500"} rounded-full border-2">
+                <div class="w-16">
+                    <div class="p-4">
+                        ${response.ok ? "<img class=\"h-8 w-8\" src=\"{% static 'shop/img/check-mark.svg' %}\" alt=\"check mark\">"
+                        : "<img class=\"h-8 w-8 fill-current\" src=\"{% static 'shop/img/x-mark.svg' %}\" alt=\"X mark\">"}
+                    </div>
+                </div>
+                <div class="w-auto items-center py-4 pr-4">
+                    <span class="text-lg font-bold">
+                        ${response.ok ? "Book added to cart successfully!" : "Can't add book to cart! Login first!"}
+                    </span>
+                </div>
+            </div>`
+            setTimeout(() => {message.innerHTML = ""}, 3000);
+        })
+    }
+</script>
+{% endblock content %}

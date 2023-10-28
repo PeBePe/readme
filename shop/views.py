@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseNotFound, HttpResponse, JsonResponse
-from django.core import serializers
 from django.views.decorators.csrf import csrf_exempt
 from shop.models import ShopItem
 from readme.models import User
-from books.models import Book
 
 # Create your views here.
 
@@ -22,7 +20,7 @@ def show_bookshelf(request):
 
 def show_item_detail(request, item_id):
     item = ShopItem.objects.get(pk=item_id)
-    return render(request, 'shop/item_detail.html', {'item': item})
+    return render(request, 'shop/shop-item-detail.html', {'item': item})
 
 @csrf_exempt
 def add_to_cart(request, item_id):
