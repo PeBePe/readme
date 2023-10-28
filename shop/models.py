@@ -12,27 +12,17 @@ class ShopItem(models.Model):
         Book, on_delete=models.CASCADE, related_name='shop_item')
 
 
-class Bookshelf(models.Model):
-    user = models.OneToOneField(
-        User, on_delete=models.CASCADE, related_name='bookshelf')
-
-
 class BookshelfItem(models.Model):
     amount = models.IntegerField(validators=[MinValueValidator(0)], default=1)
     item = models.ForeignKey(
-        ShopItem, on_delete=models.SET_NULL, null=True, related_name='bookshelves')
-    bookshelf = models.ForeignKey(
-        Bookshelf, on_delete=models.CASCADE, related_name='books')
-
-
-class ShoppingCart(models.Model):
-    user = models.OneToOneField(
-        User, on_delete=models.CASCADE, related_name='shopping_cart')
+        ShopItem, on_delete=models.SET_NULL, null=True, related_name='bookshelf')
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='bookshelf')
 
 
 class ShoppingCartItem(models.Model):
     amount = models.IntegerField(validators=[MinValueValidator(0)], default=1)
     item = models.ForeignKey(
-        ShopItem, on_delete=models.CASCADE, related_name='shopping_carts')
-    shopping_cart = models.ForeignKey(
-        ShoppingCart, on_delete=models.CASCADE, related_name='books')
+        ShopItem, on_delete=models.CASCADE, related_name='shopping_cart')
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name='shopping_cart')
