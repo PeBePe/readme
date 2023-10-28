@@ -13,6 +13,7 @@ class User(AbstractUser):
     biodata = models.CharField(max_length=60)
     phone = models.CharField(max_length=15)
     loyalty_point = models.IntegerField(default=0)
-    bookshelf = models.ManyToManyField('books.Book', related_name='bookshelf')
+    bookshelf = models.ManyToManyField(
+        'shop.ShopItem', related_name='bookshelf')
     shopping_cart = models.ManyToManyField(
-        'books.Book', related_name='shopping_cart')
+        'shop.ShopItem', related_name='shopping_cart')

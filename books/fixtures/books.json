@@ -19,16 +19,16 @@
     "model": "books.Book",
     "pk": 2,
     "fields": {
-      "isbn": "9786020258935",
-      "title": "Belajar Hacking dari Nol untuk Pemula",
-      "description": "Hacking adalah aktivitas untuk masuk ke sebuah sistem komputer dengan mencari kelemahan dari sistem keamanannya. Karena sistem adalah buatan manusia, maka tentu saja tidak ada yang sempurna. Terlepas dari pro dan kontra mengenai aktivitas hacking, buku ini akan memaparkan berbagai tool yang bisa digunakan untuk mempermudah proses hacking. Buku ini menjelaskan tahapan melakukan hacking dengan memanfaatkan tooltool yang tersedia di Internet. Diharapkan setelah mempelajari buku ini, Anda bisa menjadi hacker atau praktisi keamanan komputer, serta bisa memanfaatkan keahlian hacking untuk pengamanan diri sendiri ataupun pengamanan objek lain.",
-      "author": "Ali Zaki,Edy Winarno ST, M.",
-      "publisher": "Elex Media Komputindo",
-      "publication_date": "2015-02-21",
-      "page_count": 176,
-      "category": "Computers",
-      "image_url": "http://books.google.com/books/content?id=1E1JDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "lang": "id"
+      "isbn": "9780062463296",
+      "title": "Elon Musk and the Quest for a Fantastic Future Young Readers' Edition",
+      "description": "\u201cHighly recommended for high school and ambitious middle school readers.\u201d \u2014School Library Journal \"A valuable addition to STEM-themed collections.\" \u2014VOYA An in-depth look into the extraordinary life of the world\u2019s most important entrepreneur, Elon Musk. This middle grade book is an excellent choice for tween readers in grades 5 to 6, especially during homeschooling. It\u2019s a fun way to keep your child entertained and engaged while not in the classroom. This fascinating and easily accessible paperback young readers\u2019 adaptation of Ashlee Vance\u2019s New York Times bestselling Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future features black-and-white photographs throughout and an epilogue. The version for adults has been praised as \u201criveting\u201d (The Financial Times), \u201cspirited\u201d (The Wall Street Journal), and \u201cmasterful\u201d (Vice). Now younger readers can read about this innovative leader who is revolutionizing three industries at once: space, automotive, and energy. There are few people in history who could match Elon Musk\u2019s relentless drive and vision. A modern combination of famous inventors and industrialists like Thomas Edison, Henry Ford, and Steve Jobs, Elon is the man behind companies such as SpaceX, Tesla Motors, SolarCity, and PayPal that are transforming the way we live. Written with exclusive access to Elon, his family, and his friends, this book traces Elon\u2019s journey from a kid in South Africa to a young man in the United States, his dramatic technical inventions, and his world-changing companies. Elon has sparked new levels of innovation in the world, and this book gives young readers a detailed but fast-paced look at his story. A Junior Library Guild Selection!",
+      "author": "Ashlee Vance",
+      "publisher": "HarperCollins",
+      "publication_date": "2017-01-24",
+      "page_count": 288,
+      "category": "Juvenile Nonfiction",
+      "image_url": "http://books.google.com/books/content?id=L8-HCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "lang": "en"
     }
   },
   {
@@ -1075,16 +1075,16 @@
     "model": "books.Book",
     "pk": 68,
     "fields": {
-      "isbn": "9786239582302",
-      "title": "Netnografi in Action",
-      "description": "Buku ini berisi 4 bab hasil dari kontributor melanglang jagad dunia maya saat mempraktikkan metode netnografi, yang dilakukan peserta Kelas Netnografi Peneleh Research Institute. Bab pertama buku ini menyajikan bagaimana nilai-nilai religiositas masyarakat mulai menghilang karena tayangan konten youtuber. Bab kedua menyajikan bagaimana media sosial marak digunakan oleh oknum penguasa dan calon penguasa untuk menggiring opini publik untuk mendapatkan keuntungan. Bab ketiga buku ini merupakan ruang penyadaran bagi pu-blik, bahwa religiusitas telah ditunggangi oknum untuk menda-patkan kekuasaan. Di bab keempat, pembaca disuguhi dengan polemik seputar kehadiran fintech syariah yang tengah bertumbuh. Beberapa stigma negatif yang menghadang kehadirannya, atau penerimaan positif dari masyarakat serta berbagai fenomena pro dan kontra yang ikut hadir mewarnai menjadi bahan yang menarik untuk disimak",
-      "author": "A A Gde Satia Utama, Abdul Mun'im, Adib A. Nizar, Ahmad F. Fathoni, Ahmad Kudhori,  A'isyah M. Sholihah, Ayudia Sokarina, Binti S. Jannah, Dani Sugiri, Dika F. Anjarwati, Dita M. Agustina, Dwi Indriani F. Wijaya, Eka Siskawati, Erika Takidah, Firman Sujatmiko, Harkaneri, Luky Patricia, Lusiana Kanji, Maria Assumpta, Muhammad Yusran, Mustakim Muchlis, Rahmawati Ramli, Ratna A. Aripratiwi, Ria A. Sholihah, Rian Vebrianto, Wijaya, Selvia E. Aristantia, Syahrul Djafar, Virginia N. Rahmanti, Wa Ode Rayyani",
-      "publisher": "Penerbit Peneleh",
-      "publication_date": "2021-01-01",
-      "page_count": 103,
-      "category": "Social Science",
-      "image_url": "http://books.google.com/books/content?id=4IcfEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "lang": "id"
+      "isbn": "9780753555644",
+      "title": "Elon Musk",
+      "description": "South African born Elon Musk is the renowned entrepreneur and innovator behind PayPal, SpaceX, Tesla, and SolarCity. Musk wants to save our planet; he wants to send citizens into space, to form a colony on Mars; he wants to make money while doing these things; and he wants us all to know about it. He is the real-life inspiration for the Iron Man series of films starring Robert Downey Junior. The personal tale of Musk's life comes with all the trappings one associates with a great, drama-filled story. He was a freakishly bright kid who was bullied brutally at school, and abused by his father. In the midst of these rough conditions, and the violence of apartheid South Africa, Musk still thrived academically and attended the University of Pennsylvania, where he paid his own way through school by turning his house into a club and throwing massive parties. He started a pair of huge dot-com successes, including PayPal, which eBay acquired for $1.5 billion in 2002. Musk was forced out as CEO and so began his lost years in which he decided to go it alone and baffled friends by investing his fortune in rockets and electric cars. Meanwhile Musk's marriage disintegrated as his technological obsessions took over his life ... Elon Musk is the Steve Jobs of the present and the future, and for the past twelve months, he has been shadowed by tech reporter, Ashlee Vance. Elon Musk: How the Billionaire CEO of Spacex and Tesla is Shaping our Future is an important, exciting and intelligent account of the real-life Iron Man.",
+      "author": "Ashlee Vance",
+      "publisher": "Random House",
+      "publication_date": "2016-03-10",
+      "page_count": 402,
+      "category": "Biographies",
+      "image_url": "http://books.google.com/books/content?id=zRXjCwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "lang": "en"
     }
   },
   {

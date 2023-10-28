@@ -11,9 +11,9 @@
                 </div>
                 <div class="flex flex-col gap-2 text-sm">
                     <a href="{% url 'wishlist' %}"
-                        class="bg-[#00635D] text-white py-2 px-2 rounded-sm text-center">Lihat
+                        class="bg-[#00635D] text-white py-2 px-2 rounded-full text-center">Lihat
                         Wishlist</a>
-                    <a href="{% url 'shop' %}" class="bg-[#003f63] text-white py-2 px-2 rounded-sm text-center">Lihst
+                    <a href="{% url 'shop' %}" class="bg-[#003f63] text-white py-2 px-2 rounded-full text-center">Lihat
                         Buku yang Dibeli</a>
                 </div>
             </div>
@@ -57,6 +57,40 @@
                 {% endfor %}
                 {% else %}
                 <span class="italic">User ini belum mengutip quotes apapun</span>
+                {% endif %}
+            </div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h2 class="font-bold text-lg">Review terbaru</h2>
+            <hr class="border-2">
+            <div class="flex flex-col gap-4">
+
+                {% if user.reviews %}
+                {% for review in user.reviews.all %}
+                <div class="flex flex-col bg-white rounded-lg w-full justify-between px-4 py-4 gap-3 border ">
+                    <div class="flex items-center gap-2">
+                        <div class="w-16"><img class="w=full" src="{{ review.book.image_url }}" alt="cover"></div>
+                        <div class=" text-sm  flex flex-col">
+                            <a href="{% url 'book-detail' review.book.pk %}"
+                                class="font-semibold text-lg underline">{{review.book.title}}</a>
+                            <span>By {{review.book.author}}</span>
+                            <span>{{ review.book.publication_date|date:"j F Y" }}</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-between h-full">
+                        <span>{{review.content}}</span>
+                    </div>
+                    <div class="text-sm ">
+                        <span>Terakhir diupdate {{review.updated_at|date:"M d, Y H:i"}} · </span>
+                        <a class="underline text-[#5A4100]"
+                            href="{% url 'edit-page' book_id=review.book.pk review_id=review.pk %}">Edit review</a>
+                        <span> · </span>
+                        <a class="underline text-[#5A4100]" href="{% url 'profile' %}">{{review.user.name}}</a>
+                    </div>
+                </div>
+                {% endfor %}
+                {% else %}
+                <span class="italic">User ini belum memberikan review apapun</span>
                 {% endif %}
             </div>
         </div>
