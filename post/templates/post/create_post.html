@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-4 text-center">Create Post</h2>
+        <div class="flex flex-col md:flex-row md:items-center">
+            <div class="md:w-1/3 mb-4">
+                <img src="{{ book.image_url }}" alt="cover" class="border mx-auto">
+            </div>
+            <div class="md:w-2/3 ml-4">
+                <h2 class="text-lg font-semibold text-gray-800">{{ book.title }} ({{ book.publication_date.year }})</h2>
+                <form id="post-form" method="post" data-book-id="{{ book.id }}">
+                    {% csrf_token %}
+                    {{ form.content.label_tag }}
+                    {{ form.content }}
+                    <div class="text-center mt-4">
+                        <button class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600" type="submit">Create Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#post-form").on("submit", function(event) {
+            event.preventDefault();
+            var bookId = $(this).data("book-id");
+            var formData = $(this).serialize();
+
+            $.ajax({
+                url: '/create/' + bookId,
+                type: 'POST',
+                data: formData,
+                dataType: 'json',
+                success: function(data) {
+                    if (data.success) {
+                        alert(data.message);
+                    } else {
+                        alert('Validation errors: ' + JSON.stringify(data.errors));
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock content %}
