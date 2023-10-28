@@ -23,7 +23,11 @@
                     </div>
                 </div>
                 <div class="flex justify-center w-full mt-2">
+                    {% if shop_item.amount == 0 %}
+                    <button class="bg-gray-500 text-white text-center rounded-md w-full py-1" disabled>Out of Stock</button>
+                    {% else %}
                     <button class="bg-[#fbbd61] hover:bg-[#af8445] text-white text-center rounded-md w-full py-1" onclick="addToCart('{{shop_item.pk}}')">Add To Cart</button>
+                    {% endif %}
                 </div>
             </div>
         </div>
