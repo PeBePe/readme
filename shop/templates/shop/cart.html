@@ -3,8 +3,14 @@
 
 {% block content %}
 
+<div class="bg-gray-300 py-20 relative flex w-full flex-col gap-10">
+    <img src="{% static 'books/img/books.jpg' %}"
+        class="object-cover absolute top-0 left-0 w-full h-full brightness-50" alt="">
+    <h1 id="message1" class="relative font-bold text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-white text-center"></h1>
+</div>
+
 <div class="container flex flex-col py-6 px-4 sm:px-12 gap-6 justify-center">
-    <div id="message1"></div>
+    <!-- <div id="message1"></div> -->
     <div id="book-cards" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-6 justify-items-center"></div>
 </div>
 
@@ -12,7 +18,7 @@
 
 <script>
     async function getCartItems() {
-        return fetch("{% url 'get_shopping_cart_json' %}").then((res) => res.json())
+        return fetch("{% url 'get_shopping_cart_json' %}", {method: "GET"}).then((res) => res.json())
     }
 
     async function refreshItems() {
@@ -51,17 +57,17 @@
             })
 
             document.getElementById("message1").innerHTML = `
-            <div class="flex justify-center intems-center h-16 gap-3 md:gap-6 p-2">
-                <div class="flex justify-center items-center">
-                    <button onclick="checkout()" class="flex justify-center items-center bg-[#fbbd61] hover:bg-[#af8445] text-white text-center rounded-md w-full py-2 px-4">Checkout</button>
-                </div>
-                <div class="flex flex-col justify-center">
-                    <div>You have ${(cart_items.length == 1) ? "1 book" : cart_items.length + " books"} in the cart.</div>
-                    <div class="flex justify-start items-center items-start">
+            <div class="flex flex-col justify-center items-center h-16 gap-3 md:gap-6 p-2">
+                <div class="flex flex-col justify-center items-center">
+                    <div>You have ${(cart_items.length == 1) ? "1 book" : cart_items.length + " books"} in the cart!</div>
+                    <div class="flex justify-start items-center items-center">
                         <span class="mr-2">Total price:</span>
-                        <img class="h-5 w-5 mr-1" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
+                        <img class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 xl:h-10 xl:w-10 mr-1" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
                         <span>${total_price}</span>
                     </div>
+                </div>
+                <div class="flex relative justify-center gap-0.5 w-full max-w-screen-lg mx-auto">
+                    <button onclick="checkout()" class="flex justify-center items-center bg-[#fbbd61] hover:bg-[#af8445] text-white text-xl md:text-2xl lg:text-3xl text-center rounded-full w-1/2 py-2 px-4">Checkout</button>
                 </div>
             </div>`
             
@@ -70,7 +76,7 @@
 
         else {
             document.getElementById("message1").innerHTML = `
-            <div class="flex justify-center items-center min-h-screen pb-24 text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
+            <div class="flex justify-center mt-52 min-h-screen text-center">
                 <h1>Your cart is empty. Add books from the shop!</h1>
             </div>`
         }

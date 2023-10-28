@@ -2,6 +2,12 @@
 {% load static %}
 
 {% block content %}
+<div class="bg-gray-300 py-20 relative flex w-full flex-col gap-10">
+    <img src="{% static 'books/img/books.jpg' %}"
+        class="object-cover absolute top-0 left-0 w-full h-full brightness-50" alt="">
+    <h1 class="relative font-bold text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-white text-center">you have {{bookshelf|length}} books in your bookshelf</h1>
+</div>
+
 <div class="container flex flex-col py-6 px-4 sm:px-12 justify-center">
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-6 justify-items-center">
         {% for item in bookshelf %}

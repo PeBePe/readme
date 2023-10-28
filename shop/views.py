@@ -1,13 +1,27 @@
 from django.shortcuts import render
 from django.http import HttpResponseNotFound, HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
+from django.db.models import Q
 from shop.models import ShopItem
 from readme.models import User
 
 # Create your views here.
 
 def index(request):
+    q = request.GET.get('q', '')
+    price_range = request.GET.get('pricerange', '')
     shop_items = ShopItem.objects.all()
+
+    if q:
+        q_filter = Q(book__title__icontains=q) | Q(
+            book__author__icontains=q) | Q(book__publisher__icontains=q)
+        shop_items = shop_items.filter(q_filter)
+    if price_range:
+        price_range = price_range.split('-')
+        price_range = [int(price) for price in price_range]
+        shop_items = shop_items.filter(price__range=price_range)
+
     return render(request, 'shop/index.html', {'shop_items': shop_items})
 
 def show_cart(request):
@@ -22,6 +36,7 @@ def show_item_detail(request, item_id):
     item = ShopItem.objects.get(pk=item_id)
     return render(request, 'shop/shop-item-detail.html', {'item': item})
 
+@login_required
 @csrf_exempt
 def add_to_cart(request, item_id):
     if request.method == 'POST':
@@ -33,9 +48,11 @@ def add_to_cart(request, item_id):
     return HttpResponseNotFound()
 
 def get_shopping_cart_json(request):
-    user = User.objects.get(id=request.user.id)
-    cart_items = user.shopping_cart.all().values('id', 'amount', 'price', 'book__title', 'book__image_url', 'book__publication_date')
-    return HttpResponse(JsonResponse(list(cart_items), safe=False))
+    if request.method == 'GET':
+        user = User.objects.get(id=request.user.id)
+        cart_items = user.shopping_cart.all().values('id', 'amount', 'price', 'book__title', 'book__image_url', 'book__publication_date')
+        return HttpResponse(JsonResponse(list(cart_items), safe=False))
+    return HttpResponseNotFound()
 
 @csrf_exempt
 def remove_from_cart(request, item_id):
