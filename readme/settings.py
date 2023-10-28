@@ -124,7 +124,7 @@ AUTHENTICATION_BACKENDS = ['readme.backend.Backend']
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jakarta' #uabh ini biar waktu yg ada di card sesuai
 
 USE_I18N = True
 

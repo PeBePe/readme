@@ -2,7 +2,55 @@
 
 
 {% block content %}
-<div class="w-full h-screen text-5xl font-bold  flex justify-center items-center">
-    This is quotes page!
+<div class="w-full h-screen flex flex-col items-center mt-5">
+    <div class="text-4xl font-bold">Some Quotes to Cheer Up {{name}}'s Day 🥂</div>
+    <!-- buat munculin search bar -->
+    <div class="mt-3 flex flex-wrap items-center">
+        <label for="search" class="relative mr-4 mb-2">
+            <input type="text" id="search" class="h-8 w-96 border-1 border-black/40" placeholder="Cari quotes favoritmu">
+        </label>
+    </div>
+
+    <!-- tempat buat card -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ml-5 mr-5">
+        {% for product in quotes %}
+            <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
+                <h5 class="text-xl font-bold">{{ product.user.username }}</h5>
+                <p class="text-gray-600 font-semibold">"{{ product.quote }}"</p>
+                <p class="text-gray-600">Created Date: {{ product.created_at }}</p>
+                <p class="text-gray-600">Updated at: {{ product.updated_at }}</p>
+    
+                <div class="mt-2 flex justify-between">
+                    <a href="{% url 'edit-quote' product.pk %}">
+                        <button class="bg-yellow-500 text-white py-2 px-4 rounded mr-0">Edit Quote</button>
+                    </a>
+                    <form method="post" action="{% url 'delete-quote' product.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded ml-0">Hapus Quote</button>
+                    </form>
+
+                    <!-- Check if the user can cite this quote -->
+                    <!-- {% if product.can_cite %}
+                    <form method="post" action="{% url 'cited-quote' product.id %}">
+                        {% csrf_token %}
+                        <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded ml-0">Cite Quote</button>
+                    </form>
+                {% endif %} -->
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    
+    
+    <!-- bikin button dibawah ceritanya -->
+    <div class="fixed bottom-0 left-0 right-0 flex flex-col items-center p-4">
+        <div class="mb-2">
+            <h5 class="font-bold">Terdapat {{quotes_count}} Quotes dalam Profilemu!</h5>
+        </div>
+        <a href="{% url 'create-quotes' %}" class="w-1/4 h-10 bg-orange-100 rounded-[40px] text-m border border-1 font-['Lato'] hover:text-red-800 hover:border-red-800" style="display: flex; justify-content: center; align-items: center;">
+            Kutip quotes favoritmu
+        </a>        
+    </div>    
+    
 </div>
 {% endblock content %}
