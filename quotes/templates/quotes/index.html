@@ -14,33 +14,38 @@
     <!-- tempat buat card -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ml-5 mr-5">
         {% for product in quotes %}
-            <div class="bg-white rounded-lg shadow-lg p-4 mb-4">
-                <h5 class="text-xl font-bold">{{ product.user.username }}</h5>
-                <p class="text-gray-600 font-semibold">"{{ product.quote }}"</p>
+            <div class="bg-orange-100 rounded-lg shadow-lg p-4 mb-4">
+                <h5 class="text-xl font-bold text-center">{{ product.user.username }}</h5>
+                <p class="text-gray-600 font-semibold text-center">"{{ product.quote }}"</p>
                 <p class="text-gray-600">Created Date: {{ product.created_at }}</p>
                 <p class="text-gray-600">Updated at: {{ product.updated_at }}</p>
+                {% if product.cited_quote.count > 0 %}
+                <ul>
+                    <br>
+                    <li class="text-cyan-600">Cited by {{ product.cited_quote.count }} User:</li>
+                    {% for quoted_quote in product.cited_quote.all %}
+                        <li class="text-orange-700">🙈 {{ quoted_quote.user_id.username }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
     
                 <div class="mt-2 flex justify-between">
                     <a href="{% url 'edit-quote' product.pk %}">
-                        <button class="bg-yellow-500 text-white py-2 px-4 rounded mr-0">Edit Quote</button>
+                        <button class="bg-red-500 text-white text-sm py-2 px-4 rounded mr-0">Edit Quote</button>
                     </a>
                     <form method="post" action="{% url 'delete-quote' product.id %}">
                         {% csrf_token %}
-                        <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded ml-0">Hapus Quote</button>
+                        <button type="submit" class="bg-yellow-500 text-white text-sm py-2 px-4 rounded ml-2">Hapus Quote</button>
                     </form>
 
-                    <!-- Check if the user can cite this quote -->
-                    <!-- {% if product.can_cite %}
-                    <form method="post" action="{% url 'cited-quote' product.id %}">
+                    <form method="post" action="{% url 'cited-quote' product.pk %}">
                         {% csrf_token %}
-                        <button type="submit" class="bg-yellow-500 text-white py-2 px-4 rounded ml-0">Cite Quote</button>
+                        <button type="submit" class="bg-pink-500 text-white text-sm py-2 px-4 rounded ml-2">Cited Quote</button>
                     </form>
-                {% endif %} -->
                 </div>
             </div>
         {% endfor %}
-    </div>
-    
+    </div>    
     
     <!-- bikin button dibawah ceritanya -->
     <div class="fixed bottom-0 left-0 right-0 flex flex-col items-center p-4">

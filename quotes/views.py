@@ -6,6 +6,7 @@ from django.urls import reverse
 from quotes.forms import ProductForm
 from django.shortcuts import get_object_or_404
 from django.shortcuts import redirect
+from readme.models import User
 
 # Create your views here.
 
@@ -14,16 +15,15 @@ def index(request):
     user = request.user
     quotes = Quote.objects.all() #ambil semua quotes yang ada
     quotes_count = quotes.count() #menghitung jumlah quotes yang ada
+    quoted_quotes = QuoteCited.objects.select_related('quote_id', 'user_id').all()  #ngambil daftar kutipan dan pengguna yang mengutipnya
 
     context = {
         'name': request.user.username,
         'user': user,
         'quotes': quotes,
         'quotes_count': quotes_count,
+        'quoted_quotes': quoted_quotes
     }
-
-    # for quote in quotes:
-    #     quote.can_cite = user.can_cite_quote(quote)
 
     return render(request, 'quotes/index.html', context)
 
@@ -69,15 +69,15 @@ def cited_quote(request, id):
     quote = get_object_or_404(Quote, pk=id)
 
     # Menghitung berapa banyak user yg telah mengutip suatu quote
-    cited_count = QuoteCited.objects.filter(quote).count()
+    cited_count = QuoteCited.objects.filter(quote_id=quote).count()
 
     #cek apakah user udah cited suatu quote atau belum
-    user_cited = QuoteCited.objects.filter(quote, request.user).exists()
+    user_cited = QuoteCited.objects.filter(quote_id=quote, user_id=request.user).exists()
 
     if request.method == "POST":
         #cek jumlah cited udah lebih dari 3 atau belum
         if not user_cited and cited_count < 3:
-            QuoteCited.objects.create(quote, request.user)
+            QuoteCited.objects.create(quote_id=quote, user_id=request.user)
             cited_count += 1 #tambah jumlah cited quote
 
     # Mendapatkan daftar kutipan yang sudah dikutip oleh pengguna
@@ -90,4 +90,13 @@ def cited_quote(request, id):
         'quoted_quotes': quoted_quotes
     }
 
-    return render(request, 'cited_quote.html', context)
+    # Temukan pemilik kutipan yang dikutip
+    quote_owner = quote.user
+
+    if quote_owner:
+    # Perbarui poin loyalitas pemilik kutipan
+        quote_owner.loyalty_point += 1000
+        quote_owner.save()
+        return redirect ('quotes')
+
+    return render(request, 'quotes/cited_quote.html', context)
