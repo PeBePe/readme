@@ -20,6 +20,10 @@ def show_bookshelf(request):
     bookshelf = request.user.bookshelf.all()
     return render(request, 'shop/bookshelf.html', {'bookshelf': bookshelf})
 
+def show_item_detail(request, item_id):
+    item = ShopItem.objects.get(pk=item_id)
+    return render(request, 'shop/item_detail.html', {'item': item})
+
 @csrf_exempt
 def add_to_cart(request, item_id):
     if request.method == 'POST':
