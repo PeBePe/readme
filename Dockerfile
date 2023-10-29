@@ -23,6 +23,9 @@ RUN pip install -r /requirements.txt
 COPY . .
 
 RUN python manage.py collectstatic --noinput --clear
+RUN python manage.py migrate 
+RUN python manage.py migrate --run-syncdb
+RUN python manage.py loaddata books
 
 # Run as non-root user
 RUN chown -R django:django /app
