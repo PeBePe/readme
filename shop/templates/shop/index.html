@@ -45,23 +45,11 @@
                         {{ shop_item.price }}
                     </div>
                 </div>
-                <div class="flex justify-center w-full mt-2">
-                    {% if user.is_authenticated %}
-                        {% if shop_item not in user.bookshelf.all %}
-                            {% if shop_item.amount == 0 %}
-                            <button class="bg-gray-500 text-white text-center rounded-md w-full py-1" disabled>Out of Stock</button>
-                            {% else %}
-                            <button class="bg-[#fbbd61] hover:bg-[#af8445] text-white text-center rounded-md w-full py-1" onclick="addToCart('{{shop_item.pk}}')">Add To Cart</button>
-                            {% endif %}
-                        {% else %}
-                        <button class="bg-emerald-600 text-white text-center rounded-md w-full py-1" disabled>Purchased</button>
-                        {% endif %}
+                <div class="flex justify-center items-center w-full mt-2">
+                    {% if shop_item.amount == 0 %}
+                    <button class="bg-gray-500 text-white text-center rounded-md w-full py-1" disabled>Out of Stock</button>
                     {% else %}
-                        {% if shop_item.amount == 0 %}
-                        <button class="bg-gray-500 text-white text-center rounded-md w-full py-1" disabled>Out of Stock</button>
-                        {% else %}
-                        <button class="bg-[#fbbd61] hover:bg-[#af8445] text-white text-center rounded-md w-full py-1" onclick="addToCart('{{shop_item.pk}}')">Add To Cart</button>
-                        {% endif %}
+                    <button class="bg-[#fbbd61] hover:bg-[#af8445] text-white flex justify-center rounded-md w-full py-1" onclick="addToCart('{{shop_item.pk}}')">Add To Cart</button>
                     {% endif %}
                 </div>
             </div>
@@ -80,7 +68,9 @@
 
 <script>
     function addToCart(item_id) {
-        fetch(`add-to-cart/${item_id}/`, {method: "POST"}).then(response => {
+        fetch(`add-to-cart/${item_id}/`, {
+            method: "POST",
+        }).then(response => {
             message = document.getElementById("message");
             message.innerHTML = `<div class="flex ${response.ok ? "bg-green-100 border-green-500 text-green-500" : "bg-red-100 border-red-500 text-red-500"} rounded-full border-2">
                 <div class="w-16">
@@ -91,7 +81,7 @@
                 </div>
                 <div class="w-auto items-center py-4 pr-4">
                     <span class="text-lg font-bold">
-                        ${response.ok ? "Book added to cart successfully!" : "Can't add book to cart! Login first!"}
+                        ${response.ok ? "Book added to cart successfully!" : response.status == 400 ? "Not enough item" : "Can't add book to cart! Login first!"}
                     </span>
                 </div>
             </div>`
