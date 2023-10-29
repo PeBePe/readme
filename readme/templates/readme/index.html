@@ -24,14 +24,41 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-between h-full">
-                    <span>{{post.content}} <a href="{% url 'post' %}" class="text-[#00635D] underline">Tampilkan lebih
+                    <span>{{post.content}} <a href="{% url 'post-detail' post.pk %}"
+                            class="text-[#00635D] underline">Tampilkan
+                            lebih
                             banyak</a></span>
 
-                    {% if post.created_at == post.updated_at %}
-                    <span>{{ post.created_at|date:"g:i A · j M Y" }}</span>
-                    {% else %}
-                    <span>Terakhir diedit {{ post.updated_at|date:"g:i A · j M Y" }}</span>
-                    {% endif %}
+                    <div class="flex justify-between">
+                        {% if post.created_at == post.updated_at %}
+                        <span>{{ post.created_at|date:"g:i A · j M Y" }}</span>
+                        {% else %}
+                        <span>Terakhir diedit {{ post.updated_at|date:"g:i A · j M Y" }}</span>
+                        {% endif %}
+                        <div class="flex">
+                            <button id="like-button-{{ post.pk }}" class="like-button" data-id="{{ post.pk }}"
+                                class="flex w-fit" data-url="{% url 'like-post' post.pk %}"
+                                class="text-white rounded  py-2">
+                                {% if post.has_liked %}
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M23.9583 10.4167C23.9583 9.86421 23.7388 9.33431 23.3481 8.94361C22.9574 8.55291 22.4275 8.33341 21.875 8.33341H15.2916L16.2916 3.573C16.3125 3.46883 16.3229 3.35425 16.3229 3.23966C16.3229 2.81258 16.1458 2.41675 15.8645 2.1355L14.7604 1.04175L7.90621 7.89591C7.52079 8.28133 7.29163 8.80216 7.29163 9.37508V19.7917C7.29163 20.3443 7.51112 20.8742 7.90182 21.2649C8.29252 21.6556 8.82242 21.8751 9.37496 21.8751H18.75C19.6145 21.8751 20.3541 21.3542 20.6666 20.6042L23.8125 13.2605C23.9062 13.0209 23.9583 12.7709 23.9583 12.5001V10.4167ZM1.04163 21.8751H5.20829V9.37508H1.04163V21.8751Z"
+                                        fill="#5A4100" />
+                                </svg>
+                                {% else %}
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.20829 9.37508V21.8751H1.04163V9.37508H5.20829ZM9.37496 21.8751C8.82242 21.8751 8.29252 21.6556 7.90182 21.2649C7.51112 20.8742 7.29163 20.3443 7.29163 19.7917V9.37508C7.29163 8.80216 7.52079 8.28133 7.90621 7.90633L14.7604 1.04175L15.8645 2.14591C16.1458 2.42716 16.3229 2.81258 16.3229 3.23966L16.2916 3.573L15.302 8.33341H21.875C22.4275 8.33341 22.9574 8.55291 23.3481 8.94361C23.7388 9.33431 23.9583 9.86421 23.9583 10.4167V12.5001C23.9583 12.7709 23.9062 13.0209 23.8125 13.2605L20.6666 20.6042C20.3541 21.3542 19.6145 21.8751 18.75 21.8751H9.37496ZM9.37496 19.7917H18.7812L21.875 12.5001V10.4167H12.7187L13.8958 4.87508L9.37496 9.40633V19.7917Z"
+                                        fill="#5A4100" />
+                                </svg>
+                                {% endif %}
+                            </button>
+                            <span class="ml-2 text-lg"><span id="like-count-{{post.pk}}">
+                                    {{ post.likes.count }}</span></span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <a href="{% url 'books' %}" class="flex flex-col items-center w-full sm:w-min gap-1">
@@ -88,5 +115,56 @@
         </div>
     </aside>
 </div>
+<script>
+    const likeButtons = document.getElementsByClassName("like-button");
+    for (const likeButton of likeButtons) {
+        likeButton.addEventListener("click", function () {
+            console.log(likeButton);
+            const likeUrl = likeButton.getAttribute("data-url");
+            fetch(likeUrl, {
+                method: "POST",
+                headers: {
+                    "X-CSRFToken": getCookie("csrftoken"),
+                },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                    document.getElementById(`like-count-${likeButton.getAttribute('data-id')}`).textContent = data.likes_count;
+                    if (data.user_has_liked) {
+                        likeButton.innerHTML = ` <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.9583 10.4167C23.9583 9.86421 23.7388 9.33431 23.3481 8.94361C22.9574 8.55291 22.4275 8.33341 21.875 8.33341H15.2916L16.2916 3.573C16.3125 3.46883 16.3229 3.35425 16.3229 3.23966C16.3229 2.81258 16.1458 2.41675 15.8645 2.1355L14.7604 1.04175L7.90621 7.89591C7.52079 8.28133 7.29163 8.80216 7.29163 9.37508V19.7917C7.29163 20.3443 7.51112 20.8742 7.90182 21.2649C8.29252 21.6556 8.82242 21.8751 9.37496 21.8751H18.75C19.6145 21.8751 20.3541 21.3542 20.6666 20.6042L23.8125 13.2605C23.9062 13.0209 23.9583 12.7709 23.9583 12.5001V10.4167ZM1.04163 21.8751H5.20829V9.37508H1.04163V21.8751Z"
+                            fill="#5A4100" />
+                    </svg>`;
+                    } else {
+                        likeButton.innerHTML = `<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5.20829 9.37508V21.8751H1.04163V9.37508H5.20829ZM9.37496 21.8751C8.82242 21.8751 8.29252 21.6556 7.90182 21.2649C7.51112 20.8742 7.29163 20.3443 7.29163 19.7917V9.37508C7.29163 8.80216 7.52079 8.28133 7.90621 7.90633L14.7604 1.04175L15.8645 2.14591C16.1458 2.42716 16.3229 2.81258 16.3229 3.23966L16.2916 3.573L15.302 8.33341H21.875C22.4275 8.33341 22.9574 8.55291 23.3481 8.94361C23.7388 9.33431 23.9583 9.86421 23.9583 10.4167V12.5001C23.9583 12.7709 23.9062 13.0209 23.8125 13.2605L20.6666 20.6042C20.3541 21.3542 19.6145 21.8751 18.75 21.8751H9.37496ZM9.37496 19.7917H18.7812L21.875 12.5001V10.4167H12.7187L13.8958 4.87508L9.37496 9.40633V19.7917Z"
+                            fill="#5A4100" />
+                    </svg>`;
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        });
+    }
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+            const cookies = document.cookie.split(";");
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === name + "=") {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+</script>
 
 {% endblock content %}
