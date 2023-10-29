@@ -694,7 +694,7 @@
       "isbn": "9780470041963",
       "title": "Audio Signal Processing and Coding",
       "description": "An in-depth treatment of algorithms and standards for perceptual coding of high-fidelity audio, this self-contained reference surveys and addresses all aspects of the field. Coverage includes signal processing and perceptual (psychoacoustic) fundamentals, details on relevant research and signal models, details on standardization and applications, and details on performance measures and perceptual measurement systems. It includes a comprehensive bibliography with over 600 references, computer exercises, and MATLAB-based projects for use in EE multimedia, computer science, and DSP courses. An ftp site containing supplementary material such as wave files, MATLAB programs and workspaces for the students to solve some of the numerical problems and computer exercises in the book can be found at ftp://ftp.wiley.com/public/sci_tech_med/audio_signal",
-      "author": "Andreas Spanias,Ted Painter,Venkatraman Atti",
+      "author": "Andreas Spanias",
       "publisher": "John Wiley & Sons",
       "publication_date": "2006-09-11",
       "page_count": 544,

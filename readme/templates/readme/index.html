@@ -4,18 +4,14 @@
 
 
 {% block content %}
-<div class="container flex py-6 px-12 gap-6">
-    <div class="w-3/4 flex flex-col gap-3">
-        <div class="flex w-full bg-white p-4 border gap-4 items-center">
-            <img src="{% static 'img/profile.svg' %}" alt="">
-            <input type="text" class="w-full border-none bg-black/5"
-                placeholder="Apa yang ingin anda ceritakan hari ini?">
-            <a href="{% url 'post' %}" class="text-white bg-[#00635D] rounded-full h-fit py-1.5 px-4">Bagikan</a>
-        </div>
+<div class="container flex-col-reverse lg:flex-row flex py-6 sm:px-12 px-4 gap-6">
+    <div class="lg:w-3/4 flex flex-col gap-3">
+        <hr class="border-2">
+        <h2 class="font-semibold">POST</h2>
         {% if posts %}
 
         {% for post in posts %}
-        <div class="flex bg-white w-full justify-between px-4 py-4 gap-16 border ">
+        <div class="flex bg-white w-full flex-col sm:flex-row    justify-between px-4 py-4 gap-4 sm:gap-16 border ">
             <div class="flex flex-col gap-3">
                 <div class="flex gap-3 items-center">
                     <img src="{% static 'img/profile.svg' %}" alt="">
@@ -24,7 +20,7 @@
                             <span>{{post.user.name}}</span>
                             <span>@{{post.user.username}}</span>
                         </div>
-                        <span class="text-sm">{{post.user.biodata}}</span>
+                        <span class="text-sm line-clamp-2">{{post.user.biodata}}</span>
                     </div>
                 </div>
                 <div class="flex flex-col justify-between h-full">
@@ -38,9 +34,9 @@
                     {% endif %}
                 </div>
             </div>
-            <a href="{% url 'books' %}" class="flex flex-col items-center w-min gap-1">
-                <div class="w-40 ">
-                    <img src="{{ post.book.image_url }}" alt="Gambar buku" class="border mx-auto">
+            <a href="{% url 'books' %}" class="flex flex-col items-center w-full sm:w-min gap-1">
+                <div class="w-full sm:w-40 ">
+                    <img src="{{ post.book.image_url }}" alt="Gambar buku" class="border w-full max-w-xs mx-auto">
                 </div>
                 <span class="text-center text-xs text-black/70">{{ post.book.title }}
                     ({{post.book.publication_date.year}})</span>
@@ -53,8 +49,8 @@
         {% endif %}
 
     </div>
-    <aside class="w-1/4 flex flex-col gap-5">
-        <div class="flex flex-col gap-1">
+    <aside class="lg:w-1/4 flex flex-col gap-5">
+        <div class="flex max-w-md flex-col gap-1">
             <h2 class="font-semibold">BUKU TERBARU</h2>
             <span>Temukan banyak buku menarik <a href="{% url 'books' %}"
                     class="text-[#00635D] underline">disini</a></span>
