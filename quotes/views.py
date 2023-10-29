@@ -7,6 +7,8 @@ from quotes.forms import ProductForm
 from django.shortcuts import get_object_or_404
 from django.shortcuts import redirect
 from readme.models import User
+from django.http import JsonResponse
+from django.db.models import Q
 
 # Create your views here.
 
@@ -98,3 +100,17 @@ def cited_quote(request, id):
         return redirect ('quotes')
 
     return render(request, 'quotes/cited_quote.html', context)
+
+def search_quotes(request):
+    if request.is_ajax():
+        search_value = request.GET.get('search_value', '')
+
+        # Melakukan pencarian berdasarkan judul atau isi kutipan yang sesuai
+        quotes = Quote.objects.filter(Q(quote__icontains=search_value) | Q(user__username__icontains=search_value))
+        
+        # Mengambil hasil pencarian dalam bentuk dictionary
+        search_results = [{'quote': quote.quote, 'user': quote.user.username} for quote in quotes]
+
+        return JsonResponse({'search_results': search_results})
+
+    return JsonResponse({'error': 'AJAX ga valid'})

@@ -46,7 +46,7 @@
     </div> 
 </div>    
     
-    <!-- bikin button dibawah ceritanya -->
+    <!-- bikin button dibawah ceritanya -->        
     <div class="fixed bottom-0 left-0 right-0 flex flex-col items-center p-4">
         <div class="mb-2">
             <h5 class="font-bold">Terdapat {{quotes_count}} Quotes dalam Profilemu!</h5>
@@ -54,28 +54,39 @@
         <a href="{% url 'create-quotes' %}" class="w-1/4 h-10 bg-orange-100 rounded-[40px] text-m border border-1 font-['Lato'] hover:text-red-800 hover:border-red-800" style="display: flex; justify-content: center; align-items: center;">
             Kutip quotes favoritmu
         </a>        
-    </div>    
+    </div>
 
     <!-- JavaScript buat bisa search quotes -->
     <script>
         const searchInput = document.getElementById('search');
         const quoteCards = document.querySelectorAll('.bg-orange-100');
-
-        searchInput.addEventListener('input', function () { //kelola input yang dimasukkan di search bar
-            const searchValue = searchInput.value.toLowerCase();
-
-            quoteCards.forEach(card => { //search kartu yang memiliki username atau isi quotes yg sesuai
-                const title = card.querySelector('.text-xl').textContent.toLowerCase();
-                const quote = card.querySelector('.text-gray-600.font-bold').textContent.toLowerCase();
-
-                if (title.includes(searchValue) || quote.includes(searchValue)) {
-                    card.style.display = 'block'; //menampilkan kartu yang sesuai dengan search input
-                } else {
-                    card.style.display = 'none'; //menyembunyikan kartu yang tidak sesuai
-                }
-            });
-        });
-    </script>
     
+        searchInput.addEventListener('input', function () {
+            const searchValue = searchInput.value.toLowerCase();
+    
+            // permintaan AJAX ke server
+            fetch(`/search-quotes/?search_value=${searchValue}`)
+                .then(response => response.json())
+                .then(data => {
+                    const searchResults = data.search_results;
+    
+                    quoteCards.forEach(card => {
+                        const cardTitle = card.querySelector('.text-xl').textContent.toLowerCase();
+                        const cardQuote = card.querySelector('.text-gray-600.font-bold').textContent.toLowerCase();
+    
+                        // cek apakah kartu harus ditampilkan
+                        const shouldDisplay = searchResults.some(result => 
+                            cardTitle.includes(result.quote) || cardQuote.includes(result.quote)
+                        );
+    
+                        card.style.display = shouldDisplay ? 'block' : 'none';
+                    });
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>    
+
 </div>
 {% endblock content %}
