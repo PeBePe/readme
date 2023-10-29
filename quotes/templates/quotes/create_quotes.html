@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="max-w-xl mx-auto mt-3 min-h-screen">
+
+<div class="max-w-xl mx-auto mt-3 min-h-screen flex items-center">
     <div class="bg-orange-200 rounded-lg shadow-lg p-6">
         <h5 class="text-2xl font-bold mb-4 text-center">Tambahkan Quotes ke Dalam Daftar Kamu!</h5>
 
+        {% if error %}
+        <span class="text-red-500">{{error}}</span>
+        {% endif %}
         <form method="POST">
             {% csrf_token %}
             <table class="mx-auto">
