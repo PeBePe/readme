@@ -2,7 +2,6 @@
 
 
 {% block content %}
-<<<<<<< HEAD
 
 <form method="POST" action="">
     {% csrf_token %}
@@ -30,23 +29,6 @@
 </form>
 
 
-        <!-- {% for post in posts %}
-        <div class="flex bg-white w-full justify-between px-4 py-4 gap-16 border ">
-            <div class="flex flex-col gap-3">
-                <div class="flex gap-3 items-center">
-                    <div class="flex flex-col">
-                        <div class="flex gap-1">
-                            <span>{{post.user.name}}</span>
-                            <span>@{{post.user.username}}</span>
-                        </div>
-                        <span class="text-sm">{{post.user.biodata}}</span>
-
-                    </div>
-                </div>
-            </div>
-
-    </form>
-</div>
 <script>
     document.getElementById('goBackButton').addEventListener('click', function (event) {
         event.preventDefault();
