@@ -6,13 +6,13 @@
 {% block content %}
 <div class="container flex-col-reverse lg:flex-row flex py-6 sm:px-12 px-4 gap-6">
     <div class="lg:w-3/4 flex flex-col gap-3">
-        <hr class="border-2">
-        <h2 class="font-semibold">POST</h2>
+        <hr class="border-2 lg:hidden">
+        <h2 class="font-semibold lg:hidden">POST</h2>
         {% if posts %}
 
         {% for post in posts %}
         <div class="flex bg-white w-full flex-col sm:flex-row    justify-between px-4 py-4 gap-4 sm:gap-16 border ">
-            <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-3 w-full">
                 <div class="flex gap-3 items-center">
                     <img src="{% static 'img/profile.svg' %}" alt="">
                     <div class="flex flex-col">
@@ -98,7 +98,8 @@
             <div class="flex flex-wrap gap-2">
 
                 {% for category in categories %}
-                <a href="{% url 'books' %}?category={{ category }}" class="bg-[#E7E7E7] rounded-full text-sm py-0.5 px-3.5">{{ category }}</a>
+                <a href="{% url 'books' %}?category={{ category }}"
+                    class="bg-[#E7E7E7] rounded-full text-sm py-0.5 px-3.5">{{ category }}</a>
                 {% endfor %}
             </div>
         </div>
