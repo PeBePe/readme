@@ -8,3 +8,4 @@ psycopg2-binary
 requests
 urllib3
 environ
+django-environ

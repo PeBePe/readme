@@ -4,7 +4,7 @@ WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app \
-    DJANGO_SETTINGS_MODULE=shopping_list.settings \
+    DJANGO_SETTINGS_MODULE=readme.settings \
     PORT=8000 \
     WEB_CONCURRENCY=2
 
@@ -29,4 +29,4 @@ RUN chown -R django:django /app
 USER django
 
 # Run application
-# CMD gunicorn shopping_list.wsgi:application
+# CMD gunicorn readme.wsgi:application
