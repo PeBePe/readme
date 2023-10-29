@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="w-full h-screen text-5xl font-bold flex justify-center items-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+        <div class="w-1/3 mx-auto">
+            <img src="{{ post.book.image_url }}" alt="cover" class="border">
+        </div>
+        <div class="w-2/3 ml-4 mx-auto">
+            <h2 class="text-lg font-semibold text-gray-800">{{ post.book.title }} ({{ post.book.publication_date.year }})</h2>
+            <h2 class="text-3xl font-bold mb-4">Edit Post</h2>
+            <form id="edit-post-form" method="post" data-post-id="{{ post.id }}">
+                {% csrf_token %}
+                <textarea name="content" class="w-full rounded-lg border p-2" rows="4">{{ post.content }}</textarea>
+                <button class="bg-blue-500 text-white rounded px-4 py-2 text-sm hover:bg-blue-600 mx-auto" type="submit">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#edit-post-form").on("submit", function(event) {
+            event.preventDefault();
+            var postId = $(this).data("post-id");
+            var formData = $(this).serialize();
+            var editUrl = $(this).data("url");
+
+            $.ajax({
+                url: editUrl,
+                type: 'POST',
+                data: formData,
+                dataType: 'json',
+                success: function(data) {
+                    if (data.success) {
+                        alert(data.message);
+                    } else {
+                        alert('Validation errors: ' + JSON.stringify(data.errors));
+                    }
+                }
+            });
+        });
+    });
+</script>
+{% endblock content %}
