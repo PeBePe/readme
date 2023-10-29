@@ -117,17 +117,16 @@ def cited_quote(request, id):
 
 
 def search_quotes(request):
-    if request.is_ajax():
-        search_value = request.GET.get('search_value', '')
+    search_value = request.GET.get('search_value', '')
 
-        # Melakukan pencarian berdasarkan judul atau isi kutipan yang sesuai
-        quotes = Quote.objects.filter(Q(quote__icontains=search_value) | Q(
-            user__username__icontains=search_value))
+    # Melakukan pencarian berdasarkan judul atau isi kutipan yang sesuai
+    quotes = Quote.objects.filter(Q(quote__icontains=search_value) | Q(
+        user__username__icontains=search_value))
 
-        # Mengambil hasil pencarian dalam bentuk dictionary
-        search_results = [{'quote': quote.quote,
-                           'user': quote.user.username} for quote in quotes]
+    # Mengambil hasil pencarian dalam bentuk dictionary
+    search_results = [{'quote': quote.quote,
+                       'user': quote.user.username} for quote in quotes]
 
-        return JsonResponse({'search_results': search_results})
+    return JsonResponse({'search_results': search_results})
 
-    return JsonResponse({'error': 'AJAX ga valid'})
+    # return JsonResponse({'error': 'AJAX ga valid'})
