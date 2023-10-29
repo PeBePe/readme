@@ -12,7 +12,7 @@ ENV PYTHONUNBUFFERED=1 \
 RUN apt-get update --yes --quiet \
 && apt-get install --yes --quiet --no-install-recommends \
 && apt-get install -y build-essential curl \
-&& curl -sL https://deb.nodesource.com/setup_14.x | bash - \ 
+&& curl -sL https://deb.nodesource.com/setup_16.x | bash - \ 
 && apt-get install -y nodejs --no-install-recommends \
 && rm -rf /var/lib/apt/lists/* \ 
 && apt-get clean 
