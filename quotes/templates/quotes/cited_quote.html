@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<head>
+    <title>Quote Detail</title>
+</head>
+<body>
+    <h1>Quote Detail</h1>
+    <p>{{ quote.quote }}</p>
+    <p>Created By: {{ quote.user.username }}</p>
+
+    <p>User Count Cited: {{ cited_count }}</p>
+
+    {% if user_cited %}
+        <p>You have requote this quote</p>
+    {% else %}
+        {% if cited_count <= 3 %}
+            <form method="post" action="{% url 'cited-quote' quote.id %}">
+                {% csrf_token %}
+                <button type="submit">Cite this Quote</button>
+            </form>
+        {% else %}
+            <p>You've reached the maximum citation limit for this quote.</p>
+        {% endif %}
+    {% endif %}
+    
+    <h2>Quoted Quotes:</h2>
+    <ul>
+        {% for quoted_quote in quoted_quotes %}
+            <li>{{ quoted_quote.quote }} - Cited By: {{ quoted_quote.cited_quote.count }}</li>
+        {% endfor %}
+    </ul>
+</body>
+{% endblock content %}
