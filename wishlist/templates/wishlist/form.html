@@ -2,50 +2,32 @@
 
 
 {% block content %}
-<form method="POST" action="">
-    {% csrf_token %}
-    <div class="container flex py-6 px-12 gap-6">
-        <div class="w-3/4 flex flex-col gap-3">
-            <div class="flex w-full bg-white p-4 border gap-4 items-center">
-                <textarea id="note" name="note" rows="7" placeholder="Add your note here" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-lg">{{form.note.value}}</textarea>
-                <a href="{% url 'wishlist'}" class="hover:text-white text-black bg-gray-300 rounded-full h-fit py-1.5 px-4">Cancel</a>
-                <input type="submit" class="hover:bg-green-600 text-white bg-[#00635D] rounded-full h-fit py-1.5 px-4" value="Confirm">
-            </div>
-        </div>
-    
-</form>
-
-
-        <!-- {% for post in posts %}
-        <div class="flex bg-white w-full justify-between px-4 py-4 gap-16 border ">
-            <div class="flex flex-col gap-3">
-                <div class="flex gap-3 items-center">
-                    <div class="flex flex-col">
-                        <div class="flex gap-1">
-                            <span>{{post.user.name}}</span>
-                            <span>@{{post.user.username}}</span>
-                        </div>
-                        <span class="text-sm">{{post.user.biodata}}</span>
+<div class="min-h-screen w-full ">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="container flex min-h-screen justify-center items-center py-6 px-12 gap-6">
+            <div class=" flex flex-col gap-3">
+                <div class="flex flex-col w-full bg-white p-4 border gap-4 items-center">
+                    <h1 class="font-bold text-3xl">Tambahkan catatan sebelum menambahkan wishlist!</h1>
+                    <textarea id="note" name="note" rows="7" placeholder="Add your note here"
+                        class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-lg">{% if form.note.value %}{{form.note.value}}{% endif %}</textarea>
+                    <div class="flex gap-2 items-center">
+                        <a href="#" id="goBackButton"
+                            class="hover:text-white text-black bg-gray-300 rounded-full h-fit py-1.5 px-4">Cancel</a>
+                        <input type="submit"
+                            class="hover:bg-green-600 text-white bg-[#00635D] rounded-full h-fit py-1.5 px-4"
+                            value="Confirm">
                     </div>
                 </div>
-                <div class="flex flex-col justify-between h-full">
-                    <span>{{post.content}} <a href="{% url 'post' %}" class="text-[#00635D] underline">Tampilkan lebih
-                            banyak</a></span>
-
-                    {% if post.created_at == post.updated_at %}
-                    <span>{{ post.created_at|date:"g:i A · j M Y" }}</span>
-                    {% else %}
-                    <span>Terakhir diedit {{ post.updated_at|date:"g:i A · j M Y" }}</span>
-                    {% endif %}
-                </div>
             </div>
-            <a href="{% url 'books' %}" class="flex flex-col items-center w-min gap-1">
-                <div class="w-40 ">
-                    <img src="{{ post.book.image_url }}" alt="Gambar buku" class="border mx-auto">
-                </div>
-                <span class="text-center text-xs text-black/70">{{ post.book.title }}
-                    ({{post.book.publication_date.year}})</span>
-            </a>
-        </div>
-        {% endfor %} -->
+
+    </form>
+</div>
+<script>
+    document.getElementById('goBackButton').addEventListener('click', function (event) {
+        event.preventDefault();
+        window.history.back();
+    });
+</script>
+
 {% endblock content %}

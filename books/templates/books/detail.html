@@ -6,7 +6,7 @@
     <div class="w-full max-w-xs mx-auto md:w-2/5 lg:w-1/4 flex flex-col gap-4">
         <div class="w-full px-10"><img src="{{ book.image_url }}" class="w-full drop-shadow-lg" alt="Cover"></div>
         <div class="flex flex-col items-center gap-2">
-            <a href="{% url 'wishlist' %}"
+            <a href="{% url 'add' book.pk %}"
                 class="bg-[#00635D] text-white py-2 px-2 w-full rounded-full text-center">Tambahkan
                 ke Wishlist</a>
             <a href="{% url 'shop' %}" class="bg-[#003F63] text-white py-2 px-2 w-full rounded-full text-center">Beli
@@ -70,7 +70,7 @@
                     <form id="form" data-url="{% url 'add-review' book.pk %}" class="flex flex-col items-end gap-2"
                         action="POST" onsubmit="return false">
                         {% csrf_token %}
-                        <textarea name="content" placeholder="Berikan review baru"
+                        <textarea required name="content" placeholder="Berikan review baru"
                             class="bg-black/10 text-black border-none w-full rounded-xl resize-none"
                             rows="5"></textarea>
                         <input type="submit" value="Kirim"
