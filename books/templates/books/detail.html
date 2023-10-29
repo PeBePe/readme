@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container flex flex-col md:flex-row gap-10 max-w-screen-xl py-6">
+    <div class="w-full max-w-xs mx-auto md:w-2/5 lg:w-1/4 flex flex-col gap-4">
+        <div class="w-full px-10"><img src="{{ book.image_url }}" class="w-full drop-shadow-lg" alt="Cover"></div>
+        <div class="flex flex-col items-center gap-2">
+            <a href="{% url 'add' book.pk %}"
+                class="bg-[#00635D] text-white py-2 px-2 w-full rounded-full text-center">Tambahkan
+                ke Wishlist</a>
+            <a href="{% url 'shop' %}" class="bg-[#003F63] text-white py-2 px-2 w-full rounded-full text-center">Beli
+                Buku
+                ini</a>
+            <a href="{% url 'create-post' book.pk %}"
+                class="bg-[#631e00] text-white py-2 px-2 w-full rounded-full text-center">Buat
+                Postingan</a>
+        </div>
+    </div>
+    <div class="md:w-3/5 lg:w-3/4 flex flex-col gap-7">
+        <div class="flex flex-col gap-3">
+            <div class="flex flex-col gap-2">
+                <div class="flex flex-col gap-2">
+                    <div class="">
+                        <h1 class="text-3xl font-bold inline">{{ book.title }} </h1>
+                        <span class="bg-[#E7E7E7] h-fit rounded-full whitespace-nowrap  py-0.5 px-3.5 w-fit">
+                            {{ book.category }}</span>
+                    </div>
+                    <span class="text-xl">{{ book.author }}</span>
+                </div>
+                <hr class="border-2">
+                <span class="text-lg">{{ book.description }}</span>
+            </div>
+        </div>
+        <div class="flex flex-col gap-1">
+            <h2>Detail</h2>
+            <hr class="border-2">
+            <div class="grid grid-cols-2 w-fit gap-x-2 gap-y-1">
+                <span class="text-black/70">ISBN</span> <span>{{ book.isbn }}</span>
+                <span class="text-black/70">Penulis</span> <span>{{ book.author }}</span>
+                <span class="text-black/70">Penerbit</span> <span>{{ book.publisher }}</span>
+                <span class="text-black/70">Tanggal Terbit</span> <span>{{ book.publication_date }}</span>
+                <span class="text-black/70">Jumlah Halaman</span> <span>{{ book.page_count }}</span>
+                <span class="text-black/70">Bahasa</span> <span> {% if book.lang == 'en' %}
+                    Inggris
+                    {% elif book.lang == 'id' %}
+                    Indonesia
+                    {% else %}
+                    Bahasa Lain
+                    {% endif %}</span>
+            </div>
+        </div>
+        <div class="flex flex-col gap-2">
+            <h2>Review</h2>
+            <hr class="border-2">
+            <div class="flex flex-col bg-white rounded-lg w-full justify-between px-4 py-4 gap-3 border ">
+                <div class="flex justify-between">
+                    <div class="flex gap-3 items-center">
+                        <img src="{% static 'img/profile.svg' %}" alt="">
+                        <div class="flex flex-col">
+                            <div class="flex gap-1">
+                                <span>{{user.name}}</span>
+                                <span>@{{user.username}}</span>
+                            </div>
+                            <span class="text-sm line-clamp-2">{{user.biodata}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between h-full">
+                    <form id="form" data-url="{% url 'add-review' book.pk %}" class="flex flex-col items-end gap-2"
+                        action="POST" onsubmit="return false">
+                        {% csrf_token %}
+                        <textarea required name="content" placeholder="Berikan review baru"
+                            class="bg-black/10 text-black border-none w-full rounded-xl resize-none"
+                            rows="5"></textarea>
+                        <input type="submit" value="Kirim"
+                            class="text-white bg-[#1E1915] py-1.5 px-4 font-bold block rounded-full cursor-pointer">
+                    </form>
+                </div>
+            </div>
+            <div id="reviewContainer" class="flex flex-col w-full gap-y-2">
+                {% if book.reviews.all %}
+                {% else %}
+                <span class="italic text-center py-10">Belum ada review</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const logginedUserId = "{{ user.id }}";
+
+    const form = document.getElementById('form');
+    const reviewContainer = document.getElementById('reviewContainer');
+
+    const add_review = async () => {
+        await fetch(form.dataset.url, { method: 'POST', body: new FormData(form) });
+        await getReviews();
+        form.reset();
+    };
+
+    const getReviews = async () => {
+        const response = await fetch("{% url 'review-json' book.pk %}");
+        const reviews = await response.json();
+
+
+        reviewContainer.innerHTML = '';
+        for (const review of reviews) {
+            const deleteUrl = "{% url 'delete-review' 0 %}".replace("0", review.id);
+            const editUrl = "{% url 'edit-page' book_id=book.pk review_id=0 %}".replace("0", review.id);
+
+            reviewContainer.innerHTML += `
+                <div class="flex flex-col bg-white rounded-lg w-full justify-between px-4 py-4 gap-3 border ">
+                    <div class="flex justify-between items-start">
+                        <div class="flex gap-3 items-center">
+                            <img src="{% static 'img/profile.svg' %}" alt="">
+                            <div class="flex flex-col">
+                                <div class="flex gap-1">
+                                    <span>${review.user.name}</span>
+                                    <span>@${review.user.username}</span>
+                                </div>
+                                <span class="text-sm line-clamp-2">${review.user.biodata}</span>
+                            </div>
+                        </div>
+                        <div class="items-start gap-2 hidden lg:flex h-fit">
+                            ${review.created_at == review.updated_at ? `<span class="text-sm text-black/60">${review.created_at}</span>` : ` <span class="text-sm text-black/60">
+                                Terakhir diedit ${review.updated_at}</span>`}
+                            <div class="flex">
+                                ${logginedUserId == review.user.id ? `
+                                    <a href="${editUrl}"><img
+                                        src="{% static 'books/img/pencil.svg' %}" alt="Edit"></a>
+                                    <a href="${deleteUrl}"><img
+                                        src="{% static 'books/img/trash.svg' %}" alt="Delete"></a>` : ''}
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="flex flex-col justify-between h-full">
+                        <span>${review.content}</span>
+                    </div>
+                    <div class="flex items-start gap-2 lg:hidden h-fit">
+                            ${review.created_at == review.updated_at ? `<span class="text-sm text-black/60">${review.created_at}</span>` : ` <span class="text-sm text-black/60">
+                                Terakhir diedit ${review.updated_at}</span>`}
+                            <div class="flex">
+                                ${logginedUserId == review.user.id ? `
+                                    <a href="${editUrl}"><img
+                                        src="{% static 'books/img/pencil.svg' %}" alt="Edit"></a>
+                                    <a href="${deleteUrl}"><img
+                                        src="{% static 'books/img/trash.svg' %}" alt="Delete"></a>` : ''}
+                                
+                            </div>
+                        </div>
+                </div>
+                `;
+        }
+
+    };
+
+    getReviews();
+
+    form.addEventListener('submit', add_review);
+    ;
+</script>
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container min-h-screen max-w-screen-md py-10 flex flex-col gap-5">
+    <div class="flex flex-col gap-2">
+        <h1 class="font-bold text-3xl">{{ book.title }} (Edit Review)</h1>
+        <div class="flex items-center px-2 gap-2">
+            <div class="w-16"><img class="w=full" src="{{ book.image_url }}" alt="cover"></div>
+            <div class="text-sm flex flex-col">
+                <span class="font-bold text-lg">{{ book.title }}</span>
+                <span>by {{book.author}}</span>
+                <span>{{ book.publication_date|date:"j F Y" }}</span>
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col bg-white rounded-lg w-full justify-between px-4 py-4 gap-3 border ">
+        <div class="flex justify-between items-start">
+            <div class="flex gap-3 items-center">
+                <img src="{% static 'img/profile.svg' %}" alt="">
+                <div class="flex flex-col">
+                    <div class="flex gap-1">
+                        <span>{{review.user.name}}</span>
+                        <span>@{{review.user.username}}</span>
+                    </div>
+                    <span class="text-sm">{{review.user.biodata}}</span>
+                </div>
+            </div>
+
+        </div>
+        <form id="form" method="POST" class="w-full">
+            {% csrf_token %}
+            <div class="flex flex-col items-end gap-3 justify-between h-full">
+                <textarea name="content" rows="10"
+                    class="bg-black/10 text-black border-none w-full rounded-xl resize-none"
+                    required>{{review.content}}</textarea>
+                <input type="submit" value="Simpan"
+                    class="text-white w-fit bg-[#1E1915] py-1.5 px-4 font-bold block rounded-full cursor-pointer">
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

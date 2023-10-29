@@ -2,84 +2,131 @@
 {% load static %}
 
 {% block content %}
-<div class="container max-w-screen-xl flex gap-8 py-6">
-    <div class="flex flex-col gap-8 w-3/4">
-        <div class="flex gap-6 w-full">
-            <div class="flex flex-col items-center gap-4 ">
-                <div class="w-40 h-40"><img src="{% static 'img/profile.svg' %}" alt="photo profile"
-                        class="w-full h-full">
+<div class="container min-h-screen">
+    <div class=" max-w-screen-xl flex gap-8 py-6 mx-auto ">
+        <div class="flex flex-col gap-8 lg:w-3/4">
+            <div class="flex gap-6 w-full flex-col sm:flex-row">
+                <div class="flex flex-col items-center gap-4 ">
+                    <div class="w-40 h-40"><img src="{% static 'img/profile.svg' %}" alt="photo profile"
+                            class="w-full h-full">
+                    </div>
+                    <div class="flex flex-col gap-2 text-sm">
+                        <a href="{% url 'wishlist' %}"
+                            class="bg-[#00635D] text-white py-2 px-2 rounded-full text-center">Lihat
+                            Wishlist</a>
+                        <a href="{% url 'shop' %}"
+                            class="bg-[#003f63] text-white py-2 px-2 rounded-full text-center">Lihat
+                            Buku yang Dibeli</a>
+                    </div>
                 </div>
-                <div class="flex flex-col gap-2 text-sm">
-                    <a href="{% url 'wishlist' %}"
-                        class="bg-[#00635D] text-white py-2 px-2 rounded-sm text-center">Lihat
-                        Wishlist</a>
-                    <a href="{% url 'shop' %}" class="bg-[#003f63] text-white py-2 px-2 rounded-sm text-center">Lihst
-                        Buku yang Dibeli</a>
+                <div class="flex flex-col justify-between w-full gap-4">
+                    <div class="w-full flex flex-col gap-1">
+                        <div class="flex gap-2 items-end justify-between">
+                            <h1 class="text-2xl font-bold">{{ user.name }}
+                                <span class="text-black/50">@{{ user.username }}</span>
+                            </h1>
+                            {% comment %}
+                            <a href="{% url 'profile-edit' %}" class="text-[#00635D] underline">(Edit profile)</a>
+                            {% endcomment %}
+                        </div>
+                        <hr class="border-2">
+                        <span class="text-lg">{{ user.biodata }}</span>
+                    </div>
+                    <div class="flex flex-col justify-between h-max">
+                        <div class="grid grid-cols-2 w-full  xl:w-1/2 text-lg font-bold text-black/50">
+                            <span>Lahir</span>
+                            <span>{{ user.birthdate|date:"j F Y" }}</span>
+                            <span>Bergabung</span>
+                            <span>{{ user.created_at|date:"j F Y" }}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="flex flex-col justify-between w-full">
-                <div class="w-full flex flex-col gap-1">
-                    <div class="flex gap-2 items-end justify-between">
-                        <h1 class="text-2xl font-bold">{{ user.name }}
-                            <span class="text-black/50">@{{ user.username }}</span>
-                        </h1>
-
-                        {% comment %}
-                        <a href="{% url 'profile-edit' %}" class="text-[#00635D] underline">(Edit profile)</a>
-                        {% endcomment %}
-
-                    </div>
+            <div class="w-full block lg:hidden">
+                <div class="flex flex-col gap-2">
+                    <h2 class="font-bold text-lg">Quotes yang dibuat</h2>
                     <hr class="border-2">
-                    <span class="text-lg">{{ user.biodata }}</span>
-                </div>
-                <div class="flex flex-col justify-between h-max">
-                    <div class="grid grid-cols-2 w-1/2 text-lg font-bold text-black/50">
-                        <span>Lahir</span>
-                        <span>{{ user.birthdate|date:"j F Y" }}</span>
-                        <span>Bergabung</span>
-                        <span>{{ user.created_at|date:"j F Y" }}</span>
+                    {% if user.quote %}
+                    <div>
+                        <div
+                            class="text-[#5A410095] bg-white w-full text-center px-2 h-40 flex flex-col justify-center items-center gap-1 border rounded-2xl font-Merriweather">
+                            <span>"{{ user.quote.quote }}"</span>
+                            <span class="text-xs italic">-{{ user.name }}</span>
+                        </div>
                     </div>
+                    {% else %}
+                    <span class="italic">User ini belum membuat quote</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h2 class="font-bold text-lg">Quote yang dikutip</h2>
+                <hr class="border-2">
+                <div class="flex gap-4 flex-col lg:flex-row">
+                    {% if user.cited_quote %}
+                    {% for quote in user.cited_quote.all %}
+                    <div
+                        class="text-[#5A410095] bg-white lg:w-1/3 text-center h-40 flex flex-col justify-center items-center gap-1 border rounded-2xl px-2 font-Merriweather">
+                        <span>"{{ quote.quote_id.quote }}"</span>
+                        <span class="text-xs italic">-{{quote.quote_id.user.name}}</span>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <span class="italic">User ini belum mengutip quotes apapun</span>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h2 class="font-bold text-lg">Review terbaru</h2>
+                <hr class="border-2">
+                <div class="flex flex-col gap-4">
+                    {% if user.reviews %}
+                    {% for review in user.reviews.all %}
+                    <div class="flex flex-col bg-white rounded-lg w-full justify-between px-4 py-4 gap-3 border ">
+                        <div class="flex items-center gap-2">
+                            <div class="w-16"><img class="w=full" src="{{ review.book.image_url }}" alt="cover"></div>
+                            <div class=" text-sm  flex flex-col">
+                                <a href="{% url 'book-detail' review.book.pk %}"
+                                    class="font-semibold text-lg underline">{{review.book.title}}</a>
+                                <span>By {{review.book.author}}</span>
+                                <span>{{ review.book.publication_date|date:"j F Y" }}</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-between h-full">
+                            <span>{{review.content}}</span>
+                        </div>
+                        <div class="text-sm ">
+                            <span>Terakhir diupdate {{review.updated_at|date:"M d, Y H:i"}} · </span>
+                            <a class="underline text-[#5A4100]"
+                                href="{% url 'edit-page' book_id=review.book.pk review_id=review.pk %}">Edit review</a>
+                            <span> · </span>
+                            <a class="underline text-[#5A4100]" href="{% url 'profile' %}">{{review.user.name}}</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
+                    <span class="italic">User ini belum memberikan review apapun</span>
+                    {% endif %}
                 </div>
             </div>
         </div>
-        <div class="flex flex-col gap-2">
-            <h2 class="font-bold text-lg">Quote yang dikutip</h2>
-            <hr class="border-2">
-            <div class="flex gap-4">
-
-                {% if user.cited_quote %}
-                {% for quote in user.cited_quote.all %}
-                <div
-                    class="text-[#5A410095] bg-white w-1/3 text-center h-40 flex flex-col justify-center items-center gap-1 border rounded-2xl px-2 font-Merriweather">
-                    <span>"{{ quote.quote_id.quote }}"</span>
-                    <span class="text-xs italic">-{{quote.quote_id.user.name}}</span>
+        <aside class="w-1/4 hidden lg:block">
+            <div class="flex flex-col gap-2">
+                <h2 class="font-bold text-lg">Quotes yang dibuat</h2>
+                <hr class="border-2">
+                {% if user.quote %}
+                <div>
+                    <div
+                        class="text-[#5A410095] bg-white w-full text-center px-2 h-40 flex flex-col justify-center items-center gap-1 border rounded-2xl font-Merriweather">
+                        <span>"{{ user.quote.quote }}"</span>
+                        <span class="text-xs italic">-{{ user.name }}</span>
+                    </div>
                 </div>
-                {% endfor %}
                 {% else %}
-                <span class="italic">User ini belum mengutip quotes apapun</span>
+                <span class="italic">User ini belum membuat quote</span>
                 {% endif %}
             </div>
-        </div>
+        </aside>
     </div>
-    <aside class="w-1/4">
-        <div class="flex flex-col gap-2">
-            <h2 class="font-bold text-lg">Quotes yang dibuat</h2>
-            <hr class="border-2">
-
-            {% if user.quote %}
-            <div>
-                <div
-                    class="text-[#5A410095] bg-white w-full text-center px-2 h-40 flex flex-col justify-center items-center gap-1 border rounded-2xl font-Merriweather">
-                    <span>"{{ user.quote.quote }}"</span>
-                    <span class="text-xs italic">-{{ user.name }}</span>
-                </div>
-            </div>
-
-            {% else %}
-            <span class="italic">User ini belum membuat quote</span>
-            {% endif %}
-
-        </div>
-    </aside>
 </div>
 {% endblock content %}

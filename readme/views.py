@@ -16,12 +16,15 @@ import datetime
 
 @login_required(login_url='/landing-page', redirect_field_name=None)
 def index(request):
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by('-created_at')
     newest_books = Book.objects.order_by('-publication_date')[:3]
     categories = Book.objects.values_list(
         'category', flat=True).distinct()[:15]
     best_quote = Quote.objects.annotate(cited_count=Count(
         'cited_quote')).order_by('-cited_count').first()
+
+    for post in posts:
+        post.has_liked = post.likes.filter(user_id=request.user).exists()
 
     context = {
         'user': request.user,
@@ -84,7 +87,6 @@ def logout_user(request):
 
 @login_required(login_url='/landing-page', redirect_field_name=None)
 def profile(request):
-    print(request.user.cited_quote.all()[0].quote_id.quote)
     context = {
         "user": request.user
     }

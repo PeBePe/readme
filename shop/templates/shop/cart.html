@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="min-h-screen">
+    <div class="bg-gray-300 py-20 relative flex w-full flex-col gap-10">
+        <img src="{% static 'books/img/books.jpg' %}"
+            class="object-cover absolute top-0 left-0 w-full h-full brightness-50" alt="">
+        <h1 id="message1"
+            class="relative font-bold text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-white text-center">
+        </h1>
+    </div>
+
+    <div class="container flex flex-col py-6 px-4 sm:px-12 gap-6 justify-center">
+        <div id="book-cards"
+            class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-6 justify-items-center">
+        </div>
+    </div>
+</div>
+
+<div class="fixed top-20 flex justify-center w-full" id="message2"></div>
+
+<script>
+    async function getCartItems() {
+        return fetch("{% url 'get_shopping_cart_json' %}", { method: "GET" }).then((res) => res.json());
+    }
+
+    async function refreshItems() {
+        document.getElementById("book-cards").innerHTML = "";
+        const cart_items = await getCartItems();
+        console.log(cart_items);
+
+        if (cart_items.length != 0) {
+            let htmlString = "";
+            let total_price = 0;
+            let total_item = 0;
+            cart_items.forEach((cart_item) => {
+                const itemDetailUrl = "{% url 'item_detail' 0 %}".replace("0", cart_item.item);
+                total_price += cart_item.item__price * cart_item.amount;
+                total_item += cart_item.amount;
+                htmlString += `\n
+                <div class="bg-white border p-2 rounded-md w-36 shadow-md">
+                    <div class="flex flex-col h-4/5">
+                        <a href="${itemDetailUrl}">
+                            <img src="${cart_item.item__book__image_url}" alt="book cover" class="h-48">
+                            <p class="text-xs mt-2 font-semibold text-center">${cart_item.item__book__title} (${cart_item.item__book__publication_date.substring(0, 4)})</p>
+                        </a>
+                    </div>
+                    <div class="flex flex-col justify-end items-center h-1/5">
+                        <div class="flex justify-center items-center text-sm font-bold w-full mt-2">
+                            <img class="w-5 h-5 mr-1" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
+                            ${cart_item.item__price * cart_item.amount}
+                        </div>
+                        <div class="flex justify-center w-full mt-2">
+                            <div class="flex justify-center items-center text-white bg-[#fbbd61] w-2/3 text-sm font-bold rounded-md mr-2">
+                                <button id="increment-${cart_item.id}" data-increment-url="{% url 'increment_cart_item' 0 %}" onclick="decrementAmount('${cart_item.id}')" class="flex justify-center items-center w-1/3 rounded-l-md border-r-2 hover:bg-[#af8445] py-1">-</button>
+                                <span class="flex justify-center w-1/2">${cart_item.amount}</span>
+                                <button id="decrement-${cart_item.id}" data-decrement-url="{% url 'decrement_cart_item' 0 %}" onclick="incrementAmount('${cart_item.id}')" class="flex justify-center items-center w-1/3 rounded-r-md border-l-2 hover:bg-[#af8445] py-1">+</button>
+                            </div>
+                            <button id="delete-${cart_item.id}" data-delete-url="{% url 'remove_from_cart' 0 %}" onclick="removeFromCart('${cart_item.id}')" class="flex justify-center items-center w-1/3 bg-red-500 hover:bg-red-700 text-xs font-bold rounded-md">
+                                <img class="h-5 w-5" src="{% static 'shop/img/trash.svg' %}" alt="Delete">
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+            });
+
+            document.getElementById("message1").innerHTML = `
+            <div class="flex flex-col justify-center items-center h-16 gap-3 md:gap-6 p-2">
+                <div class="flex flex-col justify-center items-center">
+                    <div>You have ${(total_item == 1) ? "1 book" : total_item + " books"} in the cart!</div>
+                    <div class="flex justify-start items-center items-center">
+                        <span class="mr-2">Total price:</span>
+                        <img class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 xl:h-10 xl:w-10 mr-1" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
+                        <span>${total_price}</span>
+                    </div>
+                </div>
+                <div class="flex relative justify-center gap-0.5 w-full max-w-screen-lg mx-auto">
+                    <button id="checkout-button" data-checkout-url="{% url 'checkout' %}" onclick="checkout()" class="flex justify-center items-center bg-[#fbbd61] hover:bg-[#af8445] text-white text-xl md:text-2xl lg:text-3xl text-center rounded-full w-1/2 py-2 px-4">Checkout</button>
+                </div>
+            </div>`;
+
+            document.getElementById("book-cards").innerHTML = htmlString;
+        }
+
+        else {
+            document.getElementById("message1").innerHTML = `
+            <div class="flex justify-center mt-52 min-h-screen text-center">
+                <h1>Your cart is empty. Add books from the shop!</h1>
+            </div>`;
+        }
+    }
+
+    refreshItems();
+
+    function removeFromCart(item_id) {
+        const deleteURL = document.querySelector(`#delete-${item_id}`).getAttribute('data-delete-url').replace("0", item_id);
+        fetch(deleteURL, { method: "DELETE" }).then(refreshItems);
+    }
+
+    function incrementAmount(item_id) {
+        const incrementURL = document.querySelector(`#increment-${item_id}`).getAttribute('data-increment-url').replace("0", item_id);
+        fetch(incrementURL, { method: "POST" }).then(refreshItems);
+    }
+
+    function decrementAmount(item_id) {
+        const decrementURL = document.querySelector(`#decrement-${item_id}`).getAttribute('data-decrement-url').replace("0", item_id);
+        fetch(decrementURL, { method: "POST" }).then(refreshItems);
+    }
+
+    function checkout() {
+        const checkoutURL = document.querySelector("#checkout-button").getAttribute('data-checkout-url');
+        fetch(checkoutURL, { method: "POST" }).then(response => {
+            message = document.getElementById("message2");
+            message.innerHTML = `<div class="flex ${response.ok ? "bg-green-100 border-green-500 text-green-500" : "bg-red-100 border-red-500 text-red-500"} rounded-full border-2">
+                <div class="w-16">
+                    <div class="p-4">
+                        ${response.ok ? "<img class=\"h-8 w-8\" src=\"{% static 'shop/img/check-mark.svg' %}\" alt=\"check mark\">"
+                    : "<img class=\"h-8 w-8 fill-current\" src=\"{% static 'shop/img/x-mark.svg' %}\" alt=\"X mark\">"}
+                    </div>
+                </div>
+                <div class="w-auto items-center py-4 pr-4">
+                    <span class="text-lg font-bold">
+                        ${response.ok ? "Checkout successful!" : response.status == 400 ? "Empty Cart!" : "Not enough loyalty points!"}
+                    </span>
+                </div>
+            </div>`;
+            setTimeout(() => { message2.innerHTML = ""; }, 3000);
+        }).then(refreshItems);
+    }
+</script>
+
+{% endblock content %}
