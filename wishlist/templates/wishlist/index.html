@@ -1,5 +1,15 @@
 {% extends 'base.html' %}
 
+<!-- <style>
+.popup {
+    visibility: hidden;
+}
+
+
+.open-popup {
+    visibility: visible;
+}
+</style> -->
 
 {% block content %}
 <!-- <div class="flex justify-center items-center min-h-screen text-xl font-bold">
@@ -58,24 +68,37 @@
 </div>
 
 <script>
-
+    async function getWishlist() {
+        return fetch("{% url 'wishlist' %}").then((res) => res.json());
+    }
 </script>
+<!-- <script>
+const removeBtn = document.getElementById("removeBtn");
+const modal = document.getElementById("popup-modal")
+removeBtn.addEventListener("click", () => {
+    modal.showModal();
+});
+// let popup = document.getElementById("popup-modal");
+// function openPopup() {
+//     popup.classList.add("open-popup");
+// }
+</script> -->
 
-<!-- <div class="container flex py-6 px-12 gap-6">
-    <div class="w-3/4 flex flex-col gap-3">
-        <div class="flex w-full bg-white p-4 border gap-4 items-center">
-            {% for wishlist in wishlists %}
-            <a href="#" class="flex flex-col items-center w-min gap-1">
-                <div class="w-40 ">
-                    <img src="{{ wishlist.books.image_url }}" alt="Gambar buku" class="border mx-auto">
-                </div>
-            </a>
+// <!-- <div class="container flex py-6 px-12 gap-6">
+//     <div class="w-3/4 flex flex-col gap-3">
+//         <div class="flex w-full bg-white p-4 border gap-4 items-center">
+//             {% for wishlist in wishlists %}
+//             <a href="#" class="flex flex-col items-center w-min gap-1">
+//                 <div class="w-40 ">
+//                     <img src="{{ wishlist.books.image_url }}" alt="Gambar buku" class="border mx-auto">
+//                 </div>
+//             </a>
 
-            <p>{{ wishlist.note }}</p>
-            <a href="#" class="hover:bg-red-500 text-white bg-red-600 rounded-full h-fit py-1.5 px-4">Remove</a>
-            <a href="#" class="hover:bg-green-600 text-white bg-[#00635D] rounded-full h-fit py-1.5 px-4">Edit</a>
-            {% endfor %}
-        </div>
-    </div> -->
+//             <p>{{ wishlist.note }}</p>
+//             <a href="#" class="hover:bg-red-500 text-white bg-red-600 rounded-full h-fit py-1.5 px-4">Remove</a>
+//             <a href="#" class="hover:bg-green-600 text-white bg-[#00635D] rounded-full h-fit py-1.5 px-4">Edit</a>
+//             {% endfor %}
+//         </div>
+//     </div> -->
 
 {% endblock content %}
