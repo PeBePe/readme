@@ -11,7 +11,7 @@
                 <img src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
                 <span class=" font-bold text-lg">{{ user.loyalty_point }}</span>
             </div>
-            <button onclick="showNav()" class="w-7 h-5 flex flex-col justify-between lg:hidden">
+            <button id="hamburger" class="w-7 h-5 flex flex-col justify-between lg:hidden">
                 <hr class="w-full h-1 rounded-full bg-[#1E1915]">
                 <hr class="w-full h-1 rounded-full bg-[#1E1915]">
                 <hr class="w-full h-1 rounded-full bg-[#1E1915]">
@@ -32,7 +32,7 @@
             </div>
             {% else %}
             <a href="{% url 'login' %}"
-                class="text-white hidden  bg-[#1E1915] py-1.5 px-4 font-bold lg:block rounded-full">Login</a>
+                class="text-white block  bg-[#1E1915] py-1.5 px-4 font-bold lg:hidden rounded-full">Login</a>
             {% endif %}
         </div>
         <div class="w-full max-w-sm hidden lg:block">
@@ -69,6 +69,11 @@
 
 <script>
     const profileBtn = document.getElementById('profileBtn');
+    const nav = document.getElementById('nav');
+    const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+    });
 
     profileBtn.addEventListener('mouseover', () => {
         profile.classList.remove('hidden');
@@ -80,8 +85,6 @@
         profile.classList.remove('flex');
     });
 
-    const nav = document.getElementById('nav');
-    const showNav = () => {
-        nav.classList.toggle('hidden');
-    }
+
+
 </script>
