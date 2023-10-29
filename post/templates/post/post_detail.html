@@ -19,11 +19,11 @@
             <div class="my-4">
                 <p class="text-lg">{{ post.content }}</p>
             </div>
+            <div class="mt-4 flex items-center">
+                <button id="like-button" data-url="{% url 'like-post' post.id %}" class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600">Like</button>
+                <span class="ml-2 text-lg">Likes: <span id="like-count">{{ post.likes.count }}</span></span>
+            </div>
             {% if is_owner %}
-                <div class="mt-4 flex items-center">
-                    <button id="like-button" data-post-id="{{ post.id }}" class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600">Like</button>
-                    <span class="ml-2 text-lg">Likes: <span id="like-count">{{ post.likes.count }}</span></span>
-                </div>
                 <div class="mt-4 flex justify-center">
                     <a href="{% url 'edit-post' post.id %}" class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600 flex-1">Edit</a>
                     <button class="bg-red-500 text-white rounded px-4 py-2 hover-bg-red-600 flex-1" id="delete-post" data-url="{% url 'delete-post' post.id %}">Delete</button>
@@ -34,40 +34,14 @@
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const deleteButton = document.getElementById("delete-post");
-        if (deleteButton) {
-            deleteButton.addEventListener("click", function () {
-                if (confirm("Are you sure you want to delete this post?")) {
-                    const deleteUrl = deleteButton.getAttribute("data-url");
-                    fetch(deleteUrl, {
-                        method: "DELETE",
-                        headers: {
-                            "X-CSRFToken": getCookie("csrftoken")
-                        }
-                    })
-                        .then(response => response.json())
-                        .then(data => {
-                            if (data.message) {
-                                alert(data.message);
-                                window.location.href = "{% url 'homepage' %}";
-                            } else if (data.error) {
-                                alert(data.error);
-                            }
-                        })
-                        .catch(error => {
-                            console.error("Error:", error);
-                        });
-                }
-            });
-        }
+document.addEventListener("DOMContentLoaded", function () {
+    const likeButton = document.getElementById("like-button");
+    const deleteButton = document.getElementById("delete-post");
 
-        const likeButton = document.getElementById("like-button");
-        const likeCount = document.getElementById("like-count");
-        const postID = likeButton.getAttribute("data-post-id");
-
+    if (likeButton) {
         likeButton.addEventListener("click", function () {
-            fetch(`/like_post/${postID}/`, {
+            const likeUrl = likeButton.getAttribute("data-url");
+            fetch(likeUrl, {
                 method: "POST",
                 headers: {
                     "X-CSRFToken": getCookie("csrftoken"),
@@ -75,36 +49,58 @@
             })
                 .then((response) => response.json())
                 .then((data) => {
-                    if (data.success) {
-                        likeButton.disabled = true;
-                        likeCount.innerText = data.like_count;
-                    } else if (data.error) {
-                        alert(data.error);
+                    document.getElementById("like-count").textContent = data.likes_count;
+                    if (data.user_has_liked) {
+                        likeButton.textContent = "Unlike";
+                    } else {
+                        likeButton.textContent = "Like";
                     }
                 })
                 .catch((error) => {
                     console.error("Error:", error);
                 });
         });
+    }
 
-        function updateLikeCount(element, count) {
-            element.innerText = count;
-        }
-
-        function getCookie(name) {
-            let cookieValue = null;
-            if (document.cookie && document.cookie !== "") {
-                const cookies = document.cookie.split(";");
-                for (let i = 0; i < cookies.length; i++) {
-                    const cookie = cookies[i].trim();
-                    if (cookie.substring(0, name.length + 1) === name + "=") {
-                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                        break;
+    if (deleteButton) {
+        deleteButton.addEventListener("click", function () {
+            if (confirm("Are you sure you want to delete this post?")) {
+                const deleteUrl = deleteButton.getAttribute("data-url");
+                fetch(deleteUrl, {
+                    method: "DELETE",
+                    headers: {
+                        "X-CSRFToken": getCookie("csrftoken")
                     }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.redirect_url) {
+                        window.location.href = data.redirect_url;
+                    } else if (data.error) {
+                        alert(data.error);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+            }
+        });
+    }
+
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+            const cookies = document.cookie.split(";");
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === name + "=") {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
                 }
             }
-            return cookieValue;
         }
-    });
+        return cookieValue;
+    }
+});
 </script>
 {% endblock content %}

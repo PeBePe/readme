@@ -21,7 +21,7 @@ def create_post(request, book_id):
             user = request.user
             post = Post(content=content, user=user, book=book)
             post.save()
-            return HttpResponseRedirect(reverse('homepage'))
+            return HttpResponseRedirect(reverse('post-detail', args=[post.id]))
         else:
             return HttpResponseNotFound()
     else:
@@ -43,7 +43,7 @@ def post_detail(request, post_id):
 
 
 def show_json(request):
-    data = Post.objects.all()
+    data = Like.objects.all()
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
 
@@ -70,26 +70,23 @@ def edit_post(request, post_id):
 def delete_post(request, post_id):
     if request.method == "DELETE":
         post = Post.objects.get(pk=post_id)
-        if request.user == post.user:
-            post.delete()
-            return HttpResponseRedirect(reverse('homepage'))
+        post.delete()
+        return JsonResponse({'redirect_url': reverse('homepage')})
+    return HttpResponseNotFound()
         
 @csrf_exempt
 def like_post(request, post_id):
     if request.method == "POST":
         post = get_object_or_404(Post, pk=post_id)
-        user = request.user
+        if post.likes.filter(user_id=request.user).exists():
+            pass
+        else:
+            like = Like(user_id=request.user, post_id=post_id)
+            like.save()
 
-        # Periksa apakah pengguna sudah memberikan like pada post
-        if post.likes.filter(user=user).exists():
-            return JsonResponse({"error": "Anda sudah memberikan like pada post ini."})
+        likes_count = post.likes.count()
+        user_has_liked = post.likes.filter(user_id=request.user).exists()
 
-        # Tambahkan like
-        like = Like(user=user, post=post)
-        like.save()
-
-        like_count = post.likes.count()
-
-        return JsonResponse({"success": True, "like_count": like_count})
-
-    return JsonResponse({"error": "Metode tidak diizinkan."})
+        return JsonResponse({"likes_count": likes_count, "user_has_liked": user_has_liked})
+    else:
+        return HttpResponse(status=403)
