@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <a href="{% url 'books' %}" class="flex flex-col items-center w-full sm:w-min gap-1">
+            <a href="{% url 'book-detail' post.book.pk %}" class="flex flex-col items-center w-full sm:w-min gap-1">
                 <div class="w-full sm:w-40 ">
                     <img src="{{ post.book.image_url }}" alt="Gambar buku" class="border w-full max-w-xs mx-auto">
                 </div>
@@ -98,7 +98,7 @@
             <div class="flex flex-wrap gap-2">
 
                 {% for category in categories %}
-                <a href="{% url 'books' %}" class="bg-[#E7E7E7] rounded-full text-sm py-0.5 px-3.5">{{ category }}</a>
+                <a href="{% url 'books' %}?category={{ category }}" class="bg-[#E7E7E7] rounded-full text-sm py-0.5 px-3.5">{{ category }}</a>
                 {% endfor %}
             </div>
         </div>
