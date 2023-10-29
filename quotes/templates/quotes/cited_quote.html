@@ -15,7 +15,7 @@
     {% if user_cited %}
         <p>You have requote this quote</p>
     {% else %}
-        {% if cited_count < 3 %}
+        {% if cited_count <= 3 %}
             <form method="post" action="{% url 'cited-quote' quote.id %}">
                 {% csrf_token %}
                 <button type="submit">Cite this Quote</button>

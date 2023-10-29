@@ -43,12 +43,10 @@ def create_quotes(request):
     
     return render(request, 'quotes/create_quotes.html', context)
 
-def delete_quote(request, id): #fungsi delete item
-    #product = Item.objects.get(pk=id)
+def delete_quote(request, id): 
     if request.method == "POST":
         product = get_object_or_404(Quote, pk=id)
         product.delete()
-        #return HttpResponse(reverse('main:show_main'))
         return redirect('quotes')
     
 def edit_quote(request, id):
@@ -76,7 +74,7 @@ def cited_quote(request, id):
 
     if request.method == "POST":
         #cek jumlah cited udah lebih dari 3 atau belum
-        if not user_cited and cited_count < 3:
+        if not user_cited and cited_count <= 3:
             QuoteCited.objects.create(quote_id=quote, user_id=request.user)
             cited_count += 1 #tambah jumlah cited quote
 
