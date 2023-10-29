@@ -3,14 +3,28 @@
 
 {% block content %}
 <div class="flex flex-col items-center gap-6">
-    <div class="bg-gray-300 py-20 relative flex w-full flex-col gap-10">
+    <div class="bg-gray-300 py-20 relative flex w-full flex-col gap-10 px-4">
         <img src="{% static 'books/img/books.jpg' %}"
             class="object-cover absolute top-0 left-0 w-full h-full brightness-50" alt="">
-        <h1 class="relative font-bold text-5xl text-white text-center">Temukan banyak buku menarik disini!</h1>
-        <form method="GET">
-            <div class="flex relative gap-0.5 w-full max-w-screen-lg mx-auto">
+        <h1 class="relative font-bold text-xl sm:text-3xl lg:text-4xl xl:text-5xl text-white text-center">Temukan banyak buku menarik disini!</h1>
+        <form method="GET" class="flex flex-col gap-2">
+            <div class="flex relative gap-0.5 w-full max-w-screen-lg mx-auto ">
                 <input placeholder="Kata kunci" name="q" type="text" class="w-full px-6 !rounded-r-none"
                     value="{{ request.GET.q }}">
+                <select name="field " class="hidden md:block">
+                    <option value="title" {% if request.GET.field == "title" %}selected{% endif %}>Judul</option>
+                    <option value="author" {% if request.GET.field == "author" %}selected{% endif %}>Penulis</option>
+                    <option value="publisher" {% if request.GET.field == "publisher" %}selected{% endif %}>Penerbit</option>
+                </select>
+                <select name="category " class="hidden md:block">
+                    <option value="">Semua Kategori</option>
+                    {% for category in categories %}
+                    <option value="{{category.category}}" {% if request.GET.category == category.category %}selected{% endif %}>{{ category.category }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="Cari" class="bg-yellow-800 text-white font-bold  rounded-r-full px-8">
+            </div>
+            <div class="relative flex flex-wrap gap-1 justify-center md:hidden">
                 <select name="field">
                     <option value="title" {% if request.GET.field == "title" %}selected{% endif %}>Judul</option>
                     <option value="author" {% if request.GET.field == "author" %}selected{% endif %}>Penulis</option>
@@ -18,36 +32,33 @@
                 </select>
                 <select name="category">
                     <option value="">Semua Kategori</option>
-
                     {% for category in categories %}
                     <option value="{{category.category}}" {% if request.GET.category == category.category %}selected{% endif %}>{{ category.category }}</option>
                     {% endfor %}
-
                 </select>
-                <input type="submit" value="Cari" class="bg-yellow-800 text-white font-bold  rounded-r-full px-8">
             </div>
         </form>
     </div>
     
     
     {% if books %}
-    <div class="grid grid-cols-2 gap-4 container ">
+    <div class="grid xl:grid-cols-2 gap-4 container ">
         {% for book in books %}
-        <div class="flex items-center gap-3 bg-white p-5">
-            <div class="w-1/4">
+        <div class="flex flex-col sm:flex-row w-full max-w-xs sm:max-w-none mx-auto items-center gap-3 overflow-hidden bg-white p-5">
+            <div class=" w-full sm:w-1/4">
                 <img src="{{ book.image_url }}" class="w-full" alt="book cover">
             </div>
-            <div class="flex w-3/4 gap-10">
-                <div class="flex flex-col gap-3">
+            <div class="flex flex-col sm:flex-row sm:w-3/4 gap-10">
+                <div class="flex flex-col gap-3 w-fit">
                     <div class="flex flex-col">
                         <h2 class="font-bold text-xl">{{ book.title }}</h2>
-                        <span class="text-[1.0625rem]">by {{ book.author }}</span>
+                        <span class="text-[1.0625rem] ">by {{ book.author }}</span>
                     </div>
                     <span class="bg-[#E7E7E7] rounded-full text-sm py-0.5 px-3.5 w-fit">{{ book.category }}</span>
-                    <span class="line-clamp-3">{{book.description}}</span>
+                    <span class="line-clamp-3 ">{{book.description}}</span>
                     <span class="text-yellow-800">{{ book.reviews.count }} Reviews</span>
                 </div>
-                <div class="flex flex-col items-end justify-between">
+                <div class="flex sm:flex-col items-center sm:items-end justify-between">
                     <div>
                         <a href="{% url 'wishlist' %}" class="block aspect-1 rounded-full drop-shadow-lg  bg-white  hover:bg-yellow-500 transition-all
                              p-2.5 group">
