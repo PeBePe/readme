@@ -78,15 +78,18 @@ def delete_post(request, post_id):
 def like_post(request, post_id):
     if request.method == "POST":
         post = get_object_or_404(Post, pk=post_id)
-        if post.likes.filter(user_id=request.user).exists():
-            pass
+        user = request.user
+
+        like_exists = Like.objects.filter(user_id=user, post_id=post).exists()
+
+        if like_exists:
+            Like.objects.filter(user_id=user, post_id=post).delete()
         else:
-            like = Like(user_id=request.user, post_id=post_id)
+            like = Like(user_id=user, post_id=post)
             like.save()
 
         likes_count = post.likes.count()
-        user_has_liked = post.likes.filter(user_id=request.user).exists()
 
-        return JsonResponse({"likes_count": likes_count, "user_has_liked": user_has_liked})
+        return JsonResponse({"likes_count": likes_count, "user_has_liked": not like_exists})
     else:
-        return HttpResponse(status=403)
+        return HttpResponseNotFound()

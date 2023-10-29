@@ -20,7 +20,13 @@
                 <p class="text-lg">{{ post.content }}</p>
             </div>
             <div class="mt-4 flex items-center">
-                <button id="like-button" data-url="{% url 'like-post' post.id %}" class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600">Like</button>
+                <button id="like-button" data-url="{% url 'like-post' post.id %}" class="bg-blue-500 text-white rounded px-4 py-2 hover:bg-blue-600">
+                    {% if has_liked %}
+                        Unlike
+                    {% else %}
+                        Like
+                    {% endif %}
+                </button>
                 <span class="ml-2 text-lg">Likes: <span id="like-count">{{ post.likes.count }}</span></span>
             </div>
             {% if is_owner %}

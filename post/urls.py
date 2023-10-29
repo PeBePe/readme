@@ -9,5 +9,5 @@ urlpatterns = [
     path('json/<int:post_id>', views.show_json_by_id, name="show-json-by-id"), #Url untuk mendapatkan detail positing dalam bentuk json
     path('edit/<int:post_id>', views.edit_post, name="edit-post"), # Url untuk edit post berdasarkan id
     path('delete/<int:post_id>', views.delete_post, name="delete-post"), #Url untuk delete post berdasarkan id
-    path('like_post/<int:post_id>/', views.like_post, name='like-post'),
+    path('post/like/<int:post_id>/', views.like_post, name='like-post'),
 ]
