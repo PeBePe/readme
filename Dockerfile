@@ -6,13 +6,14 @@ ENV PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app \
     DJANGO_SETTINGS_MODULE=readme.settings \
     PORT=8000 \
-    WEB_CONCURRENCY=2
+    WEB_CONCURRENCY=2 \
+    NPM_BIN_PATH=/usr/local/bin/npm
 
 # Install system packages required Django.
 RUN apt-get update --yes --quiet \
 && apt-get install --yes --quiet --no-install-recommends \
 && apt-get install -y build-essential curl \
-&& curl -sL https://deb.nodesource.com/setup_16.x | bash - \ 
+&& curl -sL https://deb.nodesource.com/setup_20.x | bash - \ 
 && apt-get install -y nodejs --no-install-recommends \
 && rm -rf /var/lib/apt/lists/* \ 
 && apt-get clean 
@@ -26,6 +27,8 @@ RUN pip install -r /requirements.txt
 
 # Copy project code
 COPY . .
+
+WORKDIR /app
 
 RUN SECRET_KEY=nothing python manage.py tailwind install --no-input;
 RUN SECRET_KEY=nothing python manage.py tailwind build --no-input;
