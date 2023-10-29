@@ -3,8 +3,13 @@
 
 {% block content %}
 
+<div class="bg-gray-300 py-20 relative flex w-full flex-col gap-10">
+    <img src="{% static 'books/img/books.jpg' %}"
+        class="object-cover absolute top-0 left-0 w-full h-full brightness-50" alt="">
+    <h1 id="message1" class="relative font-bold text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl text-white text-center"></h1>
+</div>
+
 <div class="container flex flex-col py-6 px-4 sm:px-12 gap-6 justify-center">
-    <div id="message1"></div>
     <div id="book-cards" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8 gap-6 justify-items-center"></div>
 </div>
 
@@ -12,7 +17,7 @@
 
 <script>
     async function getCartItems() {
-        return fetch("{% url 'get_shopping_cart_json' %}").then((res) => res.json())
+        return fetch("{% url 'get_shopping_cart_json' %}", {method: "GET"}).then((res) => res.json())
     }
 
     async function refreshItems() {
@@ -23,30 +28,32 @@
         if (cart_items.length != 0) {
             let htmlString = ""
             let total_price = 0
+            let total_item = 0
             cart_items.forEach((cart_item) => {
-                total_price += cart_item.price
+                const itemDetailUrl = "{% url 'item_detail' 0 %}".replace("0", cart_item.item)
+                total_price += cart_item.item__price * cart_item.amount
+                total_item += cart_item.amount
                 htmlString += `\n
                 <div class="bg-white border p-2 rounded-md w-36 shadow-md">
                     <div class="flex flex-col h-4/5">
-                        <img src="${cart_item.book__image_url}" alt="book cover" class="h-48">
-                        <p class="text-xs mt-2 font-semibold text-center">${ cart_item.book__title } (${ cart_item.book__publication_date.substring(0,4) })</p>
+                        <a href="${itemDetailUrl}">
+                            <img src="${cart_item.item__book__image_url}" alt="book cover" class="h-48">
+                            <p class="text-xs mt-2 font-semibold text-center">${ cart_item.item__book__title } (${ cart_item.item__book__publication_date.substring(0,4) })</p>
+                        </a>
                     </div>
                     <div class="flex flex-col justify-end items-center h-1/5">
+                        <div class="flex justify-center items-center text-sm font-bold w-full mt-2">
+                            <img class="w-5 h-5 mr-1" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
+                            ${ cart_item.item__price * cart_item.amount }
+                        </div>
                         <div class="flex justify-center w-full mt-2">
-                            <div class="flex justify-center items-center w-1/2 text-xs font-bold rounded border-2 mr-2">
-                                <div class="mr-1">
-                                    <img class="w-5 h-5" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
-                                </div>
-                                ${ cart_item.price }
+                            <div class="flex justify-center items-center text-white bg-[#fbbd61] w-2/3 text-sm font-bold rounded-md mr-2">
+                                <button id="increment-${cart_item.id}" data-increment-url="{% url 'increment_cart_item' 0 %}" onclick="decrementAmount('${cart_item.id}')" class="flex justify-center items-center w-1/3 rounded-l-md border-r-2 hover:bg-[#af8445] py-1">-</button>
+                                <span class="flex justify-center w-1/2">${cart_item.amount}</span>
+                                <button id="decrement-${cart_item.id}" data-decrement-url="{% url 'decrement_cart_item' 0 %}" onclick="incrementAmount('${cart_item.id}')" class="flex justify-center items-center w-1/3 rounded-r-md border-l-2 hover:bg-[#af8445] py-1">+</button>
                             </div>
-                            <button onclick="removeFromCart('${cart_item.id}')" class="flex justify-center items-center w-1/2 bg-red-500 hover:bg-red-700 text-xs font-bold rounded py-1">
-                                <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
-                                    <path d="M4 6H20L18.4199 20.2209C18.3074 21.2337 17.4512 22 16.4321 22H7.56786C6.54876 22 5.69264 21.2337 5.5801 20.2209L4 6Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M7.34491 3.14716C7.67506 2.44685 8.37973 2 9.15396 2H14.846C15.6203 2 16.3249 2.44685 16.6551 3.14716L18 6H6L7.34491 3.14716Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M2 6H22" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M10 11V16" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M14 11V16" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                            <button id="delete-${cart_item.id}" data-delete-url="{% url 'remove_from_cart' 0 %}" onclick="removeFromCart('${cart_item.id}')" class="flex justify-center items-center w-1/3 bg-red-500 hover:bg-red-700 text-xs font-bold rounded-md">
+                                <img class="h-5 w-5" src="{% static 'shop/img/trash.svg' %}" alt="Delete">
                             </button>
                         </div>
                     </div>
@@ -54,17 +61,17 @@
             })
 
             document.getElementById("message1").innerHTML = `
-            <div class="flex justify-center intems-center h-16 gap-3 md:gap-6 p-2">
-                <div class="flex justify-center items-center">
-                    <button onclick="checkout()" class="flex justify-center items-center bg-[#fbbd61] hover:bg-[#af8445] text-white text-center rounded-md w-full py-2 px-4">Checkout</button>
-                </div>
-                <div class="flex flex-col justify-center">
-                    <div>You have ${(cart_items.length == 1) ? "1 book" : cart_items.length + " books"} in the cart.</div>
-                    <div class="flex justify-start items-center items-start">
+            <div class="flex flex-col justify-center items-center h-16 gap-3 md:gap-6 p-2">
+                <div class="flex flex-col justify-center items-center">
+                    <div>You have ${(total_item == 1) ? "1 book" : total_item + " books"} in the cart!</div>
+                    <div class="flex justify-start items-center items-center">
                         <span class="mr-2">Total price:</span>
-                        <img class="h-5 w-5 mr-1" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
+                        <img class="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 xl:h-10 xl:w-10 mr-1" src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
                         <span>${total_price}</span>
                     </div>
+                </div>
+                <div class="flex relative justify-center gap-0.5 w-full max-w-screen-lg mx-auto">
+                    <button id="checkout-button" data-checkout-url="{% url 'checkout' %}" onclick="checkout()" class="flex justify-center items-center bg-[#fbbd61] hover:bg-[#af8445] text-white text-xl md:text-2xl lg:text-3xl text-center rounded-full w-1/2 py-2 px-4">Checkout</button>
                 </div>
             </div>`
             
@@ -73,7 +80,7 @@
 
         else {
             document.getElementById("message1").innerHTML = `
-            <div class="flex justify-center items-center min-h-screen pb-24 text-center text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold">
+            <div class="flex justify-center mt-52 min-h-screen text-center">
                 <h1>Your cart is empty. Add books from the shop!</h1>
             </div>`
         }
@@ -82,28 +89,39 @@
     refreshItems()
 
     function removeFromCart(item_id) {
-        fetch(`remove-from-cart/${item_id}/`, {method: "DELETE"}).then(refreshItems)
+        const deleteURL = document.querySelector(`#delete-${item_id}`).getAttribute('data-delete-url').replace("0", item_id);
+        fetch(deleteURL, {method: "DELETE"}).then(refreshItems)
+    }
+
+    function incrementAmount(item_id) {
+        const incrementURL = document.querySelector(`#increment-${item_id}`).getAttribute('data-increment-url').replace("0", item_id);
+        fetch(incrementURL, {method: "POST"}).then(refreshItems)
+    }
+
+    function decrementAmount(item_id) {
+        const decrementURL = document.querySelector(`#decrement-${item_id}`).getAttribute('data-decrement-url').replace("0", item_id);
+        fetch(decrementURL, {method: "POST"}).then(refreshItems)
     }
 
     function checkout() {
-        fetch(`checkout/`, {method: "POST"}).then(response => {
-                message = document.getElementById("message2");
-                message.innerHTML = `<div class="flex ${response.ok ? "bg-green-100 border-green-500 text-green-500" : "bg-red-100 border-red-500 text-red-500"} rounded-full border-2">
-                    <div class="w-16">
-                        <div class="p-4">
-                            ${response.ok ? '<svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M468.907 214.604c-11.423 0-20.682 9.26-20.682 20.682v20.831c-.031 54.338-21.221 105.412-59.666 143.812-38.417 38.372-89.467 59.5-143.761 59.5h-.12C132.506 459.365 41.3 368.056 41.364 255.883c.031-54.337 21.221-105.411 59.667-143.813 38.417-38.372 89.468-59.5 143.761-59.5h.12c28.672.016 56.49 5.942 82.68 17.611 10.436 4.65 22.659-.041 27.309-10.474 4.648-10.433-.04-22.659-10.474-27.309-31.516-14.043-64.989-21.173-99.492-21.192h-.144c-65.329 0-126.767 25.428-172.993 71.6C25.536 129.014.038 190.473 0 255.861c-.037 65.386 25.389 126.874 71.599 173.136 46.21 46.262 107.668 71.76 173.055 71.798h.144c65.329 0 126.767-25.427 172.993-71.6 46.262-46.209 71.76-107.668 71.798-173.066v-20.842c0-11.423-9.259-20.683-20.682-20.683z"></path><path d="M505.942 39.803c-8.077-8.076-21.172-8.076-29.249 0L244.794 271.701l-52.609-52.609c-8.076-8.077-21.172-8.077-29.248 0-8.077 8.077-8.077 21.172 0 29.249l67.234 67.234a20.616 20.616 0 0 0 14.625 6.058 20.618 20.618 0 0 0 14.625-6.058L505.942 69.052c8.077-8.077 8.077-21.172 0-29.249z"></path></svg>'
-                            : '<svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M437.019 74.981C388.667 26.629 324.38 0 256 0S123.333 26.63 74.981 74.981 0 187.62 0 256s26.629 132.667 74.981 181.019C123.332 485.371 187.62 512 256 512s132.667-26.629 181.019-74.981C485.371 388.667 512 324.38 512 256s-26.629-132.668-74.981-181.019zM256 470.636C137.65 470.636 41.364 374.35 41.364 256S137.65 41.364 256 41.364 470.636 137.65 470.636 256 374.35 470.636 256 470.636z"></path><path d="M341.22 170.781c-8.077-8.077-21.172-8.077-29.249 0L170.78 311.971c-8.077 8.077-8.077 21.172 0 29.249 4.038 4.039 9.332 6.058 14.625 6.058s10.587-2.019 14.625-6.058l141.19-141.191c8.076-8.076 8.076-21.171 0-29.248z"></path><path d="M341.22 311.971l-141.191-141.19c-8.076-8.077-21.172-8.077-29.248 0-8.077 8.076-8.077 21.171 0 29.248l141.19 141.191a20.616 20.616 0 0 0 14.625 6.058 20.618 20.618 0 0 0 14.625-6.058c8.075-8.077 8.075-21.172-.001-29.249z"></path></svg>'}
-                        </div>
+        const checkoutURL = document.querySelector("#checkout-button").getAttribute('data-checkout-url');
+        fetch(checkoutURL, {method: "POST"}).then(response => {
+            message = document.getElementById("message2");
+            message.innerHTML = `<div class="flex ${response.ok ? "bg-green-100 border-green-500 text-green-500" : "bg-red-100 border-red-500 text-red-500"} rounded-full border-2">
+                <div class="w-16">
+                    <div class="p-4">
+                        ${response.ok ? "<img class=\"h-8 w-8\" src=\"{% static 'shop/img/check-mark.svg' %}\" alt=\"check mark\">"
+                        : "<img class=\"h-8 w-8 fill-current\" src=\"{% static 'shop/img/x-mark.svg' %}\" alt=\"X mark\">"}
                     </div>
-                    <div class="w-auto items-center py-4 pr-4">
-                        <span class="text-lg font-bold">
-                            ${response.ok ? "Checkout successful!" : "Not enough loyalty points!"}
-                        </span>
-                    </div>
-                </div>`
-                setTimeout(() => {message2.innerHTML = ""}, 3000);
-            }
-        ).then(refreshItems)
+                </div>
+                <div class="w-auto items-center py-4 pr-4">
+                    <span class="text-lg font-bold">
+                        ${response.ok ? "Checkout successful!" : response.status == 400 ? "Empty Cart!" : "Not enough loyalty points!"}
+                    </span>
+                </div>
+            </div>`
+            setTimeout(() => {message2.innerHTML = ""}, 3000);
+        }).then(refreshItems)
     }
 </script>
 
