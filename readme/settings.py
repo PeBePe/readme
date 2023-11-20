@@ -33,6 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+CSRF_TRUSTED_ORIGINS = ['https://readme-a03-tk.pbp.cs.ui.ac']
+
 
 # Application definition
 
