@@ -33,7 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
-CSRF_TRUSTED_ORIGINS = ['https://readme-a03-tk.pbp.cs.ui.ac']
+CSRF_TRUSTED_ORIGINS = [
+    'https://readme-a03-tk.pbp.cs.ui.ac', 'https://readme.up.railway.app']
 
 
 # Application definition
