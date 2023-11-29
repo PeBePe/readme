@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='post'),
-    path('<int:post_id>', views.post_detail, name="post-detail"),
+    path('q<int:post_id>', views.post_detail, name="post-detail"),
     path('create/<int:book_id>', views.create_post, name="create-post"),
     path('json', views.show_json, name="show-json"),
     path('json/<int:post_id>', views.show_json_by_id, name="show-json-by-id"),
