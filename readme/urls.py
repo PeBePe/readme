@@ -39,4 +39,5 @@ urlpatterns = [
     path('api/books/', include("books.api_urls")),
     path('api/post/', include("post.api_urls")),
     path('api/shop/', include("shop.api_urls")),
+    path('api/quotes/', include("quotes.api_urls")),
 ]
