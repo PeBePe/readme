@@ -38,4 +38,5 @@ urlpatterns = [
     path('api/profile', views.api_profile),
     path('api/books/', include("books.api_urls")),
     path('api/post/', include("post.api_urls")),
+    path('api/shop/', include("shop.api_urls")),
 ]
