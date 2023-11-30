@@ -32,9 +32,9 @@ urlpatterns = [
     path('post/', include("post.urls")),
     path('shop/', include("shop.urls")),
     path('wishlist/', include('wishlist.urls')),
-    path('api/auth/login', views.api_login, name='login'),
-    path('api/auth/register', views.api_register, name='register'),
-    path('api/auth/logout', views.api_logout, name='logout'),
-    path('api/profile', views.api_profile, name='profile'),
+    path('api/auth/login', views.api_login),
+    path('api/auth/register', views.api_register),
+    path('api/auth/logout', views.api_logout),
+    path('api/profile', views.api_profile),
     path('api/books/', include("books.api_urls")),
 ]
