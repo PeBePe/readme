@@ -2,19 +2,22 @@
 {% load static %}
 
 {% block content %}
-<div class="container flex gap-10 max-w-screen-xl py-6">
-    <div class="w-1/4 flex flex-col gap-4">
+<div class="container flex flex-col md:flex-row gap-10 max-w-screen-xl py-6">
+    <div class="w-full max-w-xs mx-auto md:w-2/5 lg:w-1/4 flex flex-col gap-4">
         <div class="w-full px-10"><img src="{{ book.image_url }}" class="w-full drop-shadow-lg" alt="Cover"></div>
         <div class="flex flex-col items-center gap-2">
-            <a href="{% url 'wishlist' %}"
+            <a href="{% url 'add' book.pk %}"
                 class="bg-[#00635D] text-white py-2 px-2 w-full rounded-full text-center">Tambahkan
                 ke Wishlist</a>
             <a href="{% url 'shop' %}" class="bg-[#003F63] text-white py-2 px-2 w-full rounded-full text-center">Beli
                 Buku
                 ini</a>
+            <a href="{% url 'create-post' book.pk %}"
+                class="bg-[#631e00] text-white py-2 px-2 w-full rounded-full text-center">Buat
+                Postingan</a>
         </div>
     </div>
-    <div class="w-3/4 flex flex-col gap-7">
+    <div class="md:w-3/5 lg:w-3/4 flex flex-col gap-7">
         <div class="flex flex-col gap-3">
             <div class="flex flex-col gap-2">
                 <div class="flex flex-col gap-2">
@@ -59,7 +62,7 @@
                                 <span>{{user.name}}</span>
                                 <span>@{{user.username}}</span>
                             </div>
-                            <span class="text-sm">{{user.biodata}}</span>
+                            <span class="text-sm line-clamp-2">{{user.biodata}}</span>
                         </div>
                     </div>
                 </div>
@@ -67,7 +70,7 @@
                     <form id="form" data-url="{% url 'add-review' book.pk %}" class="flex flex-col items-end gap-2"
                         action="POST" onsubmit="return false">
                         {% csrf_token %}
-                        <textarea name="content" placeholder="Berikan review baru"
+                        <textarea required name="content" placeholder="Berikan review baru"
                             class="bg-black/10 text-black border-none w-full rounded-xl resize-none"
                             rows="5"></textarea>
                         <input type="submit" value="Kirim"
@@ -116,10 +119,10 @@
                                     <span>${review.user.name}</span>
                                     <span>@${review.user.username}</span>
                                 </div>
-                                <span class="text-sm">${review.user.biodata}</span>
+                                <span class="text-sm line-clamp-2">${review.user.biodata}</span>
                             </div>
                         </div>
-                        <div class="flex items-start gap-2  h-fit">
+                        <div class="items-start gap-2 hidden lg:flex h-fit">
                             ${review.created_at == review.updated_at ? `<span class="text-sm text-black/60">${review.created_at}</span>` : ` <span class="text-sm text-black/60">
                                 Terakhir diedit ${review.updated_at}</span>`}
                             <div class="flex">
@@ -136,6 +139,18 @@
                     <div class="flex flex-col justify-between h-full">
                         <span>${review.content}</span>
                     </div>
+                    <div class="flex items-start gap-2 lg:hidden h-fit">
+                            ${review.created_at == review.updated_at ? `<span class="text-sm text-black/60">${review.created_at}</span>` : ` <span class="text-sm text-black/60">
+                                Terakhir diedit ${review.updated_at}</span>`}
+                            <div class="flex">
+                                ${logginedUserId == review.user.id ? `
+                                    <a href="${editUrl}"><img
+                                        src="{% static 'books/img/pencil.svg' %}" alt="Edit"></a>
+                                    <a href="${deleteUrl}"><img
+                                        src="{% static 'books/img/trash.svg' %}" alt="Delete"></a>` : ''}
+                                
+                            </div>
+                        </div>
                 </div>
                 `;
         }

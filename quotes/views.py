@@ -9,6 +9,10 @@ from django.shortcuts import redirect
 from readme.models import User
 from django.http import JsonResponse
 from django.db.models import Q
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_http_methods
+from django.forms.models import model_to_dict
+
 
 # Create your views here.
 
@@ -108,7 +112,7 @@ def cited_quote(request, id):
     quote_owner = quote.user
 
     if quote_owner:
-        # Perbarui poin loyalitas pemilik kutipan
+    # Perbarui poin loyalitas pemilik kutipan
         quote_owner.loyalty_point += 1000
         quote_owner.save()
         return redirect('quotes')
@@ -129,4 +133,4 @@ def search_quotes(request):
 
     return JsonResponse({'search_results': search_results})
 
-    # return JsonResponse({'error': 'AJAX ga valid'})
+    return JsonResponse({'error': 'AJAX ga valid'})
