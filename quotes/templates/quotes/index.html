@@ -65,7 +65,7 @@
             const searchValue = searchInput.value.toLowerCase();
     
             // permintaan AJAX ke server
-            fetch(`/search-quotes/?search_value=${searchValue}`)
+            fetch("{% url 'search-quotes' %}")
                 .then(response => response.json())
                 .then(data => {
                     const searchResults = data.search_results;
@@ -75,7 +75,7 @@
                         const cardQuote = card.querySelector('.text-gray-600.font-bold').textContent.toLowerCase();
     
                         // cek apakah kartu harus ditampilkan
-                        const shouldDisplay = searchResults.some(result => 
+                        const shouldDisplay = searchResults.some(result =>
                             cardTitle.includes(result.quote) || cardQuote.includes(result.quote)
                         );
     
@@ -86,7 +86,7 @@
                     console.error('Error:', error);
                 });
         });
-    </script>    
+    </script>
 
 </div>
 {% endblock content %}
