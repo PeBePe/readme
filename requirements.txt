@@ -9,3 +9,4 @@ requests
 urllib3
 environ
 django-environ
+django-cors-headers
