@@ -36,9 +36,12 @@ ALLOWED_HOSTS = ["*"]
 CSRF_TRUSTED_ORIGINS = [
     'https://readme-a03-tk.pbp.cs.ui.ac', 'https://readme.up.railway.app', 'http://localhost:55872', 'https://muhammad-daffai-readme.stndar.dev']
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:55872"
-]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
 
 # Application definition
 
