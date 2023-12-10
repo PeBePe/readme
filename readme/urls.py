@@ -41,4 +41,5 @@ urlpatterns = [
     path('api/shop/', include("shop.api_urls")),
     path('api/quotes/', include("quotes.api_urls")),
     path('api/wishlist/', include("wishlist.api_urls")),
+    path('api/home', views.api_home),
 ]

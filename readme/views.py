@@ -199,3 +199,21 @@ def api_profile(request):
             "status": False,
             "message": "Gagal mendapatkan data profil. Pengguna tidak terotentikasi."
         }, status=401)
+
+
+@require_http_methods(["GET"])
+def api_home(request):
+    posts = Post.objects.all().order_by('-created_at')
+    newest_books = Book.objects.order_by('-publication_date')[:3]
+    categories = Book.objects.values_list(
+        'category', flat=True).distinct()[:15]
+    best_quote = Quote.objects.annotate(cited_count=Count(
+        'cited_quote')).order_by('-cited_count').first()
+
+    for post in posts:
+        post.has_liked = post.likes.filter(user_id=request.user).exists()
+
+    categories = [category for category in categories]
+    print(categories)
+
+    return JsonResponse({"status": True, "message": "Berhasil mendapatkan data", "posts": list(posts.values()), "newest_books": list(newest_books.values()), "categories": list(categories)})
