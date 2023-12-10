@@ -211,9 +211,17 @@ def api_home(request):
         'cited_quote')).order_by('-cited_count').first()
 
     for post in posts:
-        post.has_liked = post.likes.filter(user_id=request.user).exists()
+        if (request.user.is_authenticated):
+            post.has_liked = post.likes.filter(user_id=request.user).exists()
+        else:
+            post.has_liked = False
 
     categories = [category for category in categories]
-    print(categories)
 
-    return JsonResponse({"status": True, "message": "Berhasil mendapatkan data", "posts": list(posts.values()), "newest_books": list(newest_books.values()), "categories": list(categories)})
+    print(best_quote.user)
+
+    best_quote = {
+        "quote": best_quote.quote,
+        "author": best_quote.user.name
+    }
+    return JsonResponse({"status": True, "message": "Berhasil mendapatkan data", "posts": list(posts.values()), "newest_books": list(newest_books.values()), "categories": list(categories), "best_quote": best_quote})

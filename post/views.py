@@ -128,7 +128,11 @@ def api_get_posts(request):
 
 @require_http_methods(["GET"])
 def api_get_post_detail(request, post_id):
-    pass
+    try:
+        data = Post.objects.get(pk=post_id)
+    except:
+        return JsonResponse({"status": False, "message": "Post tidak ditemukan"}, status=404)
+    return JsonResponse({"status": True, "message": "Success mendapatkan post", "post": {"content": data.content, "created_at": data.created_at, "updated_at": data.updated_at, "user": {"id": data.user.pk, "name": data.user.name}, "book": {"id": data.book.pk, "title": data.book.title, "author": data.book.author, "image_url": data.book.image_url, "publication_data": data.book.publication_date}}})
 
 
 @require_http_methods(["POST"])
