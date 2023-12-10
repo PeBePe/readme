@@ -218,10 +218,28 @@ def api_home(request):
 
     categories = [category for category in categories]
 
-    print(best_quote.user)
+    posts = [{
+        "id": post.id,
+        "created_at": post.created_at,
+        "updated_at": post.updated_at,
+        "content": post.content,
+        "user": {
+            "id": post.user.id,
+            "username": post.user.username,
+            "name": post.user.name,
+        },
+        "book": {
+            "id": post.book.id,
+            "title": post.book.title,
+            "author": post.book.author,
+            "publication_date": post.book.publication_date,
+            "image_url": post.book.image_url,
+        },
+        # "like_count": post.likes,
+    } for post in posts]
 
     best_quote = {
         "quote": best_quote.quote,
         "author": best_quote.user.name
     }
-    return JsonResponse({"status": True, "message": "Berhasil mendapatkan data", "posts": list(posts.values()), "newest_books": list(newest_books.values()), "categories": list(categories), "best_quote": best_quote})
+    return JsonResponse({"status": True, "message": "Berhasil mendapatkan data", "posts": posts, "newest_books": list(newest_books.values()), "categories": list(categories), "best_quote": best_quote})
