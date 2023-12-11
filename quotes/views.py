@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from quotes.models import Quote, QuoteCited
-from django.http import HttpResponseRedirect, HttpResponseBadRequest
+from django.http import HttpResponse, HttpResponseRedirect, HttpResponseBadRequest
 from django.urls import reverse
 from quotes.forms import ProductForm
 from django.shortcuts import get_object_or_404
@@ -12,6 +12,7 @@ from django.db.models import Q
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_http_methods
 from django.forms.models import model_to_dict
+from django.core import serializers
 
 
 # Create your views here.
@@ -277,3 +278,11 @@ def api_cite_quote(request, quote_id):
         return JsonResponse({"status": True, "message": "Berhasil mengutip quote", "quote": context}, status=200)
 
     return JsonResponse({"status": False, "message": "Terjadi kesalahan"}, status=500)
+
+def show_json(request): #nampilin code dalam bentuk json
+    data = Quote.objects.all()
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")
+
+def show_json_by_id(request, id):
+    data = Quote.objects.filter(pk=id)
+    return HttpResponse(serializers.serialize("json", data), content_type="application/json")

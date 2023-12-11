@@ -12,4 +12,6 @@ urlpatterns = [
     path('edit-quote/<int:id>/', views.edit_quote, name='edit-quote'),
     path('cited-quote/<int:id>/', views.cited_quote, name='cited-quote'),
     path('search-quotes/', views.search_quotes, name='search-quotes'),
+    path('json/', views.show_json, name='show_json'),
+    path('json/<int:id>/', views.show_json_by_id, name='show_json_by_id'),
 ]
