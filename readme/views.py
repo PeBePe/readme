@@ -199,3 +199,47 @@ def api_profile(request):
             "status": False,
             "message": "Gagal mendapatkan data profil. Pengguna tidak terotentikasi."
         }, status=401)
+
+
+@require_http_methods(["GET"])
+def api_home(request):
+    posts = Post.objects.all().order_by('-created_at')
+    newest_books = Book.objects.order_by('-publication_date')[:3]
+    categories = Book.objects.values_list(
+        'category', flat=True).distinct()[:15]
+    best_quote = Quote.objects.annotate(cited_count=Count(
+        'cited_quote')).order_by('-cited_count').first()
+
+    for post in posts:
+        if (request.user.is_authenticated):
+            post.has_liked = post.likes.filter(user_id=request.user).exists()
+        else:
+            post.has_liked = False
+
+    categories = [category for category in categories]
+
+    posts = [{
+        "id": post.id,
+        "created_at": post.created_at,
+        "updated_at": post.updated_at,
+        "content": post.content,
+        "user": {
+            "id": post.user.id,
+            "username": post.user.username,
+            "name": post.user.name,
+        },
+        "book": {
+            "id": post.book.id,
+            "title": post.book.title,
+            "author": post.book.author,
+            "publication_date": post.book.publication_date,
+            "image_url": post.book.image_url,
+        },
+        # "like_count": post.likes,
+    } for post in posts]
+
+    best_quote = {
+        "quote": best_quote.quote if best_quote else None,
+        "author": best_quote.user.name if best_quote else None
+    }
+    return JsonResponse({"status": True, "message": "Berhasil mendapatkan data", "posts": posts, "newest_books": list(newest_books.values()), "categories": list(categories), "best_quote": best_quote})
