@@ -2,3 +2,11 @@ django
 django-tailwind
 django-tailwind[reload]
 python-dotenv
+gunicorn
+whitenoise
+psycopg2-binary
+requests
+urllib3
+environ
+django-environ
+django-cors-headers

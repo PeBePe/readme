@@ -1,24 +1,52 @@
 {% load static %}
 
-<nav class="bg-[#FAEFDF] ">
+<nav class="bg-[#FAEFDF] relative z-50 ">
     <div class="container flex items-center justify-between">
-        <a href="{% url 'homepage' %}"><img src="{% static '/img/logo.svg' %}" alt="logo"></a>
-        <div class="flex gap-5">
-            <a href="{% url 'homepage' %}">Home</a>
-            <a href="{% url 'shop' %}">Shop</a>
-            <a href="{% url 'quotes' %}">Quotes</a>
-            <a href="{% url 'books' %}">Books</a>
+        <a href="{% url 'homepage' %}">
+            <img src="{% static '/img/logo.svg' %}" alt="logo" class="hidden sm:block">
+            <img src="{% static 'img/logo-small.svg' %}" alt="logo" class="w-14 sm:hidden">
+        </a>
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-1 lg:hidden">
+                <img src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
+                <span class=" font-bold text-lg">{{ user.loyalty_point }}</span>
+            </div>
+            <button id="hamburger" class="w-7 h-5 flex flex-col justify-between lg:hidden">
+                <hr class="w-full h-1 rounded-full bg-[#1E1915]">
+                <hr class="w-full h-1 rounded-full bg-[#1E1915]">
+                <hr class="w-full h-1 rounded-full bg-[#1E1915]">
+            </button>
         </div>
-        <div class="w-full max-w-sm">
+        <div id="nav"
+            class="lg:flex gap-5 hidden flex flex-col lg:flex-row absolute lg:static lg:w-fit top-14 left-0 w-full bg-[#FAEFDF] items-center">
+            <a class="py-2 w-full text-center" href="{% url 'homepage' %}">Home</a>
+            <a class="py-2 w-full text-center" href="{% url 'shop' %}">Shop</a>
+            <a class="py-2 w-full text-center" href="{% url 'quotes' %}">Quotes</a>
+            <a class="py-2 w-full text-center" href="{% url 'books' %}">Books</a>
+            {% if user.username %}
+            <div class="items-center flex-col w-full flex gap-4 lg:hidden">
+                <a class="py-2 w-full text-center px-4 hover:bg-gray-200 font-bold"
+                    href="{% url 'profile' %}">Profile</a>
+                <a class="py-2 w-full text-center px-4 hover:bg-gray-200 font-bold text-red-400"
+                    href="{% url 'logout' %}">Logout</a>
+            </div>
+            {% else %}
+            <a href="{% url 'login' %}"
+                class="text-white block  bg-[#1E1915] py-1.5 px-4 font-bold lg:hidden rounded-full">Login</a>
+            {% endif %}
+        </div>
+        <div class="w-full max-w-sm hidden lg:block">
             <label for="search" class="relative">
                 <img src="{% static '/img/magnify.svg' %}" alt="Magnify"
-                    class="absolute top-0 right-2 pointer-events-none">
-                <input type="text" id="search" class="h-8 w-full  border-1 border-black/40" placeholder="Cari buku">
+                    class="absolute top-1/2 -translate-y-1/2 right-2 pointer-events-none">
+                <form method="GET" action="{% url 'books' %}">
+                    <input type="text" name="q" class="h-8 w-full  border-1 border-black/40" placeholder="Cari buku">
+                </form>
             </label>
         </div>
 
         {% if user.username %}
-        <div class="flex items-center gap-4">
+        <div class="lg:flex items-center gap-4 hidden">
             <div class="flex items-center gap-1">
                 <img src="{% static '/img/loyalty-point.svg' %}" alt="loyalty point">
                 <span class=" font-bold text-lg">{{ user.loyalty_point }}</span>
@@ -33,15 +61,19 @@
             </div>
         </div>
         {% else %}
-        <a href="{% url 'login' %}" class="text-white bg-[#1E1915] py-1.5 px-4 font-bold block rounded-full">Login</a>
+        <a href="{% url 'login' %}"
+            class="text-white hidden  bg-[#1E1915] py-1.5 px-4 font-bold lg:block rounded-full">Login</a>
         {% endif %}
-
     </div>
 </nav>
 
 <script>
     const profileBtn = document.getElementById('profileBtn');
-    const profile = document.getElementById('profile');
+    const nav = document.getElementById('nav');
+    const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
+    });
 
     profileBtn.addEventListener('mouseover', () => {
         profile.classList.remove('hidden');
@@ -51,5 +83,8 @@
     profileBtn.addEventListener('mouseleave', () => {
         profile.classList.add('hidden');
         profile.classList.remove('flex');
-    })
+    });
+
+
+
 </script>

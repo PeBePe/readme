@@ -159,7 +159,6 @@ def api_get_post_detail(request, post_id):
 
     return JsonResponse(response_data)
 
-
 @require_http_methods(["POST"])
 @csrf_exempt
 def api_create_post(request, book_id):

@@ -1,4 +1,7 @@
 # PBP Kelompok A03 - ReadMe
+
+https://readme.up.railway.app/
+
 <details>
     <summary>Anggota Kelompok</summary>
 
@@ -12,6 +15,7 @@
 
 <details>
     <summary>Cerita Aplikasi</summary>
+
 
 ## Cerita Aplikasi
 Aplikasi ReadMe adalah aplikasi yang kami buat untuk meningkatkan tingkat literasi di kalangan masyarakat Indonesia dari segala usia. Aplikasi ini menawarkan serangkaian fitur yang memungkinkan pengguna untuk berinteraksi dengan dunia literasi dan buku dengan sangat menarik. Berikut adalah beberapa fitur utama dari aplikasi ReadMe:
@@ -100,6 +104,3 @@ Kami memilih Google Books API karena API tersebut menyediakan akses ke koleksi b
 ## Role Pengguna
 Hanya terdapat 1 role pada aplikasi kami yaitu role Pengguna atau User yang dapat mengakses semua fitur diatas. User memiliki akses penuh ke seluruh fitur aplikasi, termasuk memberikan ulasan terhadap buku, membuat posting, menciptakan kutipan, berbelanja dengan loyalty points, dan mengelola daftar buku di Wishlist. Mereka dapat berpartisipasi secara aktif dalam aplikasi kami, berinteraksi dengan pengguna lain, dan mendapatkan loyalty points sebagai bentuk penghargaan atas kontribusi mereka dalam membangun pengalaman berliterasi dan membaca.
 </details>
-
-
-
