@@ -139,11 +139,21 @@ def search_quotes(request):
 @require_http_methods(["GET"])
 def api_get_quotes(request):
     user = request.user
-    quotes = Quote.objects.all().values()  # ambil semua quotes yang ada
+    quotes = Quote.objects.select_related(
+        'user')  # ambil semua quotes yang ada
     quotes_count = quotes.count()  # menghitung jumlah quotes yang ada
     # ngambil daftar kutipan dan pengguna yang mengutipnya
     quoted_quotes = QuoteCited.objects.select_related(
         'quote_id', 'user_id').all().values()
+
+    quotes = [{
+        "id": quote.id,
+        "created_at": quote.created_at,
+        "updated_at": quote.updated_at,
+        "quote": quote.quote,
+        "user_id": quote.user.id,
+        "username": quote.user.username
+    } for quote in quotes]
 
     context = {
         'name': request.user.username,
