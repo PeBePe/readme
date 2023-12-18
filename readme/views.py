@@ -8,11 +8,12 @@ from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ValidationError, BadRequest
 from post.models import Post
-from books.models import Book
+from books.models import Book, Review
 from quotes.models import Quote
 from django.db.models import Count
-
+from django.core.serializers import serialize
 import datetime
+import json
 
 
 @login_required(login_url='/landing-page', redirect_field_name=None)
@@ -177,18 +178,58 @@ def api_logout(request):
 @require_http_methods(["GET"])
 def api_profile(request):
     if request.user.is_authenticated:
+        user = request.user
+
+        # Retrieve reviews for the user
+        user_reviews = Review.objects.filter(user=user)
+        reviews_data = [
+            {
+                "id": user_review.pk,
+                "created_at": user_review.created_at,
+                "updated_at": user_review.updated_at,
+                "content": user_review.content,
+                "book": {
+                    "id": user_review.book.id,
+                    "title": user_review.book.title,
+                    "author": user_review.book.author,
+                    "publication_date": user_review.book.publication_date,
+                    "image_url": user_review.book.image_url,
+                },
+            }
+            for user_review in user_reviews
+        ]
+        # Retrieve cited quotes for the user with related user names
+        user_cited_quotes = Quote.objects.filter(user=user)
+        cited_quotes_data = [
+            {
+                "id": cited_quote.pk,
+                "created_at": cited_quote.created_at,
+                "updated_at": cited_quote.updated_at,
+                "quote": cited_quote.quote,
+                "user": {
+                    "id": cited_quote.user.id,
+                    "name": cited_quote.user.name,
+                }
+            }
+            for cited_quote in user_cited_quotes
+        ]
+
         profile_data = {
-            "id": request.user.id,
-            "username": request.user.username,
-            "email": request.user.email,
-            "created_at": request.user.created_at,
-            "updated_at": request.user.updated_at,
-            "name": request.user.name,
-            "birthdate": request.user.birthdate,
-            "biodata": request.user.biodata,
-            "phone": request.user.phone,
-            "loyalty_point": request.user.loyalty_point,
+            "id": user.id,
+            "username": user.username,
+            "email": user.email,
+            "created_at": user.created_at,
+            "updated_at": user.updated_at,
+            "name": user.name,
+            "birthdate": user.birthdate,
+            "biodata": user.biodata,
+            "phone": user.phone,
+            "loyalty_point": user.loyalty_point,
+            "quote": user.quote.quote if user.quote else None,
+            "cited_quotes": cited_quotes_data,
+            "reviews": reviews_data,
         }
+
         return JsonResponse({
             "status": True,
             "message": "Sukses mendapatkan data profil",
