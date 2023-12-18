@@ -14,4 +14,10 @@ urlpatterns = [
     path('search-quotes/', views.search_quotes, name='search-quotes'),
     path('json/', views.show_json, name='show_json'),
     path('json/<int:id>/', views.show_json_by_id, name='show_json_by_id'),
+    #path('api/quotes/', views.show_json, name='show_json'),
+    # path('api-create-quote/', views.api_create_quote, name="api-create-quote"),
+    # path('api-get-quote/', views.api_get_quotes, name='api-get-quote'),
+    # path('api-edit-quote/', views.api_edit_quote, name='api-edit-quote'),
+    # path('api-delete-quote/', views.api_delete_quote, name='api-delete-quote'),
+    # path('api-cite-quote/', views.api_cite_quote, name='api-cite-quote'),
 ]
