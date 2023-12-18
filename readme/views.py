@@ -225,7 +225,7 @@ def api_profile(request):
             "biodata": user.biodata,
             "phone": user.phone,
             "loyalty_point": user.loyalty_point,
-            "quote": user.quote.quote if user.quote else None,
+            "quote": user.quote.quote if hasattr(user, 'quote') and user.quote else None,
             "cited_quotes": cited_quotes_data,
             "reviews": reviews_data,
         }
