@@ -239,7 +239,7 @@ def api_home(request):
     } for post in posts]
 
     best_quote = {
-        "quote": best_quote.quote if best_quote else None,
-        "author": best_quote.user.name if best_quote else None
+        "quote": best_quote.quote if best_quote else "",
+        "author": best_quote.user.name if best_quote else ""
     }
     return JsonResponse({"status": True, "message": "Berhasil mendapatkan data", "posts": posts, "newest_books": list(newest_books.values()), "categories": list(categories), "best_quote": best_quote})

@@ -129,11 +129,35 @@ def api_get_posts(request):
 @require_http_methods(["GET"])
 def api_get_post_detail(request, post_id):
     try:
-        data = Post.objects.get(pk=post_id)
-    except:
+        data = Post.objects.annotate(
+            jumlah_likes=Count('likes')).get(pk=post_id)
+    except Post.DoesNotExist:
         return JsonResponse({"status": False, "message": "Post tidak ditemukan"}, status=404)
-    return JsonResponse({"status": True, "message": "Success mendapatkan post", "post": {"content": data.content, "created_at": data.created_at, "updated_at": data.updated_at, "user": {"id": data.user.pk, "name": data.user.name}, "book": {"id": data.book.pk, "title": data.book.title, "author": data.book.author, "image_url": data.book.image_url, "publication_data": data.book.publication_date}}})
 
+    response_data = {
+        "status": True,
+        "message": "Success mendapatkan post",
+        "post": {
+            "content": data.content,
+            "created_at": data.created_at,
+            "updated_at": data.updated_at,
+            "user": {
+                "id": data.user.pk,
+                "username": data.user.username,
+                "name": data.user.name,
+            },
+            "book": {
+                "id": data.book.pk,
+                "title": data.book.title,
+                "author": data.book.author,
+                "image_url": data.book.image_url,
+                "publication_date": data.book.publication_date,
+            },
+            "likes_count": data.jumlah_likes,
+        }
+    }
+
+    return JsonResponse(response_data)
 
 @require_http_methods(["POST"])
 @csrf_exempt
@@ -201,5 +225,25 @@ def api_delete_post(request, post_id):
 
 
 @require_http_methods(["PUT"])
+@csrf_exempt
 def api_like_post(request, post_id):
-    pass
+    if not request.user.is_authenticated:
+        return JsonResponse({"status": False, "message": "Anda belum login"}, status=401)
+
+    try:
+        post = Post.objects.get(pk=post_id)
+    except Post.DoesNotExist:
+        return JsonResponse({"status": False, "message": "Post tidak ditemukan"}, status=404)
+
+    like_exists = Like.objects.filter(user_id=request.user, post_id=post).exists()
+
+    if like_exists:
+        Like.objects.filter(user_id=request.user, post_id=post).delete()
+        action = "unliked"
+    else:
+        Like.objects.create(user_id=request.user, post_id=post)
+        action = "liked"
+
+    likes_count = post.likes.count()
+
+    return JsonResponse({"status": True, "message": f"Post successfully {action}", "likes_count": likes_count, "user_has_liked": not like_exists})

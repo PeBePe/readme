@@ -1,7 +1,7 @@
 from django.shortcuts import render, reverse
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, QueryDict
 from django.core import serializers
-from django.db.models import Q
+from django.db.models import Q, Count
 from .models import Book, Review
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
@@ -119,10 +119,32 @@ def api_books(request):
     if category:
         books = books.filter(category=category)
 
+    # Annotate the books queryset with the count of reviews for each book
+    books = books.annotate(review_count=Count('reviews'))
+
     categories = [category.get('category') for category in Book.objects.values(
         'category').distinct()]
 
-    return JsonResponse({"status": True, "message": "Berhasil mendapatkan data buku", "books": list(books.values()), "categories": list(categories)})
+    # Create a list of dictionaries with book information and review count
+    books_data = [
+        {
+            'id': book.pk,
+            'isbn': book.isbn,
+            'title': book.title,
+            'description': book.description,
+            'author': book.author,
+            'publisher': book.publisher,
+            'publication_date': book.publication_date,
+            'page_count': book.page_count,
+            'category': book.category,
+            'image_url': book.image_url,
+            'lang': book.lang,
+            'review_count': book.review_count,
+        }
+        for book in books
+    ]
+
+    return JsonResponse({"status": True, "message": "Berhasil mendapatkan data buku", "books": books_data, "categories": list(categories)})
 
 
 @require_http_methods(["GET"])
