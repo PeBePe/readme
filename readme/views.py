@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ValidationError, BadRequest
 from post.models import Post
 from books.models import Book, Review
-from quotes.models import Quote
+from quotes.models import Quote, QuoteCited
 from django.db.models import Count
 from django.core.serializers import serialize
 import datetime
@@ -199,16 +199,16 @@ def api_profile(request):
             for user_review in user_reviews
         ]
         # Retrieve cited quotes for the user with related user names
-        user_cited_quotes = Quote.objects.filter(user=user)
+        user_cited_quotes = QuoteCited.objects.filter(user_id=user.id)
         cited_quotes_data = [
             {
                 "id": cited_quote.pk,
-                "created_at": cited_quote.created_at,
-                "updated_at": cited_quote.updated_at,
-                "quote": cited_quote.quote,
+                "created_at": cited_quote.quote_id.created_at,
+                "updated_at": cited_quote.quote_id.updated_at,
+                "quote": cited_quote.quote_id.quote,
                 "user": {
-                    "id": cited_quote.user.id,
-                    "name": cited_quote.user.name,
+                    "id": cited_quote.quote_id.user.id,
+                    "name": cited_quote.quote_id.user.name,
                 }
             }
             for cited_quote in user_cited_quotes
