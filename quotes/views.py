@@ -152,7 +152,14 @@ def api_get_quotes(request):
         "updated_at": quote.updated_at,
         "quote": quote.quote,
         "user_id": quote.user.id,
-        "username": quote.user.username
+        "username": quote.user.username,
+        "cited_count": QuoteCited.objects.filter(quote_id=quote).count(),
+        "cited_users": [ #Daftar akun yang melakukan sitasi
+            {
+                "user_id": qc.user_id.id,
+                "username": qc.user_id.username
+            } for qc in QuoteCited.objects.filter(quote_id=quote).select_related('user_id')
+        ]
     } for quote in quotes]
 
     context = {
@@ -265,7 +272,7 @@ def api_cite_quote(request, quote_id):
             "id": quote.pk,
             'created_at': quote.created_at,
             'updated_at': quote.updated_at,
-            "quote": quote.quote
+            "quote": quote.quote,
         },
         'cited_count': int(cited_count),
         'user_cited': user_cited,
@@ -273,7 +280,7 @@ def api_cite_quote(request, quote_id):
             "id": quote.id,
             'created_at': quote.created_at,
             'updated_at': quote.updated_at,
-            "quote": quote.quote
+            "quote": quote.quote,
         } for quote in quoted_quotes]
     }
 
