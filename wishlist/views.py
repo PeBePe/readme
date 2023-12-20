@@ -102,13 +102,33 @@ def api_add(request, book_id):
 
 @require_http_methods(["GET"])
 def api_get_all(request):
-    if (not request.user.is_authenticated):
+    if not request.user.is_authenticated:
         return JsonResponse(
             {"status": False, "message": "Anda belum melakukan login"}, status=401)
 
-    wishlists = request.user.wishlist.all().values()
+    wishlists = request.user.wishlist.select_related('books')
 
-    return JsonResponse({"status": True, "message": "Success mengambil data wishlist", "wishlists": list(wishlists)})
+    print(wishlists[0].books.image_url)
+    wishlists_data = [
+        {
+            "id": wishlist.id,
+            "wishlist_date": wishlist.wishlist_date,
+            "note": wishlist.note,
+            "user_id": wishlist.user.id,
+            "book": {
+                "id": wishlist.books.id,
+                "title": wishlist.books.title,
+                "image_url": wishlist.books.image_url,
+            }
+        }
+        for wishlist in wishlists
+    ]
+
+    return JsonResponse({
+        "status": True,
+        "message": "Success mengambil data wishlist",
+        "wishlists": wishlists_data
+    })
 
 
 @require_http_methods(["DELETE"])
