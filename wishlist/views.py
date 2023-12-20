@@ -108,7 +108,6 @@ def api_get_all(request):
 
     wishlists = request.user.wishlist.select_related('books')
 
-    print(wishlists[0].books.image_url)
     wishlists_data = [
         {
             "id": wishlist.id,
@@ -132,6 +131,7 @@ def api_get_all(request):
 
 
 @require_http_methods(["DELETE"])
+@csrf_exempt
 def api_remove(request, wishlist_id):
     if (not request.user.is_authenticated):
         return JsonResponse(
