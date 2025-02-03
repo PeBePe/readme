@@ -9,8 +9,8 @@ ENV PYTHONUNBUFFERED=1 \
     WEB_CONCURRENCY=2
 
 # Install system packages required Django.
-RUN apt-get update --yes --quiet && apt-get install --yes --quiet --no-install-recommends \
-&& rm -rf /var/lib/apt/lists/*
+RUN apt-get update --yes --quiet && apt-get install -y sqlite3 && apt-get install --yes --quiet --no-install-recommends \
+&& rm -rf /var/lib/apt/lists/* 
 
 RUN addgroup --system django \
     && adduser --system --ingroup django django
