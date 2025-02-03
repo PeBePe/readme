@@ -1,4 +1,4 @@
-FROM python:3.10-slim-buster
+FROM python:3.10-slim-bookworm
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ ENV PYTHONUNBUFFERED=1 \
     WEB_CONCURRENCY=2
 
 # Install system packages required Django.
-RUN apt-get update --yes --quiet && apt-get install -y sqlite3 && apt-get install --yes --quiet --no-install-recommends \
+RUN apt-get update --yes --quiet && apt-get install --yes --quiet --no-install-recommends \
 && rm -rf /var/lib/apt/lists/* 
 
 RUN addgroup --system django \
